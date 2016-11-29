@@ -15,7 +15,7 @@ $(document).ready(function(){
     var li = $('<li>');
     console.log(objsCreated);
     for (var i = 0; i < objsCreated.length; i++) {
-      $('.courses').append($("<li>").text(objsCreated[i].nome));
+      $('.courses').append($("<li>").text(objsCreated[i].nome+'('+objsCreated[i].cargaHoraria+')'));
     }
     $('.result').html(workload);
 
@@ -23,6 +23,16 @@ $(document).ready(function(){
 });
 
 var numberId = [];
+var tcc = {
+   "nome":"TCC",
+   "cargaHoraria":90,
+   "disciplinas":[
+     {
+       "nome":"Disciplina TCC"
+     }
+   ],
+   "id":1
+};
 var elements = [
      {
         "nome":"Curso A",
@@ -115,7 +125,7 @@ var elements = [
         "id":9
      },
      {
-        "name":"Curso J",
+        "nome":"Curso J",
         "cargaHoraria":180,
         "disciplinas":[
           {
@@ -161,6 +171,7 @@ var cart = function finish(){
 
 var cargaHoraria = function result(courses){
   if(courses.length >=2 ){
+    courses.push(tcc);
     var workload = (courses.length*180)+90;
   }else{
     var workload = courses.length*180;

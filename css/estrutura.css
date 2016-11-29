@@ -231,7 +231,7 @@ mc = m├íximo de colunas (12)
   position: relative;
   margin: 0.5em auto;
   transition: 0.1s linear 0s;
-  cursor: pointer; 
+  cursor: pointer;
   color:#000}
   .quiz-complementar .option-complementar:hover,
   .quiz-complementar .resp:hover {
@@ -255,9 +255,6 @@ html, body {
   user-select: none;
   /* Likely future */
   color: #000; }
-
-body {
-  overflow: hidden; }
 
 h1 {
   line-height: 1.2em; }
