@@ -14,8 +14,9 @@ $(document).ready(function(){
     var workload = cargaHoraria(objsCreated);
     var li = $('<li>');
     console.log(objsCreated);
+    $('.obj').remove();
     for (var i = 0; i < objsCreated.length; i++) {
-      $('.courses').append($("<li>").text(objsCreated[i].nome+'('+objsCreated[i].cargaHoraria+')'));
+      $('.courses').append($("<li class='obj'>").text(objsCreated[i].nome+'('+objsCreated[i].cargaHoraria+')'));
     }
     $('.result').html(workload);
 
