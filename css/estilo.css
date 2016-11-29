@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.draggable,.droppable{
+  min-height: 150px;
+  border: 1px solid #f1f1f1;
+  padding: 1em;
+  margin: 1em 0em;
+}
+.drag{
+  border: 1px solid #f1f1f1;
+  padding: 1em;
+  margin: 0.5em 0em;
+}
+.droppable{
+  background-color: #f1f1f1;
+}
