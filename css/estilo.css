@@ -5,6 +5,7 @@
   border: 1px solid #f1f1f1;
   padding: 1em;
   margin: 1em 0em;
+  cursor: move;
 }
 .drag{
   border: 1px solid #f1f1f1;
