@@ -74,6 +74,27 @@ var main = (function init(){
   var cart = function finish(){
     return elements.filter(o => numberId.indexOf(o.id) >= 0);
   }
+
+  var stateRevertTrue = function revert(element){
+    element('option','revert',true);
+    return true;
+  }
+
+  var stateRevertFalse = function revert(element){
+     element('option','revert',false);
+     return true;
+  }
+
+  var stateRevertValid = function revert(element){
+     element('option','revert',"valid");
+     return true;
+  }
+
+  var stateRevertInvalid = function revert(element){
+     element('option','revert',"invalid");
+     return true;
+  }
+
   var addNumber = function dropCount(number){
     if(dropped() > 4){
       return false;
@@ -88,7 +109,6 @@ var main = (function init(){
         element.addClass('.dropped');
         return true;
       }else{
-        element.draggable('option','revert',true);
         return false;
       }
   }
