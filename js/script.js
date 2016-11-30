@@ -1,6 +1,6 @@
 
 var main = (function init(){
-  $( ".drag" ).draggable();
+  $( ".drag" ).draggable({revert:"invalid"});
   $( ".droppable" ).droppable({
       accept: ".drag",
       drop: function( event, ui ) {
