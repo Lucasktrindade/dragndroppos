@@ -1,18 +1,5 @@
 
 var main = (function init(){
-  $( ".drag" ).draggable({revert:"invalid"});
-  $( ".droppable" ).droppable({
-      accept: ".drag",
-      drop: function( event, ui ) {
-        addNumber( ui.draggable.data('id') );
-        return onCreate();
-      },
-      out: function ( event,ui ){
-        removeNumber( ui.draggable, ui.draggable.data('id') );
-        onDelete();
-      }
-  });
-
   var numberId = [];
   var tcc = {
      "nome":"TCC",
@@ -26,7 +13,7 @@ var main = (function init(){
   };
   var elements = [
        {
-          "nome":"Curso A",
+          "nome":"RH",
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -36,7 +23,7 @@ var main = (function init(){
           "id":1
        },
        {
-          "nome":"Curso B",
+          "nome":"Logística",
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -46,7 +33,7 @@ var main = (function init(){
           "id":2
        },
        {
-          "nome":"Curso C",
+          "nome":"Marketing",
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -60,7 +47,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "disciplinas":[
             {
-              "nome":"Disciplinas D"
+              "nome":"Finanças"
             }
           ],
           "id":4
@@ -74,12 +61,26 @@ var main = (function init(){
   var cart = function finish(){
     return elements.filter(o => numberId.indexOf(o.id) >= 0);
   }
-  var addNumber = function dropCount(number){
+  paint(cart());
+  $( ".drag" ).draggable();
+  $(".droppable" ).droppable({
+      accept: ".drag",
+      drop: function( event, ui ) {
+        addNumber( ui.draggable, ui.draggable.data('id') );
+        return paint(onCreate());
+      },
+      out: function ( event,ui ){
+        removeNumber( ui.draggable, ui.draggable.data('id') );
+        return paint(onDelete());
+      }
+  });
+
+  var addNumber = function dropCount(element, number){
     if(dropped() > 4){
-      return false;
+      return added(element, false);
     }else{
       numberId.push(number);
-      return true
+      return added(element, true);
     }
   };
 
@@ -88,13 +89,18 @@ var main = (function init(){
         element.addClass('.dropped');
         return true;
       }else{
-        element.draggable('option','revert',true);
         return false;
       }
   }
 
   var removeNumber = function dropCount(element,number){
       element.removeClass('dropped');
+      for(var i = numberId.length - 1; i >= 0; i--) {
+         if(numberId[i] === number) {
+            numberId.splice(i, 1);
+        }
+      }
+
       return true;
   };
 
@@ -105,4 +111,38 @@ var main = (function init(){
   var onDelete = function update(){
     return cart();
   };
+});
+
+var paint = (function init(objs){
+  switch(objs.length) {
+    case 1:
+        $('.areas').html(objs.length +' área');
+        $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão');
+        $('.hours').html((objs.length*180));
+        $('.meses').html('6 meses de duração');
+        break;
+    case 2:
+        $('.areas').html( objs.length +' áreas');
+        $('.spec-name').html('Certificado de Especialização em Gestão');
+        $('.meses').html('6 meses de duração');
+        $('.hours').html((objs.length*180)+90);
+        break;
+    case 3:
+        $('.areas').html(objs.length +' áreas');
+        $('.spec-name').html('Certificado de MBA Essencial em Gestão');
+        $('.meses').html('1 ano de duração');
+        $('.hours').html((objs.length*180)+90 );
+        break;
+    case 4:
+        $('.areas').html(objs.length +' áreas');
+        $('.spec-name').html('Certificado de MBA Avançado em Gestão');
+        $('.meses').html('1 ano de duração');
+        $('.hours').html((objs.length*180)+90);
+        break;
+    default:
+       $('.areas').html('0 áreas');
+       $('.spec-name').html('Nenhum curso selecionado');
+       $('.meses').html('0 de duração');
+       $('.hours').html('0');
+    }
 });
