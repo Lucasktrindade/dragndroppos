@@ -377,9 +377,6 @@ a:hover {
   position: relative;
   float: left; }
 
-.column + .column {
-  margin-left: 1.66667%; }
-
 .container-fluid {
   width: 100%; }
 
@@ -402,9 +399,6 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
-  .column + .column {
-    margin-left: 1.66667%; }
 
   .col-t-1 {
     width: 6.80556%; }
@@ -499,9 +493,6 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
-  .column + .column {
-    margin-left: 1.66667%; }
 
   .index {
     background-position: right; }
@@ -599,9 +590,6 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
-  .column + .column {
-    margin-left: 1.66667%; }
 
   .col-l-1 {
     width: 6.80556%; }

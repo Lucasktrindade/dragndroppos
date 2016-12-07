@@ -1,7 +1,7 @@
 
 var main = (function init(){
   var numberId = [];
-  var tcc = {
+  const tcc = {
      "nome":"TCC",
      "cargaHoraria":90,
      "disciplinas":[
@@ -11,7 +11,7 @@ var main = (function init(){
      ],
      "id":1
   };
-  var elements = [
+  const elements = [
        {
           "nome":"RH",
           "cargaHoraria":180,
@@ -53,7 +53,33 @@ var main = (function init(){
           "id":4
        },
   ];
-
+  const goals = [
+    {
+      "id":1,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e logística como sendo fundamentais para o processo efetivo de atendimento ao cliente, que envolve, além da venda, também a disponibilização adequada de bens e serviços.",
+      "peso":0;
+    },
+    {
+      "id":2,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
+      "peso":0;
+    },
+    {
+      "id":3,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
+      "peso":0;
+    },
+    {
+      "id":4,
+      "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e a integração e seus impactos nas atividades operacionais de logística e movimentação, bem como da integração entre os processos e recursos físicos e humanos.",
+      "peso":0;
+    },
+    {
+      "id":5,
+      "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e os seus impactos nos resultados financeiros da organização, bem como nos processos e sistemas de gestão de recursos e de investimentos.",
+      "peso":0;
+    },
+  ];
   var dropped = function count(){
     return $('.draggable .dropped').length;
   }
@@ -129,13 +155,13 @@ var paint = (function init(objs){
         break;
     case 3:
         $('.areas').html(objs.length +' áreas');
-        $('.spec-name').html('Certificado de MBA Essencial em Gestão');
+        $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
         $('.hours').html((objs.length*180)+90 );
         break;
     case 4:
         $('.areas').html(objs.length +' áreas');
-        $('.spec-name').html('Certificado de MBA Avançado em Gestão');
+        $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
         $('.hours').html((objs.length*180)+90);
         break;
