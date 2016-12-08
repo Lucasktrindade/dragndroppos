@@ -20,7 +20,8 @@ var main = (function init(){
               "nome":"RH"
             }
           ],
-          "id":1
+          "id":1,
+          "peso":5
        },
        {
           "nome":"Logística",
@@ -30,7 +31,8 @@ var main = (function init(){
               "nome":"Logística"
             }
           ],
-          "id":2
+          "id":2,
+          "peso":10
        },
        {
           "nome":"Marketing",
@@ -40,7 +42,8 @@ var main = (function init(){
               "nome":"Marketing"
             }
           ],
-          "id":3
+          "id":3,
+          "peso":15
        },
        {
           "nome":"Finanças",
@@ -50,36 +53,74 @@ var main = (function init(){
               "nome":"Finanças"
             }
           ],
-          "id":4
+          "id":4,
+          "peso":20
        },
   ];
   const goals = [
     {
       "id":1,
       "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e logística como sendo fundamentais para o processo efetivo de atendimento ao cliente, que envolve, além da venda, também a disponibilização adequada de bens e serviços.",
-      "peso":0;
+      "total":150
     },
     {
       "id":2,
       "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
-      "peso":0;
+      "total":300
     },
     {
       "id":3,
       "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
-      "peso":0;
+      "total":75
     },
     {
       "id":4,
       "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e a integração e seus impactos nas atividades operacionais de logística e movimentação, bem como da integração entre os processos e recursos físicos e humanos.",
-      "peso":0;
+      "total":50
     },
     {
       "id":5,
       "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e os seus impactos nos resultados financeiros da organização, bem como nos processos e sistemas de gestão de recursos e de investimentos.",
-      "peso":0;
+      "total":60
+    },
+    {
+      "id":6,
+      "descricao":"Fazer compreender a importância do domínio das variáveis de gestão da logística integral da organização, que inclui todas as atividades do processo de compras, produção, movimentação e entregas, avaliando os impactos financeiros destas atividades na gestão organizacional.",
+      "total":200
     },
   ];
+  const skills = [
+    {
+      "id":1,
+      "descricao":"Ao final do curso o participante estará apto a compreender o mercado, planejar o composto de marketing, desenvolver e implementar estratégias mercadológicas, sendo capaz de disponibilizar adequadamente bens e serviços conforme previsto no plano de marketing.",
+      "total":150
+    },
+    {
+      "id":2,
+      "descricao":"Ao final do curso o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas, bem como a entender o impacto da gestão financeira das atividades realizadas e a forma de analisar os resultados e compreender a saúde financeira da organização.",
+      "total":300
+    },
+    {
+      "id":3,
+      "descricao":"Ao final do curso o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas e entender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, na aplicação das ferramentas de marketing e no sucesso da empresa.",
+      "total":75
+    },
+    {
+      "id":4,
+      "descricao":"Ao final do curso o participante estará apto a entender a importância das práticas de recursos humanos no sucesso da organização e a sua influência nos resultados operacionais e logísticos, promovendo a integração entre setores, processos e pessoas e motivando e empoderando as equipes na busca de resultados.",
+      "total":50
+    },
+    {
+      "id":5,
+      "descricao":"Ao final de curso o participante estará apto a entender a importância das práticas de recursos humanos no sucesso da organização e a sua influência nos resultados financeiros de avaliação de investimentos, retornos financeiros, fluxos de caixa e de análise de recursos utilizados pelas equipes.",
+      "total":60
+    },
+    {
+      "id":6,
+      "descricao":"Ao final de curso o participante estará apto a entender a importância das práticas das atividades logísticas de planejamento de compras, produção, movimentação, entregas e logística reversa, bem como a sua influência nos resultados financeiros de avaliação de investimentos, retornos financeiros, fluxos de caixa e de análise de recursos utilizados pelas equipes",
+      "total":200
+    },
+  ]
   var dropped = function count(){
     return $('.draggable .dropped').length;
   }
@@ -87,17 +128,19 @@ var main = (function init(){
   var cart = function finish(){
     return elements.filter(o => numberId.indexOf(o.id) >= 0);
   }
+
   paint(cart());
+
   $( ".drag" ).draggable();
   $(".droppable" ).droppable({
       accept: ".drag",
       drop: function( event, ui ) {
         addNumber( ui.draggable, ui.draggable.data('id') );
-        return paint(onCreate());
+        return paint(cart(),goals,skills);
       },
       out: function ( event,ui ){
         removeNumber( ui.draggable, ui.draggable.data('id') );
-        return paint(onDelete());
+        return paint(cart(),goals,skills);
       }
   });
 
@@ -121,7 +164,7 @@ var main = (function init(){
 
   var removeNumber = function dropCount(element,number){
       element.removeClass('dropped');
-      for(var i = numberId.length - 1; i >= 0; i--) {
+      for(let i = numberId.length - 1; i >= 0; i--) {
          if(numberId[i] === number) {
             numberId.splice(i, 1);
         }
@@ -129,41 +172,46 @@ var main = (function init(){
 
       return true;
   };
-
-  var onCreate = function update(){
-    return cart();
-  };
-
-  var onDelete = function update(){
-    return cart();
-  };
 });
 
-var paint = (function init(objs){
-  switch(objs.length) {
+var paint = (function init(courses,goals,skills){
+  let peso = function peso(objs){
+    return objs.reduce((prev,current) => prev.peso*current.peso);
+  }
+  let findGoal = function find(goals,value){
+    return goals.filter(o => o.total == value);
+  }
+  let findSkill = function find(skills,value){
+    return skills.filter(o => o.total == value);
+  }
+  switch(courses.length) {
     case 1:
-        $('.areas').html(objs.length +' área');
+        $('.areas').html(courses.length +' área');
         $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão');
-        $('.hours').html((objs.length*180));
+        $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
         break;
     case 2:
-        $('.areas').html( objs.length +' áreas');
+        $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de Especialização em Gestão');
         $('.meses').html('6 meses de duração');
-        $('.hours').html((objs.length*180)+90);
+        $('.hours').html((courses.length*180)+90);
+        let goal = findGoal(goals,peso(courses));
+        let skill = findSkill(skills, peso(courses))
+        $('.goal').html(goal[0].descricao);
+        $('.skill').html(skill[0].descricao);
         break;
     case 3:
-        $('.areas').html(objs.length +' áreas');
+        $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
-        $('.hours').html((objs.length*180)+90 );
+        $('.hours').html((courses.length*180)+90 );
         break;
     case 4:
-        $('.areas').html(objs.length +' áreas');
+        $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
-        $('.hours').html((objs.length*180)+90);
+        $('.hours').html((courses.length*180)+90);
         break;
     default:
        $('.areas').html('0 áreas');
