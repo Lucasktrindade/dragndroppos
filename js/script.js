@@ -14,6 +14,8 @@ var main = (function init(){
   const elements = [
        {
           "nome":"RH",
+          "slug":"rh",
+          "dropped":false,
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -25,6 +27,8 @@ var main = (function init(){
        },
        {
           "nome":"Logística",
+          "slug":"logistica",
+          "dropped":false,
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -36,6 +40,8 @@ var main = (function init(){
        },
        {
           "nome":"Marketing",
+          "slug":"marketing",
+          "dropped":false,
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -47,6 +53,8 @@ var main = (function init(){
        },
        {
           "nome":"Finanças",
+          "slug":"financas",
+          "dropped":false,
           "cargaHoraria":180,
           "disciplinas":[
             {
@@ -121,14 +129,18 @@ var main = (function init(){
       "total":200
     },
   ]
-  var dropped = function count(){
+
+  let dropped = function count(){
     return $('.draggable .dropped').length;
   }
 
-  var cart = function finish(){
+  let cart = function finish(){
     return elements.filter(o => numberId.indexOf(o.id) >= 0);
   }
 
+  let findById = function find(id){
+    return elements.filter(o => o.id == id);
+  };
   paint(cart());
 
   $( ".drag" ).draggable();
@@ -136,15 +148,17 @@ var main = (function init(){
       accept: ".drag",
       drop: function( event, ui ) {
         addNumber( ui.draggable, ui.draggable.data('id') );
+        hourIn(ui.draggable.data('id'));
         return paint(cart(),goals,skills);
       },
       out: function ( event,ui ){
         removeNumber( ui.draggable, ui.draggable.data('id') );
+        hourOut(ui.draggable.data('id'));
         return paint(cart(),goals,skills);
       }
   });
 
-  var addNumber = function dropCount(element, number){
+  let addNumber = function dropCount(element, number){
     if(dropped() > 4){
       return added(element, false);
     }else{
@@ -153,7 +167,7 @@ var main = (function init(){
     }
   };
 
-  var added = function alterElement(element,bool){
+  let added = function alterElement(element,bool){
       if(bool){
         element.addClass('.dropped');
         return true;
@@ -162,7 +176,7 @@ var main = (function init(){
       }
   }
 
-  var removeNumber = function dropCount(element,number){
+  let removeNumber = function dropCount(element,number){
       element.removeClass('dropped');
       for(let i = numberId.length - 1; i >= 0; i--) {
          if(numberId[i] === number) {
@@ -172,6 +186,23 @@ var main = (function init(){
 
       return true;
   };
+
+  let hourIn =  function show(id){
+    let element = findById(id);
+    if(!element[0].dropped){
+      element[0].dropped = true;
+      $('.hour-'+element[0].slug).fadeIn();
+    }
+  };
+
+  let hourOut =  function show(id){
+    let element = findById(id);
+      if(element[0].dropped){
+        element[0].dropped = false;
+        $('.hour-'+element[0].slug).fadeOut();
+      }
+  };
+
 });
 
 var paint = (function init(courses,goals,skills){

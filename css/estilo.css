@@ -28,3 +28,6 @@
   margin: 1em auto;
   border-radius: 2px;
 }
+.hour{
+  display: none;
+}

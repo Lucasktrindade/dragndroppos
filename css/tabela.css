@@ -9,6 +9,7 @@
     border-collapse: collapse;
     border-spacing: 0;
     font-family: arial;
+    margin: 1em auto;
   }
 
   .table {
@@ -21,14 +22,18 @@
   .table td {
     border-right: #999999 solid 1px;
     font-size: 12px;
-    padding: 8px;
+    padding: 1em;
     line-height: 20px;
     vertical-align: middle;
-	text-align: left;
+	  text-align: left;
   }
 
   .table td:last-child {
      border-right: 0;
+  }
+
+  .table td[rowspan="2"]{
+    background-color: #fff;
   }
 
   .table thead th {
@@ -40,14 +45,14 @@
 
   .table tbody > tr:nth-child(odd) > td,
   .table tbody > tr:nth-child(odd) > th {
-    background-color: #f8f8f8;
-	color: #000000;
+    background-color: #bdbdbd;
+	  color: #000000;
   }
 
 
 /* Small Sizes */
-@media (max-width: 767px) { 
-  
+@media (max-width: 767px) {
+
   /* Responsive Table */
   .table-responsive {
     display: block;
@@ -83,7 +88,7 @@
     display: inline-block;
   }
 
-  
+
   .table td:last-child {
      border-right: #999999 solid 1px;
   }
