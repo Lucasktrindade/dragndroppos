@@ -1,0 +1,22 @@
+{
+  "name": "poscourse",
+  "version": "1.0.0",
+  "description": "Drag and Drop de cursos pos",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucasktrindade/dragndroppos.git"
+  },
+  "author": "Lucas Trindade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucasktrindade/dragndroppos/issues"
+  },
+  "homepage": "https://github.com/Lucasktrindade/dragndroppos#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
