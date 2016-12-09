@@ -7,6 +7,7 @@
     <link rel="icon" href="img/GloboUnigranrio.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/pandora.css">
     <link rel="stylesheet" href="css/estrutura.css">
+    <link rel="stylesheet" href="css/tabela.css">
     <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body onload="main()">
@@ -115,7 +116,49 @@
         </div>
       </div>
     </section>
-
+    
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="column col-m-12">
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th colspan="2">Sábado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Semana 1</td>
+                </tr>
+                <tr>
+                    <td>Marketing</td>
+                    <td>Logística</td>
+                    <td>Marketing</td>
+                    <td>Logística</td>
+                    <td rowspan="2">Trilha 1</td>
+                </tr>
+                <tr>
+                    <td>RH</td>
+                    <td>Finanças</td>
+                    <td>RH</td>
+                    <td>Finanças</td>
+                    <td colspan="1" rowspan="2">Logística</td>
+                    <td colspan="1" rowspan="2">Marketing</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
