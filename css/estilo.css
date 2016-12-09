@@ -9,6 +9,7 @@
 .drag{
   background-color: #FEFEFE;
   border: 3px solid #09213d;
+  border-radius: 2px;
   padding: 1em;
   margin: 0.5em 0.15em;
 }
@@ -17,10 +18,9 @@
 }
 .certificado{
   padding: 0.5em;
-  width: calc(100% - 0.1em);
+  width: 100%;
   height: 100px;
   border-radius: 2px;
-  margin: 0.5em 0em;
 }
 .card{
   width: 100%;
