@@ -1,0 +1,38 @@
+.menu{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  z-index: 99;
+  h1{
+    margin-left: 7%;
+  }
+  .submenu{
+    position: relative;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+    height: auto;
+  	z-index: 0;
+  	text-align: center; /* for aligning the sub items */
+    z-index: 99;
+    margin: 4rem auto;
+
+    h4{
+      padding: 0em 0.5em;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1.3em;
+      text-align: center;
+    }
+    .menu-icon{
+      position: relative;
+    }
+  }
+  .icon-column{
+    margin: 0.15em auto;
+    img.icon{
+      margin: 0.75em auto;
+    }
+  }
+
+}

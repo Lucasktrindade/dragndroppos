@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop Unigranrio</title>
     <link rel="icon" href="img/GloboUnigranrio.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="css/pandora.css">
     <link rel="stylesheet" href="css/estrutura.css">
+    <link rel="stylesheet" href="css/tabela.css">
+    <link rel="stylesheet" href="css/pandora.css"/>
     <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body onload="main()">
@@ -49,19 +50,121 @@
       <div class="container">
         <div class="row">
           <div class="column col-m-12 col-t-2">
-            <div class="certificado t-branco bg-unigranrio-azul">
+            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
               <h3><span class="areas"></span></h3>
             </div>
           </div>
           <div class="column col-m-12 col-t-6">
-            <div class="certificado t-branco bg-unigranrio-azul">
+            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
               <h3 class="spec-name"></h3>
             </div>
           </div>
           <div class="column col-m-12 col-t-4">
-            <div class="certificado t-branco bg-unigranrio-azul">
+            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
               <h3><span class="meses"></span> - <span class="hours"></span>hrs</h3>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="column col-m-12">
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th colspan="2">Sábado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3" class="bg-unigranrio-azul-claro2">Semana 1</td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td rowspan="2">Trilha 1</td>
+                    <td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
+                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td rowspan="3" class="bg-unigranrio-azul-claro2">Semana 2</td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td rowspan="2">Trilha 2</td>
+                    <td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
+                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td rowspan="3" class="bg-unigranrio-azul-claro2">Semana 3</td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td rowspan="2">Trilha 1</td>
+                    <td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
+                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td rowspan="3" class="bg-unigranrio-azul-claro2">Semana 4</td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td><span class="hour hour-marketing">Marketing</span></td>
+                    <td><span class="hour hour-logistica">Logística</span></td>
+                    <td rowspan="2">Trilha 2</td>
+                    <td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
+                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>
+                </tr>
+                <tr>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                    <td><span class="hour hour-rh">RH</span></td>
+                    <td><span class="hour hour-financas">Finanças</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -74,10 +177,10 @@
             <div class="card sombra-1 padding15 bg-unigranrio-azul-claro t-branco">
               <div class="card-header">
                 <div class="row flex-center">
-                  <div class="column col-m-2">
-                    <img src="img/goal-white.png" alt="" class="direito">
+                  <div class="column col-m-1">
+                    <img src="img/goal-white.png" alt="" class="esquerdo">
                   </div>
-                  <div class="column col-m-10">
+                  <div class="column col-m-11">
                     <h3>Objetivos</h3>
                   </div>
                 </div>
@@ -95,10 +198,10 @@
             <div class="card sombra-1 padding15 bg-unigranrio-azul-claro t-branco">
               <div class="card-header">
                 <div class="row flex-center">
-                  <div class="column col-m-2">
-                    <img src="img/documents-white.png" alt="" class="direito">
+                  <div class="column col-m-1">
+                    <img src="img/documents-white.png" alt="" class="esquerdo">
                   </div>
-                  <div class="column col-m-10">
+                  <div class="column col-m-11">
                     <h3>Competências</h3>
                   </div>
                 </div>
@@ -115,7 +218,6 @@
         </div>
       </div>
     </section>
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

@@ -1,0 +1,59 @@
+/**refêrencia**/
+.ref_mini {
+  width: 100%;
+  margin: 0 auto;
+	padding: 0px;
+	cursor: default;
+  background-color: #fff;
+}
+.escuro {
+	background-color: #d6d6d6;
+}
+.ref_mini{
+  line-height: 35px;
+}/*
+.ref_mini a {
+	color: #336699;
+	text-decoration: none;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+}
+.ref_mini a:hover {
+	color: #F63;
+}*/
+.ref_mini ul {
+	padding: 0px;
+}
+.ref_mini li {
+	padding: 1em;
+}
+.site {
+	background-image: url(../img/site.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin: 0px 10px;
+}
+.video {
+	background-image: url(../img/Video.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin: 0px 10px;
+}
+.livro {
+	background-image: url(../img/Livro.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin: 0px 10px;
+}

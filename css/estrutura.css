@@ -211,8 +211,8 @@ mc = m├íximo de colunas (12)
   .quiz .back {
     float: left; }
 
-/*.enunciado p {
-  color: #333; }*/
+.enunciado p {
+  color: #333; }
 
 .quiz .option .alternativa {
   background-color: #DDDDDD;
@@ -231,8 +231,7 @@ mc = m├íximo de colunas (12)
   position: relative;
   margin: 0.5em auto;
   transition: 0.1s linear 0s;
-  cursor: pointer;
-  color:#000}
+  cursor: pointer; }
   .quiz-complementar .option-complementar:hover,
   .quiz-complementar .resp:hover {
     background-color: #C3C3C3; }
@@ -377,6 +376,9 @@ a:hover {
   position: relative;
   float: left; }
 
+.column + .column {
+  margin-left: 1.66667%; }
+
 .container-fluid {
   width: 100%; }
 
@@ -399,6 +401,9 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
+
+  .column + .column {
+    margin-left: 1.66667%; }
 
   .col-t-1 {
     width: 6.80556%; }
@@ -493,6 +498,9 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
+
+  .column + .column {
+    margin-left: 1.66667%; }
 
   .index {
     background-position: right; }
@@ -590,6 +598,9 @@ a:hover {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
+
+  .column + .column {
+    margin-left: 1.66667%; }
 
   .col-l-1 {
     width: 6.80556%; }
