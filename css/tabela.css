@@ -9,7 +9,6 @@
     border-collapse: collapse;
     border-spacing: 0;
     font-family: arial;
-    margin: 1em auto;
   }
 
   .table {
@@ -29,26 +28,28 @@
   }
 
   .table td:last-child {
-     border-right: 0;
-  }
-
-  .table td[rowspan="2"]{
-    background-color: #fff;
+     border-right: 1;
   }
 
   .table thead th {
     font-weight: normal;
-    background-color: #005dab;
+    background-color: #09213d;
     color: #fff;
     font-size: 15px;
   }
 
-  .table tbody > tr:nth-child(odd) > td,
-  .table tbody > tr:nth-child(odd) > th {
+  tbody > tr:nth-child(odd) > td{
     background-color: #bdbdbd;
 	  color: #000000;
   }
+  .odd{
 
+  }
+
+  .table tbody{
+    margin-top: 0.1em;
+    border-bottom: 1px solid #999999;
+  }
 
 /* Small Sizes */
 @media (max-width: 767px) {

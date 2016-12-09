@@ -31,3 +31,11 @@
 .hour{
   display: none;
 }
+.button-print{
+  margin-bottom: 1em;
+  width: auto;
+  border-radius: 2px;
+}
+.table tbody td.semana{
+  background-color: #b3d0e9;
+}
