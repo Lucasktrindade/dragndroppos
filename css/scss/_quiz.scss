@@ -1,0 +1,64 @@
+.quiz{
+  margin:0.5em 0.5em;
+    .next,
+    .back
+    {
+     width:30%;
+     padding:0.4em;
+     border:0;
+     border-radius:2px;
+     text-transform:capitalize;
+     margin:0.5em auto;
+     transition:0.1s linear 0s;
+      &:hover{
+        background-color:#50a3e2;
+      }
+   }
+   .next{float:right;}
+   .back{float:left;}
+}
+.enunciado{
+  p{
+    color:#333;
+  }
+}
+.quiz
+{
+  .option{
+    .alternativa{
+      background-color:#DDDDDD;
+      border-radius:3px;
+      position:relative;
+      margin:0.5em auto;
+      transition:0.1s linear 0s;
+      cursor:pointer;
+      &:hover{
+        background-color:#C3C3C3
+      }
+    }
+  }
+}
+.quiz-complementar
+{
+  .option-complementar,
+  .resp
+  {
+      background-color:#DDDDDD;
+      border-radius:3px;
+      position:relative;
+      margin:0.5em auto;
+      transition:0.1s linear 0s;
+      cursor:pointer;
+      &:hover{
+        background-color:#C3C3C3
+      }
+  }
+}
+.option{
+  .feedback-alternativa{
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:2px;
+  }
+}

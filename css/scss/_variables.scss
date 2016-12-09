@@ -1,0 +1,25 @@
+$font:Helvetica, sans-serif;
+$font-color:#000000;
+$font-size:16px;
+$grid-columns:12;
+$breakpoint-medium:768px;
+$breakpoint-large:992px;
+$breakpoint-extra-large:1200px;
+$breakpoint-icons:550px;
+
+/*
+Feito para saber o gutter entre as colunas
+mr = margem em porcentagem
+mp = margem em pixel
+mc = máximo de colunas
+*/
+$mr:20%/$grid-columns;
+
+/*
+largura de uma coluna com gutter de dado acima
+scw = largura da coluna única
+m = margin (1.6%)
+mc = máximo de colunas (12)
+*/
+
+$scw:((100 - ($mr * ($grid-columns - 1))) / $grid-columns);
