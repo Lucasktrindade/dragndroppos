@@ -591,3 +591,79 @@ a:hover {
 img {
   max-width: 100%;
   height: auto; }
+
+@media print {
+  html, body {
+    color: #000 !important; }
+  .column + .column {
+    margin-left: 0; }
+  .col-m-1 {
+    width: 6.80556%; }
+  .col-m-offset-1 {
+    left: 6.80556%; }
+  .col-m-2 {
+    width: 15.27778%; }
+  .col-m-offset-2 {
+    left: 15.27778%; }
+  .col-m-3 {
+    width: 23.75%; }
+  .col-m-offset-3 {
+    left: 23.75%; }
+  .col-m-4 {
+    width: 32.22222%; }
+  .col-m-offset-4 {
+    left: 32.22222%; }
+  .col-m-5 {
+    width: 40.69444%; }
+  .col-m-offset-5 {
+    left: 40.69444%; }
+  .col-m-6 {
+    width: 49.16667%; }
+  .col-m-offset-6 {
+    left: 49.16667%; }
+  .col-m-7 {
+    width: 57.63889%; }
+  .col-m-offset-7 {
+    left: 57.63889%; }
+  .col-m-8 {
+    width: 66.11111%; }
+  .col-m-offset-8 {
+    left: 66.11111%; }
+  .col-m-9 {
+    width: 74.58333%; }
+  .col-m-offset-9 {
+    left: 74.58333%; }
+  .col-m-10 {
+    width: 83.05556%; }
+  .col-m-offset-10 {
+    left: 83.05556%; }
+  .col-m-11 {
+    width: 91.52778%; }
+  .col-m-offset-11 {
+    left: 91.52778%; }
+  .col-m-12 {
+    width: 100%; }
+  .col-m-offset-12 {
+    left: 100%; }
+  .col-m-12 + .col-t-12 {
+    margin-left: 0; }
+  @page {
+    size: landscape; }
+  .no-print {
+    display: none; }
+  .print, .dropped {
+    display: block !important; }
+  .page-break {
+    display: block;
+    page-break-before: always; }
+  .table tbody {
+    margin-top: 0.1em;
+    border: 1px solid #999999; }
+  .table thead {
+    margin-top: 0.1em;
+    border: 1px solid #999999; }
+  .certificado, .card {
+    box-shadow: 0px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    color: #000; } }

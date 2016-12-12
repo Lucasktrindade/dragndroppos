@@ -86,6 +86,8 @@ a:hover {
 .subtitulo{
   @extend %center;
 }
+
+
 @media only screen and (min-width:#{$breakpoint-medium}){
   html,body{
     font-size: 17px;
@@ -111,6 +113,8 @@ a:hover {
     }
   }
 }
+
+
 
 @media only screen and (min-width:#{$breakpoint-large}){
   html,body{
@@ -141,6 +145,8 @@ a:hover {
   }
 }
 
+
+
 @media only screen and (min-width:#{$breakpoint-extra-large}){
   html,body{
     font-size: 20px;
@@ -166,7 +172,52 @@ a:hover {
     }
   }
 }
+
+
 img{
 	max-width: 100%;
 	height: auto;
+}
+@media print {
+  html, body{
+    color: #000 !important;
+  }
+  .column + .column{margin-left: 0;}
+  @for $i from 1 through $grid-columns {
+    .col-m-#{$i} {
+      width:(($scw * $i) + ($mr * ($i - 1)));
+    }
+    .col-m-offset-#{$i} {
+      left:(($scw * $i) + ($mr * ($i - 1)));
+    }
+    @if $i==12 {
+      .col-m-#{$i} + .col-t-#{$i}{margin-left: 0;}
+    }
+  }
+  @page {
+      size: landscape;
+  }
+  .no-print {
+    display:none;
+  }
+  .print, .dropped {
+    display:block !important;
+  }
+  .page-break	{ display: block; page-break-before: always; }
+  .table{
+    tbody{
+      margin-top: 0.1em;
+      border: 1px solid #999999;
+    }
+    thead{
+      margin-top: 0.1em;
+      border: 1px solid #999999;
+    }
+  }
+  .certificado,.card{
+    box-shadow: 0px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    color: #000;
+  }
 }
