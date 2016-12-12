@@ -1,5 +1,39 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+var server = require('gulp-server-livereload');
+var concat = require('gulp-concat');
+var minifyCSS = require('gulp-minify-css');
 
-gulp.task('default', function() {
-  // place code for your default task here
+gulp.task('default', ['sass:watch','webserver','css', 'scripts']);
+
+gulp.task('sass', function () {
+  return gulp.src('./css/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./css/**/*.scss', ['sass']);
+});
+
+gulp.task('webserver', function() {
+  gulp.src('./')
+    .pipe(server({
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
+});
+
+gulp.task('css', function() {
+  return gulp.src(['./css/estrutura.css','./css/tabela.css','./css/pandora.css',  './css/estilo.css'])
+    .pipe(concat('bundle.css'))
+    .pipe(minifyCSS({keepBreaks:false}))
+    .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src(['./js/jquery.min.js','./js/jquery-ui.min.js','./js/script.js'])
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('./js/'));
 });

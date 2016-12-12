@@ -3,13 +3,13 @@
 Feito para saber o gutter entre as colunas
 mr = margem em porcentagem
 mp = margem em pixel
-mc = m├íximo de colunas
+mc = máximo de colunas
 */
 /*
 largura de uma coluna com gutter de dado acima
-scw = largura da coluna ├║nica
+scw = largura da coluna única
 m = margin (1.6%)
-mc = m├íximo de colunas (12)
+mc = máximo de colunas (12)
 */
 .row, .clearfix {
   *zoom: 1; }
@@ -95,7 +95,7 @@ mc = m├íximo de colunas (12)
     width: 17px;
     height: 17px; }
 
-/**ref├¬rencia**/
+/**refêrencia**/
 .ref_mini {
   width: 100%;
   margin: 0 auto;
@@ -109,7 +109,7 @@ mc = m├íximo de colunas (12)
 .ref_mini {
   line-height: 35px; }
 
- /*
+/*
 .ref_mini a {
 	color: #336699;
 	text-decoration: none;
@@ -385,299 +385,209 @@ a:hover {
 @media only screen and (min-width: 768px) {
   html, body {
     font-size: 17px; }
-
   .sumir-medium {
     display: none; }
-
   .visible-medium {
     display: block; }
-
   .container {
     width: 768px;
     margin-right: auto;
     margin-left: auto; }
-
   .container-icons {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
   .column + .column {
     margin-left: 1.66667%; }
-
   .col-t-1 {
     width: 6.80556%; }
-
   .col-t-offset-1 {
     left: 6.80556%; }
-
   .col-t-2 {
     width: 15.27778%; }
-
   .col-t-offset-2 {
     left: 15.27778%; }
-
   .col-t-3 {
     width: 23.75%; }
-
   .col-t-offset-3 {
     left: 23.75%; }
-
   .col-t-4 {
     width: 32.22222%; }
-
   .col-t-offset-4 {
     left: 32.22222%; }
-
   .col-t-5 {
     width: 40.69444%; }
-
   .col-t-offset-5 {
     left: 40.69444%; }
-
   .col-t-6 {
     width: 49.16667%; }
-
   .col-t-offset-6 {
     left: 49.16667%; }
-
   .col-t-7 {
     width: 57.63889%; }
-
   .col-t-offset-7 {
     left: 57.63889%; }
-
   .col-t-8 {
     width: 66.11111%; }
-
   .col-t-offset-8 {
     left: 66.11111%; }
-
   .col-t-9 {
     width: 74.58333%; }
-
   .col-t-offset-9 {
     left: 74.58333%; }
-
   .col-t-10 {
     width: 83.05556%; }
-
   .col-t-offset-10 {
     left: 83.05556%; }
-
   .col-t-11 {
     width: 91.52778%; }
-
   .col-t-offset-11 {
     left: 91.52778%; }
-
   .col-t-12 {
     width: 100%; }
-
   .col-t-offset-12 {
     left: 100%; }
-
   .col-t-12 + .col-t-12 {
     margin-left: 0; } }
+
 @media only screen and (min-width: 992px) {
   html, body {
     font-size: 18px; }
-
   .sumir-large {
     display: none; }
-
   .visible-large {
     display: block; }
-
   .container {
     width: 992px;
     margin-right: auto;
     margin-left: auto; }
-
   .container-icons {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
   .column + .column {
     margin-left: 1.66667%; }
-
   .index {
     background-position: right; }
-
   .col-1 {
     width: 6.80556%; }
-
   .col-offset-1 {
     left: 6.80556%; }
-
   .col-2 {
     width: 15.27778%; }
-
   .col-offset-2 {
     left: 15.27778%; }
-
   .col-3 {
     width: 23.75%; }
-
   .col-offset-3 {
     left: 23.75%; }
-
   .col-4 {
     width: 32.22222%; }
-
   .col-offset-4 {
     left: 32.22222%; }
-
   .col-5 {
     width: 40.69444%; }
-
   .col-offset-5 {
     left: 40.69444%; }
-
   .col-6 {
     width: 49.16667%; }
-
   .col-offset-6 {
     left: 49.16667%; }
-
   .col-7 {
     width: 57.63889%; }
-
   .col-offset-7 {
     left: 57.63889%; }
-
   .col-8 {
     width: 66.11111%; }
-
   .col-offset-8 {
     left: 66.11111%; }
-
   .col-9 {
     width: 74.58333%; }
-
   .col-offset-9 {
     left: 74.58333%; }
-
   .col-10 {
     width: 83.05556%; }
-
   .col-offset-10 {
     left: 83.05556%; }
-
   .col-11 {
     width: 91.52778%; }
-
   .col-offset-11 {
     left: 91.52778%; }
-
   .col-12 {
     width: 100%; }
-
   .col-offset-12 {
     left: 100%; }
-
   .col-12 + .col-12 {
     margin-left: 0; } }
+
 @media only screen and (min-width: 1200px) {
   html, body {
     font-size: 20px; }
-
   .sumir-extra {
     display: none; }
-
   .visible-extra {
     display: block; }
-
   .container {
     width: 1200px;
     margin-right: auto;
     margin-left: auto; }
-
   .container-icons {
     max-width: 550px;
     margin-right: auto;
     margin-left: auto; }
-
   .column + .column {
     margin-left: 1.66667%; }
-
   .col-l-1 {
     width: 6.80556%; }
-
   .col-l-offset-1 {
     left: 6.80556%; }
-
   .col-l-2 {
     width: 15.27778%; }
-
   .col-l-offset-2 {
     left: 15.27778%; }
-
   .col-l-3 {
     width: 23.75%; }
-
   .col-l-offset-3 {
     left: 23.75%; }
-
   .col-l-4 {
     width: 32.22222%; }
-
   .col-l-offset-4 {
     left: 32.22222%; }
-
   .col-l-5 {
     width: 40.69444%; }
-
   .col-l-offset-5 {
     left: 40.69444%; }
-
   .col-l-6 {
     width: 49.16667%; }
-
   .col-l-offset-6 {
     left: 49.16667%; }
-
   .col-l-7 {
     width: 57.63889%; }
-
   .col-l-offset-7 {
     left: 57.63889%; }
-
   .col-l-8 {
     width: 66.11111%; }
-
   .col-l-offset-8 {
     left: 66.11111%; }
-
   .col-l-9 {
     width: 74.58333%; }
-
   .col-l-offset-9 {
     left: 74.58333%; }
-
   .col-l-10 {
     width: 83.05556%; }
-
   .col-l-offset-10 {
     left: 83.05556%; }
-
   .col-l-11 {
     width: 91.52778%; }
-
   .col-l-offset-11 {
     left: 91.52778%; }
-
   .col-l-12 {
     width: 100%; }
-
   .col-l-offset-12 {
     left: 100%; }
-
   .col-l-12 + .col-l-12 {
     margin-left: 0; } }
+
 img {
   max-width: 100%;
   height: auto; }
-
-/*# sourceMappingURL=estrutura.css.map */

@@ -1,4 +1,6 @@
 
+
+/*Scripts for page*/
 var main = (function init(){
   var numberId = [];
   const tcc = {
