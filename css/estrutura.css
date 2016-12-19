@@ -681,6 +681,13 @@ a:hover {
 .subtitulo img.icon {
   margin: 0.75em 0.5em; }
 
+.table-hour .header-cell h3 {
+  font-size: 1em; }
+
+.hour {
+  min-height: 50px;
+  margin: 0; }
+
 .col-m-1 {
   width: 8.33333%; }
 
@@ -840,7 +847,12 @@ a:hover {
     width: 150px;
     height: 150px; }
     .drag h3, .droppable h3 {
-      font-size: 1.17em; } }
+      font-size: 1.17em; }
+  .table-hour .header-cell h3 {
+    font-size: 1.17em; }
+  .hour {
+    min-height: 30px;
+    margin: 0.5em; } }
 
 @media only screen and (min-width: 992px) {
   html, body {
@@ -1048,14 +1060,10 @@ img {
   .page-break {
     display: block;
     page-break-before: always; }
-  .table tbody {
-    margin-top: 0.1em;
-    border: 1px solid #999999; }
-  .table thead {
-    margin-top: 0.1em;
-    border: 1px solid #999999; }
-  .certificado, .card {
-    box-shadow: 0px;
-    margin-top: 10px;
-    border: 1px solid #000000;
+  .body-table {
+    border-bottom: 0;
+    border-top: 1px solid #09213d; }
+  .line-azul {
+    border-top: 1px solid #eff5fc; }
+  .line-info h3 {
     color: #000; } }

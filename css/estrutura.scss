@@ -505,7 +505,13 @@ a:hover {
     margin: 0.75em 0.5em;
   }
 }
-
+.table-hour .header-cell h3{
+  font-size: 1em;
+}
+.hour{
+  min-height: 50px;
+  margin:0;
+}
 
 @for $i from 1 through $grid-columns {
   .col-m-#{$i} {
@@ -571,6 +577,13 @@ a:hover {
     h3{
       font-size: 1.17em;
     }
+  }
+  .table-hour .header-cell h3{
+    font-size: 1.17em;
+  }
+  .hour{
+    min-height: 30px;
+    margin: 0.5em;
   }
 }
 
@@ -662,20 +675,14 @@ img{
     display:block !important;
   }
   .page-break	{ display: block; page-break-before: always; }
-  .table{
-    tbody{
-      margin-top: 0.1em;
-      border: 1px solid #999999;
-    }
-    thead{
-      margin-top: 0.1em;
-      border: 1px solid #999999;
-    }
+  .body-table{
+    border-bottom: 0;
+    border-top: 1px solid #09213d;
   }
-  .certificado,.card{
-    box-shadow: 0px;
-    margin-top: 10px;
-    border: 1px solid #000000;
+  .line-azul{
+    border-top: 1px solid #eff5fc;
+  }
+  .line-info h3{
     color: #000;
   }
 }
