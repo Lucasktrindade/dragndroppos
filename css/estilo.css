@@ -68,13 +68,20 @@
 .card p{
   margin: 0;
 }
-.hour{
-  min-height: 30px;
-}
 .button-print{
   margin-bottom: 1em;
   width: auto;
   border-radius: 2px;
+  box-shadow: none;
+  padding: 0.75em 0.5em;
+  border: 0;
+  color: #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#334275+0,222f5b+0,222f5b+11,222f5b+45,222f5b+45,334174+95,334174+99,222f5b+100 */
+  background: #334275; /* Old browsers */
+  background: -moz-linear-gradient(left,  #334275 0%, #222f5b 0%, #222f5b 11%, #222f5b 45%, #222f5b 45%, #334174 95%, #334174 99%, #222f5b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #334275 0%,#222f5b 0%,#222f5b 11%,#222f5b 45%,#222f5b 45%,#334174 95%,#334174 99%,#222f5b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #334275 0%,#222f5b 0%,#222f5b 11%,#222f5b 45%,#222f5b 45%,#334174 95%,#334174 99%,#222f5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334275', endColorstr='#222f5b',GradientType=1 ); /* IE6-9 */
 }
 .t-laranja-2{
   color:#ea8110;
