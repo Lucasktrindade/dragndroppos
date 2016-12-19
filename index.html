@@ -6,135 +6,620 @@
     <title>Drag and Drop Unigranrio</title>
     <link rel="icon" href="img/GloboUnigranrio.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/estrutura.css">
-    <link rel="stylesheet" href="css/tabela.css">
     <link rel="stylesheet" href="css/pandora.css"/>
     <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body onload="main()">
-    <section class="draggable no-print">
-      <div class="container">
-        <div class="row">
-          <div class="column col-m-6 col-3">
-            <div class="drag sombra-1 t-centro" data-id="1">
-              <h3>RH</h3>
+    <section class="draggable no-print relative">
+      <div class="container-fluid">
+        <div class="pelicula gradiente"></div>
+        <div class="container">
+          <div class="row">
+            <div class="column col-m-12">
+              <h2 class="t-laranja t-centro subtitle">Gerencie a sua carreira</h2>
             </div>
           </div>
-          <div class="column col-m-6 col-3">
-            <div class="drag sombra-1 t-centro" data-id="2">
-              <h3>Logística</h3>
+          <div class="row">
+            <div class="column col-m-3">
+              <div class="drag t-centro centralizado" data-id="1">
+                <h3>Recursos Humanos</h3>
+              </div>
             </div>
-          </div>
-          <div class="column col-m-6 col-3">
-            <div class="drag sombra-1 t-centro" data-id="3">
-              <h3>Marketing</h3>
+            <div class="column col-m-3">
+              <div class="drag t-centro centralizado" data-id="2">
+                <h3>Logística</h3>
+              </div>
             </div>
-          </div>
-          <div class="column col-m-6 col-3">
-            <div class="drag sombra-1 t-centro" data-id="4">
-              <h3>Finanças</h3>
+            <div class="column col-m-3">
+              <div class="drag t-centro centralizado" data-id="3">
+                <h3>Marketing</h3>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="droppable no-print">
-      <div class="container">
-        <div class="row">
-          <div class="column col-12">
-
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="page-break"></div>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="column col-m-12 col-t-2">
-            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
-              <h3><span class="areas"></span></h3>
-            </div>
-          </div>
-          <div class="column col-m-12 col-t-6">
-            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
-              <h3 class="spec-name"></h3>
-            </div>
-          </div>
-          <div class="column col-m-12 col-t-4">
-            <div class="certificado t-branco bg-unigranrio-azul sombra-1">
-              <h3><span class="meses"></span> - <span class="hours"></span>hrs</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="page-break"></div>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="column col-m-12 col-t-6">
-            <div class="card sombra-1 padding15 bg-unigranrio-azul-claro t-branco">
-              <div class="card-header">
-                <div class="row flex-center">
-                  <div class="column col-m-1">
-                    <img src="img/goal-white.png" alt="" class="esquerdo no-print">
-                    <img src="img/goal-black.png" alt="" class="esquerdo print sumir">
-                  </div>
-                  <div class="column col-m-11">
-                    <h3>Objetivos</h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="column col-m-12">
-                    <div class="card-content">
-                      <p class="goal"></p>
-                    </div>
-                  </div>
-                </div>
+            <div class="column col-m-3">
+              <div class="drag t-centro centralizado" data-id="4">
+                <h3>Finanças</h3>
               </div>
             </div>
           </div>
-          <div class="column col-m-12 col-t-6">
-            <div class="card sombra-1 padding15 bg-unigranrio-azul-claro t-branco">
-              <div class="card-header">
-                <div class="row flex-center">
-                  <div class="column col-m-1">
-                    <img src="img/documents-white.png" alt="" class="esquerdo no-print">
-                    <img src="img/documents-black.png" alt="" class="esquerdo print sumir">
-                  </div>
-                  <div class="column col-m-11">
-                    <h3>Competências</h3>
-                  </div>
+        </div>
+      </div>
+    </section>
+    <section class="no-print">
+      <div class="container">
+        <div class="row">
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="page-break"></div>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="column col-m-12 certificado t-branco bg-unigranrio-azul">
+            <div class="container">
+              <div class="row line-info sumir">
+                <div class="column col-m-12 col-2">
+                  <h3><span class="areas"></span></h3>
                 </div>
-                <div class="row">
-                  <div class="column col-m-12">
-                    <div class="card-content">
-                      <p class="skill"></p>
-                    </div>
-                  </div>
+                <div class="column col-m-12 col-6">
+                  <h3 class="spec-name"></h3>
                 </div>
+                <div class="column col-m-12 col-4">
+                  <h3><span class="meses"></span> - <span class="hours"></span>hrs</h3>
+                </div>
+              </div>
+              <div class="column col-m-12 t-centro line-mensagem">
+                <p class="mensagem-none"></p>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="column col-m-12">
-            <div class="alert-box bg-unigranrio-vermelho t-branco t-centro sumir no-print">
-              <h3>Curso de 180hs é apenas uma trilha a cada 15 dias.</h3>
+            <div class="column col-m-12 card gradiente t-azul-escuro">
+              <div class="container">
+                  <div class="column col-m-12 col-t-6 card-content">
+                    <div class="row">
+                      <div class="column col-m-1">
+                        <img src="img/goal.png" alt="" class="esquerdo no-print">
+                      </div>
+                      <div class="column col-m-11">
+                        <h3 class="card-header">Objetivos</h3>
+                        <p class="goal"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column col-m-12 col-t-6 card-content">
+                    <div class="row">
+                      <div class="column col-m-1">
+                        <img src="img/documents.png" alt="" class="esquerdo no-print">
+                      </div>
+                      <div class="column col-m-11">
+                        <h3 class="card-header">Competências</h3>
+                        <p class="skill"></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
-    <div class="page-break"></div>
     <section>
       <div class="container">
         <div class="row">
-          <div class="column col-m-12"></div>
-        </div>
-        <div class="row">
           <div class="column col-m-12">
-            <h3>Grade Horária da seleção:</h3>
+            <h3 class="t-centro t-laranja-2 subtitle">Grade Horária da seleção</h3>
+          </div>
+        </div>
+        <div class="row table-hour t-azul-escuro t-centro">
+          <div class="column col-m-12">
+            <div class="row line-azul flex-center">
+              <div class="column col-m-2 header-cell">
+                  <h3>1ª Semestre</h3>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Segunda</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Terça</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quarta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quinta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Sexta</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>1ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 1</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>2ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 2</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>3ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 1</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>4ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row table-hour t-azul-escuro t-centro">
+          <div class="column col-m-12">
+            <div class="row line-azul flex-center">
+              <div class="column col-m-2 header-cell">
+                  <h3>2ª Semestre</h3>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Segunda</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Terça</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quarta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quinta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Sexta</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>1ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 3</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>2ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 4</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>3ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 3</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>4ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-marketing sumir">Marketing</span></span></p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-rh sumir">Recursos Humanos</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-logistica sumir">Logística</p>
+                  </div>
+                </div>
+                <div class="row line-azul">
+                  <div class="column col-m-12">
+                    <p class="hour"><span class="hour-financas sumir">Finanças</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p>Trilha 4</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="row">
+          <div class="column col-m-12">
             <h5>Semestre 1</h5>
             <table class="table table-responsive">
               <thead>
@@ -145,7 +630,6 @@
                     <th>Quarta</th>
                     <th>Quinta</th>
                     <th>Sexta</th>
-                    <!--<th colspan="2">Sábado</th>-->
                 </tr>
               </thead>
               <tbody>
@@ -158,8 +642,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 1</td>
-                    <!--<td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
-                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -178,8 +660,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 2</td>
-                    <!--<td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
-                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -198,8 +678,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 1</td>
-                    <!--<td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
-                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -218,8 +696,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 2</td>
-                    <!--<td rowspan="2"><span class="hour hour-marketing">Marketing</span></td>
-                    <td rowspan="2"><span class="hour hour-logistica">Logística</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -230,9 +706,8 @@
               </tbody>
             </table>
           </div>
-        </div>
-        <div class="page-break"></div>
-        <div class="row">
+        </div>-->
+        <!--<div class="row">
           <div class="column col-m-12">
             <h5>Semestre 2</h5>
             <table class="table table-responsive">
@@ -244,7 +719,6 @@
                     <th>Quarta</th>
                     <th>Quinta</th>
                     <th>Sexta</th>
-                    <!--<th colspan="2">Sábado</th>-->
                 </tr>
               </thead>
               <tbody>
@@ -257,8 +731,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 3</td>
-                    <!--<td rowspan="2"><span class="hour hour-rh">RH</span></td>
-                    <td rowspan="2"><span class="hour hour-financas">Finanças</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -277,8 +749,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 4</td>
-                    <!--<td rowspan="2"><span class="hour hour-rh">RH</span></td>
-                    <td rowspan="2"><span class="hour hour-financas">Finanças</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -297,8 +767,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 3</td>
-                    <!--<td rowspan="2"><span class="hour hour-rh">RH</span></td>
-                    <td rowspan="2"><span class="hour hour-financas">Finanças</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -317,8 +785,6 @@
                     <td><span class="hour hour-marketing">Marketing</span></td>
                     <td><span class="hour hour-logistica">Logística</span></td>
                     <td rowspan="2" class="bg-unigranrio-azul-claro2">Trilha 4</td>
-                    <!--<td rowspan="2"><span class="hour hour-rh">RH</span></td>
-                    <td rowspan="2"><span class="hour hour-financas">Finanças</span></td>-->
                 </tr>
                 <tr>
                     <td><span class="hour hour-rh">RH</span></td>
@@ -329,12 +795,12 @@
               </tbody>
             </table>
           </div>
-        </div>
-        <div class="row no-print">
+        </div>-->
+        <!--<div class="row no-print">
           <div class="column col-m-12">
             <button type="button" name="button" onclick="window.print()" class="centralizado botao-cinza button-print bg-unigranrio-verde">Imprimir ficha de intenção</button>
           </div>
-        </div>
+        </div>-->
       </div>
     </section>
 

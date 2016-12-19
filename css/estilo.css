@@ -1,38 +1,99 @@
 @charset "UTF-8";
-.draggable,.droppable{
-  min-height: 150px;
-  border: 1px solid #f1f1f1;
-  padding: 1em;
-  margin: 1em 0.5em;
-  cursor: move;
-}
 .drag{
   background-color: #FEFEFE;
-  border: 3px solid #09213d;
-  border-radius: 2px;
-  padding: 1em;
-  margin: 0.5em 0.15em;
+  border: 3px solid #83b1e0;
+  border-radius: 100%;
+  cursor: move;
+  z-index: 5;
+  display: table;
 }
-.droppable{
-  background-color: #f1f1f1;
+.drag h3{
+  display: table-cell; vertical-align: middle;
 }
-.certificado,.alert-box{
+.gradiente{
+  background: -moz-radial-gradient(center, ellipse cover, #feffff 0%, #e7effa 99%, #e7effa 100%); /* ff3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #feffff), color-stop(99%, #e7effa), color-stop(100%, #e7effa)); /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, #feffff 0%, #e7effa 99%, #e7effa 100%); /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, #feffff 0%, #e7effa 99%, #e7effa 100%); /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, #feffff 0%, #e7effa 99%, #e7effa 100%); /* ie10+ */
+  background: radial-gradient(ellipse at center, #feffff 0%, #e7effa 99%, #e7effa 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#e7effa',GradientType=1 ); /* ie6-9 */
+}
+.pelicula{
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 0;
+  left: 0;
+}
+.card{
   padding: 0.5em;
   width: 100%;
-  height: 100px;
-  border-radius: 2px;
+  min-height: 100px;
+}
+.card-header{
+  vertical-align: text-top;
+  display: table-cell;
+}
+.card-content{
+  margin-top: 1em;
+}
+.droppable{
+  border: 3px dashed #83b1e0;
+  border-radius: 100%;
+  margin-top: 1em;
+  background-color: #FEFEFE;
+  display: table;
+}
+.text-drop{
+  text-align: center;
+  font-size: 0.75rem;
+}
+.text-center{
+  display: table-cell; vertical-align: middle;
+}
+.display-table{
+  display: table;
+}
+.certificado{
+  padding: 0.5em;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 1em;
 }
 .card{
   width: 100%;
   min-height: 100px;
-  margin: 1em auto;
-  border-radius: 2px;
+}
+.card p{
+  margin: 0;
 }
 .hour{
-  display: none;
+  min-height: 30px;
 }
 .button-print{
   margin-bottom: 1em;
   width: auto;
   border-radius: 2px;
+}
+.t-laranja-2{
+  color:#ea8110;
+}
+.t-azul-escuro{
+  color: #222f5b;
+}
+.table-hour{
+  margin: 1em auto;
+}
+.header-cell, .body-cell{
+  border-left: 1px solid #fff;
+}
+.body-table{
+  border-bottom: 1px solid #eff5fc;
+}
+.line-azul{
+  background-color: #eff5fc;
+}
+.subtitle{
+  font-family: Arial, Helvetica, sans-serif;
 }

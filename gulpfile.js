@@ -4,7 +4,7 @@ var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 
-gulp.task('default', ['sass:watch','webserver','css', 'scripts']);
+gulp.task('default', ['sass:watch','webserver']);
 
 gulp.task('sass', function () {
   return gulp.src('./css/**/*.scss')
@@ -26,7 +26,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src(['./css/estrutura.css','./css/tabela.css','./css/pandora.css',  './css/estilo.css'])
+  return gulp.src(['./css/estrutura.css','./css/pandora.css',  './css/estilo.css'])
     .pipe(concat('bundle.css'))
     .pipe(minifyCSS({keepBreaks:false}))
     .pipe(gulp.dest('./css/'));

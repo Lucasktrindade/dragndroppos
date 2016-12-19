@@ -116,6 +116,26 @@ var main = (function init(){
       "descricao":"Fazer compreender a importância do domínio das variáveis de gestão da logística integral da organização, que inclui todas as atividades do processo de compras, produção, movimentação e entregas, avaliando os impactos financeiros destas atividades na gestão organizacional.",
       "total":200
     },
+    {
+      "id":7,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas na área de marketing como sendo fundamentais para o processo efetivo de atendimento e a geração de vantagens competitivas para as organizações.",
+      "total":15
+    },
+    {
+      "id":8,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas na área de  logística como sendo fundamentais para o processo efetivo de disponibilização adequada de bens e serviços aos clientes e consumidores.",
+      "total":10
+    },
+    {
+      "id":9,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas na área de  finanças  como sendo fundamentais para o sucesso organizacional.",
+      "total":20
+    },
+    {
+      "id":10,
+      "descricao":"Fazer compreender a importância do domínio das ferramentas na área de gestão de pessoas, considerando os impactos da participação das pessoas, da liderança e da organização de pessoal nos resultados da organização.",
+      "total":5
+    },
   ];
   const skills = [
     {
@@ -147,6 +167,26 @@ var main = (function init(){
       "id":6,
       "descricao":"Ao final de curso o participante estará apto a entender a importância das práticas das atividades logísticas de planejamento de compras, produção, movimentação, entregas e logística reversa, bem como a sua influência nos resultados financeiros de avaliação de investimentos, retornos financeiros, fluxos de caixa e de análise de recursos utilizados pelas equipes",
       "total":200
+    },
+    {
+      "id":7,
+      "descricao":"Ao final do curso, o participante estará apto a compreender o mercado, planejar o composto de marketing e a desenvolver e implementar estratégias mercadológicas, de forma a potencializar os recursos organizacionais, conforme previsto no plano de marketing.",
+      "total":15
+    },
+    {
+      "id":8,
+      "descricao":"Ao final do curso, o participante estará apto a implementar estratégias logísticas que assegurem a disponibilização de bens e serviços, a partir da adequação dos fluxos - de informações e físicos.",
+      "total":10
+    },
+    {
+      "id":9,
+      "descricao":"Ao final do curso, o participante estará apto a desenvolver políticas de gestão financeira que atendam às especificidades do mercado.",
+      "total":20
+    },
+    {
+      "id":10,
+      "descricao":"Ao final do curso, o participante estará apto a compreender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, no sucesso da empresa.",
+      "total":5
     },
   ]
 
@@ -189,7 +229,7 @@ var main = (function init(){
 
   let added = function alterElement(element,bool){
       if(bool){
-        element.addClass('.dropped');
+        element.addClass('dropped');
         return true;
       }else{
         return false;
@@ -241,22 +281,29 @@ var paint = (function init(courses,goals,skills){
         $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão');
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
+        $('.alert-box').fadeIn();
+        let goal1 = findGoal(goals,courses[0].peso);
+        let skill1 = findSkill(skills, courses[0].peso)
+        $('.goal').html(goal1[0].descricao);
+        $('.skill').html(skill1[0].descricao);
         break;
     case 2:
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de Especialização em Gestão');
         $('.meses').html('6 meses de duração');
         $('.hours').html((courses.length*180)+90);
-        let goal = findGoal(goals,peso(courses));
-        let skill = findSkill(skills, peso(courses))
-        $('.goal').html(goal[0].descricao);
-        $('.skill').html(skill[0].descricao);
+        $('.alert-box').fadeOut();
+        let goal2 = findGoal(goals,peso(courses));
+        let skill2 = findSkill(skills, peso(courses))
+        $('.goal').html(goal2[0].descricao);
+        $('.skill').html(skill2[0].descricao);
         break;
     case 3:
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
         $('.hours').html((courses.length*180)+90 );
+        $('.alert-box').fadeOut();
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
@@ -264,6 +311,7 @@ var paint = (function init(courses,goals,skills){
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
+        $('.alert-box').fadeOut();
         $('.hours').html((courses.length*180)+90);
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
@@ -273,5 +321,8 @@ var paint = (function init(courses,goals,skills){
        $('.spec-name').html('Nenhum curso selecionado');
        $('.meses').html('0 de duração');
        $('.hours').html('0');
+       $('.skill').html('');
+       $('.goal').html('');
+       $('.alert-box').fadeOut();
     }
 });
