@@ -733,6 +733,11 @@ a:hover {
 .certificado {
   overflow: hidden; }
 
+.cont {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .col-m-1 {
   width: 8.33333%; }
 
@@ -815,10 +820,10 @@ a:hover {
 .container-fluid {
   width: 100%; }
 
-.droppable, .drag {
+.droppable, .drag, .drag-holder {
   width: 70px;
   height: 70px; }
-  .droppable h3, .drag h3 {
+  .droppable h3, .drag h3, .drag-holder h3 {
     font-size: 0.65em; }
 
 @media only screen and (min-width: 768px) {
@@ -888,10 +893,10 @@ a:hover {
     left: 100%; }
   .col-t-12 + .col-t-12 {
     margin-left: 0; }
-  .drag, .droppable {
+  .drag, .droppable, .drag-holder {
     width: 150px;
     height: 150px; }
-    .drag h3, .droppable h3 {
+    .drag h3, .droppable h3, .drag-holder h3 {
       font-size: 1.17em; }
   .table-hour .header-cell h3 {
     font-size: 1.17em; }
@@ -907,7 +912,9 @@ a:hover {
   .line-esq:after {
     left: 13.5%; }
   .line-esq:before {
-    right: -0.4%; } }
+    right: -0.4%; }
+  .cont {
+    width: 68%; } }
 
 @media only screen and (min-width: 992px) {
   html, body {

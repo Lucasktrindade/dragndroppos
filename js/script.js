@@ -184,16 +184,25 @@ var main = (function init(){
     return elements.filter(o => o.id == id);
   };
   paint(cart());
-
-  $( ".drag" ).draggable();
+  $( ".drag" ).draggable({
+      revert : function(event, ui) {
+            $(this).data("uiDraggable").originalPosition = {
+                top : 0,
+                left : 0
+            };
+            return !event;
+        }
+      });
   $(".droppable" ).droppable({
       accept: ".drag",
       drop: function( event, ui ) {
+        ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
         addNumber( ui.draggable, ui.draggable.data('id') );
         hourIn(ui.draggable.data('id'));
         return paint(cart(),goals,skills);
       },
       out: function ( event,ui ){
+        ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
         removeNumber( ui.draggable, ui.draggable.data('id') );
         hourOut(ui.draggable.data('id'));
         return paint(cart(),goals,skills);
@@ -262,7 +271,7 @@ var paint = (function init(courses,goals,skills){
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
-        $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão');
+        $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão '+courses[0].nome);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
         let goal1 = findGoal(goals,courses[0].peso);
