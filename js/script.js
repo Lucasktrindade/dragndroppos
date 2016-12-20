@@ -15,7 +15,7 @@ var main = (function init(){
   };
   const elements = [
        {
-          "nome":"RH",
+          "nome":"Recursos Humanos",
           "slug":"rh",
           "dropped":false,
           "cargaHoraria":180,
