@@ -4,11 +4,20 @@
   border: 3px solid #83b1e0;
   border-radius: 100%;
   cursor: move;
-  z-index: 5;
+  z-index: 9999;
   display: table;
 }
 .drag h3{
   display: table-cell; vertical-align: middle;
+}
+.drag-holder{
+  background-color: #FEFEFE;
+  border: 3px solid #83b1e0;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 0;
 }
 .gradiente{
   background: -moz-radial-gradient(center, ellipse cover, #feffff 0%, #e7effa 99%, #e7effa 100%); /* ff3.6+ */
@@ -34,6 +43,7 @@
 .card-header{
   vertical-align: text-top;
   display: table-cell;
+  padding-left: 0.5em;
 }
 .card-content{
   margin-top: 1em;

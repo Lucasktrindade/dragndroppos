@@ -557,6 +557,11 @@ a:hover {
 .certificado{
   overflow: hidden;
 }
+.cont{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 @for $i from 1 through $grid-columns {
   .col-m-#{$i} {
     width:(($scw * $i) + ($mr * ($i - 1)));
@@ -582,7 +587,7 @@ a:hover {
 .flex-center{
     @extend %center;
 }
-.droppable,.drag{
+.droppable,.drag,.drag-holder{
   width: 70px;
   height: 70px;
   h3{
@@ -615,7 +620,7 @@ a:hover {
     }
   }
 
-  .drag,.droppable{
+  .drag,.droppable,.drag-holder{
     width: 150px;
     height: 150px;
     h3{
@@ -643,6 +648,9 @@ a:hover {
   }
   .line-esq:before{
     right: -0.4%;
+  }
+  .cont{
+    width: 68%;
   }
 }
 
