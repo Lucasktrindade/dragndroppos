@@ -512,7 +512,51 @@ a:hover {
   min-height: 50px;
   margin:0;
 }
-
+.line,.line-center{
+  width:71%;
+  height: 2px;
+  border: 1px solid #83b1e0;
+  position: relative;
+  margin: 1em auto;
+}
+.line-center{
+  width:100%;
+}
+.line-dir:after,.line-dir:before,.line-center:after{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #83b1e0;
+}
+.line-dir:after{
+  left: -1%;
+}
+.line-dir:before{
+  right: 12%;
+}
+.line-center:after{
+  left: 50%;
+}
+.line-esq:after,.line-esq:before{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: #83b1e0;
+}
+.line-esq:after{
+  left: 12%;
+}
+.line-esq:before{
+  right: -1%;
+}
+.up:before,.up:after{
+  bottom: 0;
+}
+.certificado{
+  overflow: hidden;
+}
 @for $i from 1 through $grid-columns {
   .col-m-#{$i} {
     width:(($scw * $i) + ($mr * ($i - 1)));
@@ -584,6 +628,21 @@ a:hover {
   .hour{
     min-height: 30px;
     margin: 0.5em;
+  }
+  .line{
+    width:71%;
+  }
+  .line-dir:after{
+    left: -0.4%;
+  }
+  .line-dir:before{
+    right: 13.5%
+  }
+  .line-esq:after{
+    left: 13.5%;
+  }
+  .line-esq:before{
+    right: -0.4%;
   }
 }
 
