@@ -15,7 +15,7 @@ var main = (function init(){
   };
   const elements = [
        {
-          "nome":"Recursos Humanos",
+          "nome":"RH",
           "slug":"rh",
           "dropped":false,
           "cargaHoraria":180,
@@ -170,7 +170,7 @@ var main = (function init(){
       "descricao":"Ao final do curso, o participante estará apto a compreender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, no sucesso da empresa.",
       "total":5
     },
-  ]
+  ];
 
   let dropped = function count(){
     return $('.draggable .dropped').length;
@@ -267,13 +267,13 @@ var paint = (function init(courses,goals,skills){
   let findSkill = function find(skills,value){
     return skills.filter(o => o.total == value);
   }
-  
+
   switch(courses.length) {
     case 1:
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
-        $('.spec-name').html('Certificado de Aperfeiçoamento em Gestão '+courses[0].nome);
+        $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
         let goal1 = findGoal(goals,courses[0].peso);
@@ -285,7 +285,7 @@ var paint = (function init(courses,goals,skills){
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
-        $('.spec-name').html('Certificado de Especialização em Gestão');
+        $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
         $('.meses').html('6 meses de duração');
         $('.hours').html((courses.length*180)+90);
         let goal2 = findGoal(goals,peso(courses));
