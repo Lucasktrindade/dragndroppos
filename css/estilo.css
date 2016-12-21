@@ -76,6 +76,7 @@
 }
 .card p{
   margin: 0;
+  padding-left: 0.5em;
 }
 .button-print{
   margin-bottom: 1em;
@@ -110,6 +111,6 @@
 .line-azul{
   background-color: #eff5fc;
 }
-.subtitle{
+.subtitle,.title{
   font-family: Arial, Helvetica, sans-serif;
 }

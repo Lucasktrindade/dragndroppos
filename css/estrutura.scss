@@ -562,6 +562,10 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.title{
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
 @for $i from 1 through $grid-columns {
   .col-m-#{$i} {
     width:(($scw * $i) + ($mr * ($i - 1)));
@@ -651,6 +655,17 @@ a:hover {
   }
   .cont{
     width: 68%;
+
+    .col-8{
+      width: 50%;
+    }
+    .col-2{
+      width: 25%;
+    }
+  }
+  .title{
+    font-size: 1.75rem;
+    margin-bottom: 0;
   }
 }
 

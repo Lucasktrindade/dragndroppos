@@ -738,6 +738,10 @@ a:hover {
   margin-left: auto;
   margin-right: auto; }
 
+.title {
+  font-size: 1.75rem;
+  margin-bottom: 0; }
+
 .col-m-1 {
   width: 8.33333%; }
 
@@ -914,7 +918,14 @@ a:hover {
   .line-esq:before {
     right: -0.4%; }
   .cont {
-    width: 68%; } }
+    width: 68%; }
+    .cont .col-8 {
+      width: 50%; }
+    .cont .col-2 {
+      width: 25%; }
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 0; } }
 
 @media only screen and (min-width: 992px) {
   html, body {
