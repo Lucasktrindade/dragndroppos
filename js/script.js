@@ -183,32 +183,33 @@ var main = (function init(){
   let findById = function find(id){
     return elements.filter(o => o.id == id);
   };
-  paint(cart());
-  $( ".drag" ).draggable({
-      revert : function(event, ui) {
-            $(this).data("uiDraggable").originalPosition = {
-                top : 0,
-                left : 0
-            };
-            return !event;
-        }
-      });
-  $(".droppable" ).droppable({
-      accept: ".drag",
-      drop: function( event, ui ) {
-        ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-        addNumber( ui.draggable, ui.draggable.data('id') );
-        hourIn(ui.draggable.data('id'));
-        return paint(cart(),goals,skills);
-      },
-      out: function ( event,ui ){
-        ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-        removeNumber( ui.draggable, ui.draggable.data('id') );
-        hourOut(ui.draggable.data('id'));
-        return paint(cart(),goals,skills);
-      }
-  });
 
+  paint(cart());
+
+  $( ".drag" ).draggable({revert : revertElement});
+  $(".droppable" ).droppable({accept: ".drag",drop: onDrop,out: onOut});
+
+  function onDrop (event, ui){
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    addNumber( ui.draggable, ui.draggable.data('id') );
+    hourIn(ui.draggable.data('id'));
+    paint(cart(),goals,skills);
+    return true;
+  }
+  function onOut( event, ui){
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    removeNumber( ui.draggable, ui.draggable.data('id') );
+    hourOut(ui.draggable.data('id'));
+    paint(cart(),goals,skills);
+    return true;
+   }
+  function revertElement( event, ui){
+    $(this).data("uiDraggable").originalPosition = {
+        top : 0,
+        left : 0
+    };
+    return !event;
+  }
   let addNumber = function dropCount(element, number){
     if(dropped() > 4){
       return added(element, false);
@@ -234,7 +235,6 @@ var main = (function init(){
             numberId.splice(i, 1);
         }
       }
-
       return true;
   };
 
@@ -257,6 +257,7 @@ var main = (function init(){
 });
 
 var paint = (function init(courses,goals,skills){
+
   let peso = function peso(objs){
     return objs.reduce((prev,current) => prev.peso*current.peso);
   }
@@ -266,6 +267,7 @@ var paint = (function init(courses,goals,skills){
   let findSkill = function find(skills,value){
     return skills.filter(o => o.total == value);
   }
+  
   switch(courses.length) {
     case 1:
         $('.line-info').show();

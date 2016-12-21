@@ -111,6 +111,6 @@
 .line-azul{
   background-color: #eff5fc;
 }
-.subtitle{
+.subtitle,.title{
   font-family: Arial, Helvetica, sans-serif;
 }
