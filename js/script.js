@@ -13,58 +13,46 @@ var main = (function init(){
      ],
      "id":1
   };
+
+  //combDay são os dias de cada curso
+  // 1 = Seg e Quar 1st semestre
+  // 2 = Ter e Qui  1st semestre
   const elements = [
        {
           "nome":"RH",
           "slug":"rh",
           "dropped":false,
           "cargaHoraria":180,
-          "disciplinas":[
-            {
-              "nome":"RH"
-            }
-          ],
           "id":1,
-          "peso":5
+          "peso":5,
+          "combDay":1,
        },
        {
           "nome":"Logística",
           "slug":"logistica",
           "dropped":false,
           "cargaHoraria":180,
-          "disciplinas":[
-            {
-              "nome":"Logística"
-            }
-          ],
           "id":2,
-          "peso":10
+          "peso":10,
+          "combDay":2,
        },
        {
           "nome":"Marketing",
           "slug":"marketing",
           "dropped":false,
           "cargaHoraria":180,
-          "disciplinas":[
-            {
-              "nome":"Marketing"
-            }
-          ],
           "id":3,
-          "peso":15
+          "peso":15,
+          "combDay":1,
        },
        {
           "nome":"Finanças",
           "slug":"financas",
           "dropped":false,
           "cargaHoraria":180,
-          "disciplinas":[
-            {
-              "nome":"Finanças"
-            }
-          ],
           "id":4,
-          "peso":20
+          "peso":20,
+          "combDay":1,
        },
   ];
   const goals = [
@@ -171,6 +159,36 @@ var main = (function init(){
       "total":5
     },
   ];
+  const grade = [
+    {
+      "id":1,
+      "dia":1,
+      "class": "segunda-1",
+      "combDay":1,
+      "curso": "",
+    },
+    {
+      "id":2,
+      "dia":2,
+      "class": "terca-1",
+      "combDay":2,
+      "curso": ""
+    },
+    {
+      "id":3,
+      "dia":3,
+      "class": "quarta-1",
+      "combDay":1,
+      "curso": "",
+    },
+    {
+      "id":4,
+      "dia":4,
+      "class": "quinta-1",
+      "combDay":2,
+      "curso": "",
+    },
+  ]
 
   let dropped = function count(){
     return $('.draggable .dropped').length;
@@ -192,17 +210,17 @@ var main = (function init(){
   function onDrop (event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     addNumber( ui.draggable, ui.draggable.data('id') );
-    hourIn(ui.draggable.data('id'));
-    paint(cart(),goals,skills);
+    paint(cart(),goals,skills, grade);
     return true;
   }
+
   function onOut( event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     removeNumber( ui.draggable, ui.draggable.data('id') );
-    hourOut(ui.draggable.data('id'));
-    paint(cart(),goals,skills);
+    paint(cart(),goals,skills, grade);
     return true;
    }
+
   function revertElement( event, ui){
     $(this).data("uiDraggable").originalPosition = {
         top : 0,
@@ -210,6 +228,7 @@ var main = (function init(){
     };
     return !event;
   }
+
   let addNumber = function dropCount(element, number){
     if(dropped() > 4){
       return added(element, false);
@@ -237,26 +256,17 @@ var main = (function init(){
       }
       return true;
   };
-
-  let hourIn =  function show(id){
-    let element = findById(id);
-    if(!element[0].dropped){
-      element[0].dropped = true;
-      $('.hour-'+element[0].slug).fadeIn();
-    }
-  };
-
-  let hourOut =  function show(id){
-    let element = findById(id);
-      if(element[0].dropped){
-        element[0].dropped = false;
-        $('.hour-'+element[0].slug).fadeOut();
+  let paintCoursesDay = function find(grades){
+    grades.forEach(
+      function(o){
+        $('.'+o.class).html(o.curso);
       }
-  };
+    );
+  }
 
 });
 
-var paint = (function init(courses,goals,skills){
+var paint = (function init(courses,goals,skills, grade){
 
   let peso = function peso(objs){
     return objs.reduce((prev,current) => prev.peso*current.peso);
@@ -267,56 +277,53 @@ var paint = (function init(courses,goals,skills){
   let findSkill = function find(skills,value){
     return skills.filter(o => o.total == value);
   }
+  let getCoursesDay = function find(grade,courses){
+
+  }
+
 
   switch(courses.length) {
     case 1:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
         $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
+        $('.trilha1').show();
         let goal1 = findGoal(goals,courses[0].peso);
         let skill1 = findSkill(skills, courses[0].peso)
         $('.goal').html(goal1[0].descricao);
         $('.skill').html(skill1[0].descricao);
         break;
     case 2:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
         $('.meses').html('6 meses de duração');
         $('.hours').html((courses.length*180)+90);
+        $('.trilha2').show();
         let goal2 = findGoal(goals,peso(courses));
         let skill2 = findSkill(skills, peso(courses))
         $('.goal').html(goal2[0].descricao);
         $('.skill').html(skill2[0].descricao);
         break;
     case 3:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
         $('.hours').html((courses.length*180)+90 );
+        $('.trilha3').show();
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     case 4:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
-        $('.alert-box').fadeOut();
         $('.hours').html((courses.length*180)+90);
+        $('.trilha4').show();
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     default:
-       $('.line-info').hide();
-       $('.line-mensagem').show();
        $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
        $('.skill').html('');
        $('.goal').html('');
