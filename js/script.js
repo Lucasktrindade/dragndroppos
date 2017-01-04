@@ -21,7 +21,6 @@ var main = (function init(){
        {
           "nome":"RH",
           "slug":"rh",
-          "dropped":false,
           "cargaHoraria":180,
           "id":1,
           "peso":5,
@@ -30,7 +29,6 @@ var main = (function init(){
        {
           "nome":"Logística",
           "slug":"logistica",
-          "dropped":false,
           "cargaHoraria":180,
           "id":2,
           "peso":10,
@@ -39,7 +37,6 @@ var main = (function init(){
        {
           "nome":"Marketing",
           "slug":"marketing",
-          "dropped":false,
           "cargaHoraria":180,
           "id":3,
           "peso":15,
@@ -48,7 +45,6 @@ var main = (function init(){
        {
           "nome":"Finanças",
           "slug":"financas",
-          "dropped":false,
           "cargaHoraria":180,
           "id":4,
           "peso":20,
@@ -165,28 +161,28 @@ var main = (function init(){
       "dia":1,
       "class": "segunda-1",
       "combDay":1,
-      "curso": "",
+      "curso": 0,
     },
     {
       "id":2,
       "dia":2,
       "class": "terca-1",
       "combDay":2,
-      "curso": ""
+      "curso": 0,
     },
     {
       "id":3,
       "dia":3,
       "class": "quarta-1",
       "combDay":1,
-      "curso": "",
+      "curso": 0,
     },
     {
       "id":4,
       "dia":4,
       "class": "quinta-1",
       "combDay":2,
-      "curso": "",
+      "curso": 0,
     },
   ]
 
@@ -210,14 +206,16 @@ var main = (function init(){
   function onDrop (event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     addNumber( ui.draggable, ui.draggable.data('id') );
-    paint(cart(),goals,skills, grade);
+    paintCoursesDay(cart(),grade);
+    paint(cart(),goals,skills);
     return true;
   }
 
   function onOut( event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     removeNumber( ui.draggable, ui.draggable.data('id') );
-    paint(cart(),goals,skills, grade);
+    paintCoursesDay(cart(),grade);
+    paint(cart(),goals,skills);
     return true;
    }
 
@@ -231,7 +229,7 @@ var main = (function init(){
 
   let addNumber = function dropCount(element, number){
     if(dropped() > 4){
-      return added(element, false);
+      return false
     }else{
       numberId.push(number);
       return added(element, true);
@@ -242,9 +240,8 @@ var main = (function init(){
       if(bool){
         element.addClass('dropped');
         return true;
-      }else{
-        return false;
       }
+      return false;
   }
 
   let removeNumber = function dropCount(element,number){
@@ -256,17 +253,15 @@ var main = (function init(){
       }
       return true;
   };
-  let paintCoursesDay = function find(grades){
-    grades.forEach(
-      function(o){
-        $('.'+o.class).html(o.curso);
-      }
-    );
+  let paintCoursesDay = function find(courses,grades){
+    courses.forEach(function(o){
+      console.log(o);
+    })
   }
 
 });
 
-var paint = (function init(courses,goals,skills, grade){
+var paint = (function init(courses,goals,skills){
 
   let peso = function peso(objs){
     return objs.reduce((prev,current) => prev.peso*current.peso);
@@ -277,10 +272,6 @@ var paint = (function init(courses,goals,skills, grade){
   let findSkill = function find(skills,value){
     return skills.filter(o => o.total == value);
   }
-  let getCoursesDay = function find(grade,courses){
-
-  }
-
 
   switch(courses.length) {
     case 1:
