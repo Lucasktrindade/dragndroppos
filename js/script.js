@@ -48,7 +48,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":4,
           "peso":20,
-          "combDay":1,
+          "combDay":2,
        },
   ];
   const goals = [
@@ -161,31 +161,84 @@ var main = (function init(){
       "dia":1,
       "class": "segunda-1",
       "combDay":1,
-      "curso": 0,
+      "disponivel":true,
+      "curso":"",
     },
     {
       "id":2,
       "dia":2,
       "class": "terca-1",
       "combDay":2,
-      "curso": 0,
+      "disponivel":true,
+      "curso":"",
     },
     {
       "id":3,
       "dia":3,
       "class": "quarta-1",
       "combDay":1,
-      "curso": 0,
+      "disponivel":true,
+      "curso":"",
     },
     {
       "id":4,
       "dia":4,
       "class": "quinta-1",
       "combDay":2,
-      "curso": 0,
+      "disponivel":true,
+      "curso":"",
+    },
+    {
+      "id":5,
+      "dia":1,
+      "class": "segunda-2",
+      "combDay":1,
+      "disponivel":true,
+      "curso":"",
+    },
+    {
+      "id":6,
+      "dia":2,
+      "class": "terca-2",
+      "combDay":2,
+      "disponivel":true,
+      "curso":0,
+    },
+    {
+      "id":7,
+      "dia":3,
+      "class": "quarta-2",
+      "combDay":1,
+      "disponivel":true,
+      "curso":0,
+    },
+    {
+      "id":8,
+      "dia":4,
+      "class": "quinta-2",
+      "combDay":2,
+      "disponivel":true,
+      "curso":0,
     },
   ]
-
+  const trilha = [
+    {
+      "id":1,
+      "nome":"Trilha 1",
+    },
+    {
+      "id":2,
+      "nome":"Trilha 2",
+    },
+    {
+      "id":3,
+      "nome":"Trilha 3",
+    },
+    {
+      "id":4,
+      "nome":"Trilha 4",
+    },
+  ]
   let dropped = function count(){
     return $('.draggable .dropped').length;
   }
@@ -198,6 +251,9 @@ var main = (function init(){
     return elements.filter(o => o.id == id);
   };
 
+  let gradeBycurso = function find(id){
+    return grade.filter(o => o.curso == id );
+  }
   paint(cart());
 
   $( ".drag" ).draggable({revert : revertElement});
@@ -206,7 +262,7 @@ var main = (function init(){
   function onDrop (event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     addNumber( ui.draggable, ui.draggable.data('id') );
-    paintCoursesDay(cart(),grade);
+    paintCoursesDay(ui.draggable.data('id'),grade);
     paint(cart(),goals,skills);
     return true;
   }
@@ -214,7 +270,8 @@ var main = (function init(){
   function onOut( event, ui){
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     removeNumber( ui.draggable, ui.draggable.data('id') );
-    paintCoursesDay(cart(),grade);
+    removeCoursesDay(ui.draggable.data('id'),grade);
+    repaintCoursesDay(cart(),grade);
     paint(cart(),goals,skills);
     return true;
    }
@@ -253,12 +310,36 @@ var main = (function init(){
       }
       return true;
   };
-  let paintCoursesDay = function find(courses,grades){
-    courses.forEach(function(o){
-      console.log(o);
+  let paintCoursesDay = function find(elementId,grades){
+    let element = findById(elementId)[0];
+    let grade = grades.filter((grade) => grade.combDay == element.combDay && grade.disponivel == true);
+    grade.forEach(function(el,index){
+      if(index > 1){
+        return false;
+      }else {
+        el.curso = element.id;
+        el.disponivel = false;
+        $('.'+el.class).html(element.nome)
+      }
     })
   }
-
+  let removeCoursesDay = function find(elementId,grades){
+    let element = findById(elementId)[0];
+    let grade = grades.filter((grade) => grade.curso == element.id && grade.disponivel == false);
+    grade.forEach(function(el,index){
+        el.curso = "";
+        el.disponivel = true;
+        $('.'+el.class).html(el.curso)
+    })
+  }
+  let repaintCoursesDay = function(courses, grades){
+    courses.forEach(function(el){
+      let grade = grades.filter((grade) => grade.combDay == el.combDay && grade.disponivel == true);
+      if(grade != null){
+        console.log(grade);
+      }
+    });
+  }
 });
 
 var paint = (function init(courses,goals,skills){
@@ -275,47 +356,51 @@ var paint = (function init(courses,goals,skills){
 
   switch(courses.length) {
     case 1:
+        $('.trilha1').show();
+        $('.trilha2,.trilha3,.trilha4').hide();
         $('.areas').html(courses.length +' área');
         $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
-        $('.trilha1').show();
         let goal1 = findGoal(goals,courses[0].peso);
         let skill1 = findSkill(skills, courses[0].peso)
         $('.goal').html(goal1[0].descricao);
         $('.skill').html(skill1[0].descricao);
         break;
     case 2:
+        $('.trilha2').show();
+        $('.trilha3,.trilha4').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
         $('.meses').html('6 meses de duração');
         $('.hours').html((courses.length*180)+90);
-        $('.trilha2').show();
         let goal2 = findGoal(goals,peso(courses));
         let skill2 = findSkill(skills, peso(courses))
         $('.goal').html(goal2[0].descricao);
         $('.skill').html(skill2[0].descricao);
         break;
     case 3:
+        $('.trilha3').show();
+        $('.trilha4').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
         $('.hours').html((courses.length*180)+90 );
-        $('.trilha3').show();
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     case 4:
+        $('.trilha4').show();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
         $('.hours').html((courses.length*180)+90);
-        $('.trilha4').show();
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     default:
        $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
+       $('.trilhas').hide();
        $('.skill').html('');
        $('.goal').html('');
     }
