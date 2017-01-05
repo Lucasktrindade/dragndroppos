@@ -376,8 +376,8 @@ var paint = (function init(courses,goals,skills){
 
   switch(courses.length) {
     case 1:
-        $('.trilha1').show();
-        $('.trilha2,.trilha3,.trilha4').hide();
+        $('.trilha1,.line-info').show();
+        $('.trilha2,.trilha3,.trilha4,.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
         $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
         $('.hours').html((courses.length*180));
@@ -388,8 +388,8 @@ var paint = (function init(courses,goals,skills){
         $('.skill').html(skill1[0].descricao);
         break;
     case 2:
-        $('.trilha2').show();
-        $('.trilha3,.trilha4').hide();
+        $('.trilha2,.line-info').show();
+        $('.trilha3,.trilha4,.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
         $('.meses').html('6 meses de duração');
@@ -400,8 +400,8 @@ var paint = (function init(courses,goals,skills){
         $('.skill').html(skill2[0].descricao);
         break;
     case 3:
-        $('.trilha3').show();
-        $('.trilha4').hide();
+        $('.trilha3,.line-info').show();
+        $('.trilha4,.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
@@ -410,7 +410,8 @@ var paint = (function init(courses,goals,skills){
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     case 4:
-        $('.trilha4').show();
+        $('.trilha4,.line-info').show();
+        $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
@@ -419,8 +420,9 @@ var paint = (function init(courses,goals,skills){
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
         break;
     default:
+       $('.line-mensagem').show();
        $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
-       $('.trilhas').hide();
+       $('.trilhas,.line-info').hide();
        $('.skill').html('');
        $('.goal').html('');
     }
