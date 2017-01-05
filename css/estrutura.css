@@ -830,6 +830,12 @@ a:hover {
   .droppable h3, .drag h3, .drag-holder h3 {
     font-size: 0.65em; }
 
+.line-azul h3 {
+  font-size: 1em; }
+
+.body-table p {
+  font-size: 0.8em; }
+
 @media only screen and (min-width: 768px) {
   html, body {
     font-size: 17px; }
@@ -925,7 +931,11 @@ a:hover {
       width: 25%; }
   .title {
     font-size: 1.75rem;
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .line-azul h3 {
+    font-size: 1.17em; }
+  .body-table p {
+    font-size: 1em; } }
 
 @media only screen and (min-width: 992px) {
   html, body {
