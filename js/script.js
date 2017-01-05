@@ -163,6 +163,7 @@ var main = (function init(){
       "combDay":1,
       "disponivel":true,
       "curso":"",
+      "semestre":1,
     },
     {
       "id":2,
@@ -171,6 +172,7 @@ var main = (function init(){
       "combDay":2,
       "disponivel":true,
       "curso":"",
+      "semestre":1,
     },
     {
       "id":3,
@@ -179,6 +181,7 @@ var main = (function init(){
       "combDay":1,
       "disponivel":true,
       "curso":"",
+      "semestre":1,
     },
     {
       "id":4,
@@ -187,6 +190,7 @@ var main = (function init(){
       "combDay":2,
       "disponivel":true,
       "curso":"",
+      "semestre":1,
     },
     {
       "id":5,
@@ -195,6 +199,7 @@ var main = (function init(){
       "combDay":1,
       "disponivel":true,
       "curso":"",
+      "semestre":2,
     },
     {
       "id":6,
@@ -203,6 +208,7 @@ var main = (function init(){
       "combDay":2,
       "disponivel":true,
       "curso":0,
+      "semestre":2,
     },
     {
       "id":7,
@@ -211,6 +217,7 @@ var main = (function init(){
       "combDay":1,
       "disponivel":true,
       "curso":0,
+      "semestre":2,
     },
     {
       "id":8,
@@ -219,6 +226,7 @@ var main = (function init(){
       "combDay":2,
       "disponivel":true,
       "curso":0,
+      "semestre":2,
     },
   ]
   const trilha = [
@@ -334,9 +342,21 @@ var main = (function init(){
   }
   let repaintCoursesDay = function(courses, grades){
     courses.forEach(function(el){
-      let grade = grades.filter((grade) => grade.combDay == el.combDay && grade.disponivel == true);
-      if(grade != null){
-        console.log(grade);
+      let grade = grades.filter((grade) => grade.combDay == el.combDay && grade.disponivel == true && grade.semestre == 1);
+      if(grade.length > 0 && grade.length < 3){
+        let preenGrade = grades.filter(o => o.combDay == grade[0].combDay && o.disponivel == false);
+
+        preenGrade.forEach(function(el,index){
+          let auxCurso = el.curso;
+          let curso = findById(auxCurso)[0];
+          el.curso = "";
+          el.disponivel = true;
+          $('.'+el.class).html(el.curso);
+          grade[index].curso = auxCurso;
+          grade[index].disponivel = false;
+          $('.'+grade[index].class).html(curso.nome);
+        })
+
       }
     });
   }
