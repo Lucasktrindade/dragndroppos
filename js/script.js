@@ -25,6 +25,7 @@ var main = (function init(){
           "id":1,
           "peso":5,
           "combDay":1,
+          "semestre":1,
        },
        {
           "nome":"Logística",
@@ -33,6 +34,7 @@ var main = (function init(){
           "id":2,
           "peso":10,
           "combDay":2,
+          "semestre":2,
        },
        {
           "nome":"Marketing",
@@ -41,6 +43,7 @@ var main = (function init(){
           "id":3,
           "peso":15,
           "combDay":1,
+          "semestre":2,
        },
        {
           "nome":"Finanças",
@@ -49,6 +52,7 @@ var main = (function init(){
           "id":4,
           "peso":20,
           "combDay":2,
+          "semestre":1,
        },
   ];
   const goals = [
@@ -64,7 +68,7 @@ var main = (function init(){
     },
     {
       "id":3,
-      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
+      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e gestão de pessoas como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, considerando os impactos da participação das pessoas, da liderança e da organização de pessoal, nos resultados da organização.",
       "total":75
     },
     {
@@ -102,6 +106,11 @@ var main = (function init(){
       "descricao":"Fazer compreender a importância do domínio das ferramentas na área de gestão de pessoas, considerando os impactos da participação das pessoas, da liderança e da organização de pessoal nos resultados da organização.",
       "total":5
     },
+    {
+      "id":11,
+      "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e os seus impactos nos resultados financeiros da organização, bem como nos processos e sistemas de gestão de recursos e de investimentos.",
+      "total":100
+    },
   ];
   const skills = [
     {
@@ -116,7 +125,7 @@ var main = (function init(){
     },
     {
       "id":3,
-      "descricao":"Ao final do curso o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas e entender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, na aplicação das ferramentas de marketing e no sucesso da empresa.",
+      "descricao":"Ao final do curso, o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas e entender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, na aplicação das ferramentas de marketing e no sucesso da empresa.",
       "total":75
     },
     {
@@ -153,6 +162,11 @@ var main = (function init(){
       "id":10,
       "descricao":"Ao final do curso, o participante estará apto a compreender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, no sucesso da empresa.",
       "total":5
+    },
+    {
+      "id":11,
+      "descricao":"Ao final de curso, o participante estará apto a entender a importância das práticas de recursos humanos no sucesso da organização e a sua influência nos resultados financeiros de avaliação de investimentos, retornos financeiros, fluxos de caixa e de análise de recursos utilizados pelas equipes.",
+      "total":100
     },
   ];
   const grade = [
@@ -268,19 +282,29 @@ var main = (function init(){
   $(".droppable" ).droppable({accept: ".drag",drop: onDrop,out: onOut});
 
   function onDrop (event, ui){
+    let courses =  cart(),
+    elDroppedId = ui.draggable.data('id'),
+    elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-    addNumber( ui.draggable, ui.draggable.data('id') );
-    paintCoursesDay(ui.draggable.data('id'),grade);
-    paint(cart(),goals,skills);
+    addNumber( elDropped, elDroppedId );
+    if(courses.length < 3){
+      especCoursesDay(elDroppedId, grade, courses);
+    }else{
+      mbaCoursesDay(grades, courses);
+    }
+    paint(courses,goals,skills);
     return true;
   }
 
   function onOut( event, ui){
+    let courses =  cart(),
+    elDroppedId = ui.draggable.data('id'),
+    elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-    removeNumber( ui.draggable, ui.draggable.data('id') );
-    removeCoursesDay(ui.draggable.data('id'),grade);
-    repaintCoursesDay(cart(),grade);
-    paint(cart(),goals,skills);
+    removeNumber(elDropped, elDroppedId);
+    removeCoursesDay(elDroppedId, grade);
+    repaintCoursesDay(courses, grade);
+    paint(courses,goals,skills);
     return true;
    }
 
@@ -318,18 +342,23 @@ var main = (function init(){
       }
       return true;
   };
-  let paintCoursesDay = function find(elementId,grades){
-    let element = findById(elementId)[0];
-    let grade = grades.filter((grade) => grade.combDay == element.combDay && grade.disponivel == true);
-    grade.forEach(function(el,index){
-      if(index > 1){
+  let especCoursesDay = function find(elementId,grades, courses){
+      let element = findById(elementId)[0],
+      grade = grades.filter((grade) => grade.combDay == element.combDay && grade.disponivel == true);
+      grade.forEach(function(el,index){
+        if(index < 2){
+          el.curso = element.id;
+          el.disponivel = false;
+          $('.'+el.class).html(element.nome)
+        }
         return false;
-      }else {
-        el.curso = element.id;
-        el.disponivel = false;
-        $('.'+el.class).html(element.nome)
-      }
-    })
+      });
+  }
+
+  let mbaCoursesDay = function find(grades, courses){
+      courses.forEach(function(el){
+        let mbaGrade = grades.filter(grade => grade.combDay == el.combDay && grade.semestre == el.semestre);
+      });
   }
   let removeCoursesDay = function find(elementId,grades){
     let element = findById(elementId)[0];
@@ -343,7 +372,7 @@ var main = (function init(){
   let repaintCoursesDay = function(courses, grades){
     courses.forEach(function(el){
       let grade = grades.filter((grade) => grade.combDay == el.combDay && grade.disponivel == true && grade.semestre == 1);
-      if(grade.length > 0 && grade.length < 3){
+      if(grade.length == 2){
         let preenGrade = grades.filter(o => o.combDay == grade[0].combDay && o.disponivel == false);
 
         preenGrade.forEach(function(el,index){
@@ -446,5 +475,6 @@ var paint = (function init(courses,goals,skills){
        $('.line-info').hide();
        $('.skill').html('');
        $('.goal').html('');
+       $('.trilhas').html('');
     }
 });
