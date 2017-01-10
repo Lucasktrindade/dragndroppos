@@ -25,6 +25,7 @@ var main = (function init(){
           "id":1,
           "peso":5,
           "combDay":1,
+          "semestre":1,
        },
        {
           "nome":"Logística",
@@ -33,6 +34,7 @@ var main = (function init(){
           "id":2,
           "peso":10,
           "combDay":2,
+          "semestre":2,
        },
        {
           "nome":"Marketing",
@@ -41,6 +43,7 @@ var main = (function init(){
           "id":3,
           "peso":15,
           "combDay":1,
+          "semestre":2,
        },
        {
           "nome":"Finanças",
@@ -49,6 +52,7 @@ var main = (function init(){
           "id":4,
           "peso":20,
           "combDay":2,
+          "semestre":1,
        },
   ];
   const goals = [
@@ -64,7 +68,7 @@ var main = (function init(){
     },
     {
       "id":3,
-      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e finanças como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, tanto sob o ponto de vista de serviços como financeiros e dos instrumentos e impactos nos resultados da empresa.",
+      "descricao":"Fazer compreender a importância do domínio das ferramentas nas áreas de marketing e gestão de pessoas como sendo fundamentais para o processo efetivo de atendimento ao cliente de forma eficiente, considerando os impactos da participação das pessoas, da liderança e da organização de pessoal, nos resultados da organização.",
       "total":75
     },
     {
@@ -102,6 +106,11 @@ var main = (function init(){
       "descricao":"Fazer compreender a importância do domínio das ferramentas na área de gestão de pessoas, considerando os impactos da participação das pessoas, da liderança e da organização de pessoal nos resultados da organização.",
       "total":5
     },
+    {
+      "id":11,
+      "descricao":"Fazer compreender a importância do domínio das variáveis de gestão dos recursos humanos da organizacão, em seus aspectos motivacionais, de liderança e de competências e os seus impactos nos resultados financeiros da organização, bem como nos processos e sistemas de gestão de recursos e de investimentos.",
+      "total":100
+    },
   ];
   const skills = [
     {
@@ -116,7 +125,7 @@ var main = (function init(){
     },
     {
       "id":3,
-      "descricao":"Ao final do curso o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas e entender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, na aplicação das ferramentas de marketing e no sucesso da empresa.",
+      "descricao":"Ao final do curso, o participante estará apto a compreender o mercado, planejar o composto de marketing e implantar estratégias mercadológicas e entender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, na aplicação das ferramentas de marketing e no sucesso da empresa.",
       "total":75
     },
     {
@@ -154,6 +163,11 @@ var main = (function init(){
       "descricao":"Ao final do curso, o participante estará apto a compreender o impacto da correta gestão de recursos humanos no que tange à liderança, proatividade e comprometimento, no sucesso da empresa.",
       "total":5
     },
+    {
+      "id":11,
+      "descricao":"Ao final de curso, o participante estará apto a entender a importância das práticas de recursos humanos no sucesso da organização e a sua influência nos resultados financeiros de avaliação de investimentos, retornos financeiros, fluxos de caixa e de análise de recursos utilizados pelas equipes.",
+      "total":100
+    },
   ];
   const grade = [
     {
@@ -162,6 +176,7 @@ var main = (function init(){
       "class": "segunda-1",
       "combDay":1,
       "disponivel":true,
+      "trilha":"",
       "curso":"",
       "semestre":1,
     },
@@ -171,6 +186,7 @@ var main = (function init(){
       "class": "terca-1",
       "combDay":2,
       "disponivel":true,
+      "trilha":"",
       "curso":"",
       "semestre":1,
     },
@@ -180,6 +196,7 @@ var main = (function init(){
       "class": "quarta-1",
       "combDay":1,
       "disponivel":true,
+      "trilha":"",
       "curso":"",
       "semestre":1,
     },
@@ -189,6 +206,7 @@ var main = (function init(){
       "class": "quinta-1",
       "combDay":2,
       "disponivel":true,
+      "trilha":"",
       "curso":"",
       "semestre":1,
     },
@@ -198,6 +216,7 @@ var main = (function init(){
       "class": "segunda-2",
       "combDay":1,
       "disponivel":true,
+      "trilha":"",
       "curso":"",
       "semestre":2,
     },
@@ -207,7 +226,8 @@ var main = (function init(){
       "class": "terca-2",
       "combDay":2,
       "disponivel":true,
-      "curso":0,
+      "trilha":"",
+      "curso":"",
       "semestre":2,
     },
     {
@@ -216,7 +236,8 @@ var main = (function init(){
       "class": "quarta-2",
       "combDay":1,
       "disponivel":true,
-      "curso":0,
+      "trilha":"",
+      "curso":"",
       "semestre":2,
     },
     {
@@ -225,27 +246,37 @@ var main = (function init(){
       "class": "quinta-2",
       "combDay":2,
       "disponivel":true,
-      "curso":0,
+      "trilha":"",
+      "curso":"",
       "semestre":2,
     },
   ]
   const trilha = [
     {
       "id":1,
-      "nome":"Trilha 1",
+      "semestre":1,
+      "semana":1,
+      "disponivel":true,
     },
     {
       "id":2,
-      "nome":"Trilha 2",
+      "semestre":1,
+      "semana":2,
+      "disponivel":true,
     },
     {
       "id":3,
-      "nome":"Trilha 3",
+      "semestre":1,
+      "semana":3,
+      "disponivel":true,
     },
     {
       "id":4,
-      "nome":"Trilha 4",
+      "semestre":1,
+      "semana":4,
+      "disponivel":true,
     },
+
   ]
   let dropped = function count(){
     return $('.draggable .dropped').length;
@@ -268,18 +299,26 @@ var main = (function init(){
   $(".droppable" ).droppable({accept: ".drag",drop: onDrop,out: onOut});
 
   function onDrop (event, ui){
+    let elDroppedId = ui.draggable.data('id'),
+    elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-    addNumber( ui.draggable, ui.draggable.data('id') );
-    paintCoursesDay(ui.draggable.data('id'),grade);
+    addNumber( elDropped, elDroppedId );
+    if(cart().length < 3){
+      especCoursesDay(elDroppedId, grade, cart());
+    }else{
+      mbaCoursesDay(grade, cart());
+    }
     paint(cart(),goals,skills);
     return true;
   }
 
   function onOut( event, ui){
+    let elDroppedId = ui.draggable.data('id'),
+    elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
-    removeNumber( ui.draggable, ui.draggable.data('id') );
-    removeCoursesDay(ui.draggable.data('id'),grade);
-    repaintCoursesDay(cart(),grade);
+    removeNumber(elDropped, elDroppedId);
+    removeCoursesDay(elDroppedId, grade);
+    repaintCoursesDay(cart(), grade);
     paint(cart(),goals,skills);
     return true;
    }
@@ -318,18 +357,39 @@ var main = (function init(){
       }
       return true;
   };
-  let paintCoursesDay = function find(elementId,grades){
-    let element = findById(elementId)[0];
-    let grade = grades.filter((grade) => grade.combDay == element.combDay && grade.disponivel == true);
-    grade.forEach(function(el,index){
-      if(index > 1){
+  let especCoursesDay = function find(elementId,grades, courses){
+      let element = findById(elementId)[0],
+      grade = grades.filter((grade) => grade.combDay == element.combDay && grade.disponivel == true);
+      grade.forEach(function(grade,index){
+        if(index < 2){
+          grade.curso = element.id;
+          grade.disponivel = false;
+          $('.'+grade.class).html(element.nome)
+        }
         return false;
-      }else {
-        el.curso = element.id;
-        el.disponivel = false;
-        $('.'+el.class).html(element.nome)
+      });
+  }
+
+  let mbaCoursesDay = function find(grades, courses){
+      let findGradeCourse = function(course){
+        return grades.filter(grade => grade.combDay == course.combDay && grade.semestre == course.semestre);
       }
-    })
+      let repaintCourse = function(grades, course){
+        grades.forEach(function(grade){
+          grade.id =course.id;
+          grade.disponivel = false;
+          $('.'+grade.class).html(course.nome)
+        })
+      };
+      grades.map(function(grade){
+        grade.id ="";
+        grade.disponivel = true;
+        $('.'+grade.class).html("");
+      });
+      courses.forEach(function(course){
+        let grades = findGradeCourse(course);
+        repaintCourse(grades, course);
+      });
   }
   let removeCoursesDay = function find(elementId,grades){
     let element = findById(elementId)[0];
@@ -340,30 +400,33 @@ var main = (function init(){
         $('.'+el.class).html(el.curso)
     })
   }
+
   let repaintCoursesDay = function(courses, grades){
-    courses.forEach(function(el){
-      let grade = grades.filter((grade) => grade.combDay == el.combDay && grade.disponivel == true && grade.semestre == 1);
-      if(grade.length > 0 && grade.length < 3){
-        let preenGrade = grades.filter(o => o.combDay == grade[0].combDay && o.disponivel == false);
-
-        preenGrade.forEach(function(el,index){
-          let auxCurso = el.curso;
-          let curso = findById(auxCurso)[0];
-          el.curso = "";
-          el.disponivel = true;
-          $('.'+el.class).html(el.curso);
-          grade[index].curso = auxCurso;
-          grade[index].disponivel = false;
-          $('.'+grade[index].class).html(curso.nome);
-        })
-
-      }
+    let findGradeCourse = function(course){
+      return grades.filter(grade => grade.combDay == course.combDay && grade.disponivel == true);
+    }
+    let repaintCourse = function(grades, course){
+      grades.forEach(function(grade, index){
+        if(index < 2){
+          grade.id =course.id;
+          grade.disponivel = false;
+          $('.'+grade.class).html(course.nome)
+        }
+      })
+    };
+    grades.map(function(grade){
+      grade.id ="";
+      grade.disponivel = true;
+      $('.'+grade.class).html("");
+    });
+    courses.forEach(function(course){
+      let grades = findGradeCourse(course);
+      repaintCourse(grades, course);
     });
   }
 });
 
 var paint = (function init(courses,goals,skills){
-
   let peso = function peso(objs){
     return objs.reduce((prev,current) => prev.peso*current.peso);
   }
@@ -382,8 +445,8 @@ var paint = (function init(courses,goals,skills){
         $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
-        $('.trilha1').html("Trilha 1");
-        $('.trilha2,.trilha3,.trilha4').html("");
+        $('.trilha-1').html("Trilha 1");
+        $('.trilha-2,.trilha-3,.trilha-4').html("");
         let goal1 = findGoal(goals,courses[0].peso);
         let skill1 = findSkill(skills, courses[0].peso)
         $('.goal').html(goal1[0].descricao);
@@ -396,16 +459,15 @@ var paint = (function init(courses,goals,skills){
         $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
         if(courses[0].combDay == courses[1].combDay){
           $('.meses').html('1 ano de duração');
-          $('.trilha1').html("Trilha 1");
-          $('.trilha3').html("Trilha 2");
-          $('.trilha2,.trilha4').html("");
+          $('.trilha-1').html("Trilha 1");
+          $('.trilha-3').html("Trilha 2");
+          $('.trilha-2,.trilha-4').html("");
         }else{
           $('.meses').html('6 meses de duração');
-          $('.trilha1').html("Trilha 1");
-          $('.trilha2').html("Trilha 2");
-          $('.trilha3,.trilha4').html("");
+          $('.trilha-1').html("Trilha 1");
+          $('.trilha-2').html("Trilha 2");
+          $('.trilha-3,.trilha-4').html("");
         }
-
         $('.hours').html((courses.length*180)+90);
         let goal2 = findGoal(goals,peso(courses));
         let skill2 = findSkill(skills, peso(courses))
@@ -418,10 +480,22 @@ var paint = (function init(courses,goals,skills){
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Essencial');
         $('.meses').html('1 ano de duração');
-        $('.trilha1').html("Trilha 1");
-        $('.trilha2').html("Trilha 2");
-        $('.trilha3').html("Trilha 3");
-        $('.trilha4').html("");
+        let i=0;
+        let coursesGrade = courses.some(function(el, index){
+          if(el.semestre == 2){i++;}
+          return i >=2;
+        });
+        if(coursesGrade){
+          $('.trilha-1').html("Trilha 1");
+          $('.trilha-2').html("");
+          $('.trilha-3').html("Trilha 3");
+          $('.trilha-4').html("Trilha 4");
+        }else{
+          $('.trilha-1').html("Trilha 1");
+          $('.trilha-2').html("Trilha 2");
+          $('.trilha-3').html("Trilha 3");
+          $('.trilha-4').html("");
+        }
         $('.hours').html((courses.length*180)+90 );
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
@@ -432,10 +506,10 @@ var paint = (function init(courses,goals,skills){
         $('.areas').html(courses.length +' áreas');
         $('.spec-name').html('Certificado de MBA em Gestão Avançado');
         $('.meses').html('1 ano de duração');
-        $('.trilha1').html("Trilha 1");
-        $('.trilha2').html("Trilha 2");
-        $('.trilha3').html("Trilha 3");
-        $('.trilha4').html("Trilha 4");
+        $('.trilha-1').html("Trilha 1");
+        $('.trilha-2').html("Trilha 2");
+        $('.trilha-3').html("Trilha 3");
+        $('.trilha-4').html("Trilha 4");
         $('.hours').html((courses.length*180)+90);
         $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
         $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
@@ -446,5 +520,6 @@ var paint = (function init(courses,goals,skills){
        $('.line-info').hide();
        $('.skill').html('');
        $('.goal').html('');
+       $('.trilhas').html('');
     }
 });
