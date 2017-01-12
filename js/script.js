@@ -24,6 +24,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":1,
           "peso":5,
+          "certificado":'Certificado de Aperfeiçoamento em RH',
           "combDay":1,
           "semestre":1,
        },
@@ -33,6 +34,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":2,
           "peso":10,
+          "certificado":'Certificado de Aperfeiçoamento em Logística',
           "combDay":2,
           "semestre":2,
        },
@@ -42,6 +44,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":3,
           "peso":15,
+          "certificado":'Certificado de Aperfeiçoamento em Marketing',
           "combDay":1,
           "semestre":2,
        },
@@ -51,6 +54,7 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":4,
           "peso":20,
+          "certificado":'Certificado de Aperfeiçoamento em Finanças',
           "combDay":2,
           "semestre":1,
        },
@@ -169,6 +173,38 @@ var main = (function init(){
       "total":100
     },
   ];
+  const nameEspec = [
+    {
+      "id":1,
+      "certificado": "Certificado de Especialização em Gestão de Marketing e Logística Integrada",
+      "total":150,
+    },
+    {
+      "id":2,
+      "certificado":"Certificado de Especialização em Gestão de Pessoas e Finanças",
+      "total":100,
+    },
+    {
+      "id":3,
+      "certificado": "Certificado de Especialização em Gestão de Pessoas e Logística Integrada",
+      "total":50,
+    },
+    {
+      "id":4,
+      "certificado":"Certificado de Especialização em Gestão Estratégica de Pessoas e Marketing",
+      "total":75,
+    },
+    {
+      "id":4,
+      "certificado":"Certificado de Especialização em Gestão Financeira e Logística",
+      "total":200,
+    },
+    {
+      "id":5,
+      "certificado":"Certificado de Especialização em Gestão de Marketing e Finanças",
+      "total":300,
+    },
+  ]
   const grade = [
     {
       "id":1,
@@ -251,33 +287,6 @@ var main = (function init(){
       "semestre":2,
     },
   ]
-  const trilha = [
-    {
-      "id":1,
-      "semestre":1,
-      "semana":1,
-      "disponivel":true,
-    },
-    {
-      "id":2,
-      "semestre":1,
-      "semana":2,
-      "disponivel":true,
-    },
-    {
-      "id":3,
-      "semestre":1,
-      "semana":3,
-      "disponivel":true,
-    },
-    {
-      "id":4,
-      "semestre":1,
-      "semana":4,
-      "disponivel":true,
-    },
-
-  ]
   let dropped = function count(){
     return $('.draggable .dropped').length;
   }
@@ -308,7 +317,7 @@ var main = (function init(){
     }else{
       mbaCoursesDay(grade, cart());
     }
-    paint(cart(),goals,skills);
+    paint(cart(),goals, skills, nameEspec);
     return true;
   }
 
@@ -319,7 +328,7 @@ var main = (function init(){
     removeNumber(elDropped, elDroppedId);
     removeCoursesDay(elDroppedId, grade);
     repaintCoursesDay(cart(), grade);
-    paint(cart(),goals,skills);
+    paint(cart(), goals, skills, nameEspec);
     return true;
    }
 
@@ -426,7 +435,7 @@ var main = (function init(){
   }
 });
 
-var paint = (function init(courses,goals,skills){
+var paint = (function init(courses,goals,skills, nameEspec){
   let peso = function peso(objs){
     return objs.reduce((prev,current) => prev.peso*current.peso);
   }
@@ -437,12 +446,16 @@ var paint = (function init(courses,goals,skills){
     return skills.filter(o => o.total == value);
   }
 
+  let findNameEspec = function find(value, espec){
+    return espec.filter(o => o.total == value)[0];
+  }
+
   switch(courses.length) {
     case 1:
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
-        $('.spec-name').html('Certificado de Aperfeiçoamento em '+courses[0].nome);
+        $('.spec-name').html(courses[0].certificado);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
         $('.trilha-1').html("Trilha 1");
@@ -456,7 +469,8 @@ var paint = (function init(courses,goals,skills){
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
-        $('.spec-name').html('Certificado de Especialização em Gestão de '+courses[0].nome+' e ' +courses[1].nome);
+        let especs = findNameEspec(courses[0].peso * courses[1].peso,nameEspec);
+        $('.spec-name').html(especs.certificado);
         if(courses[0].combDay == courses[1].combDay){
           $('.meses').html('1 ano de duração');
           $('.trilha-1').html("Trilha 1");
@@ -488,8 +502,8 @@ var paint = (function init(courses,goals,skills){
         if(coursesGrade){
           $('.trilha-1').html("Trilha 1");
           $('.trilha-2').html("");
-          $('.trilha-3').html("Trilha 3");
-          $('.trilha-4').html("Trilha 4");
+          $('.trilha-3').html("Trilha 2");
+          $('.trilha-4').html("Trilha 3");
         }else{
           $('.trilha-1').html("Trilha 1");
           $('.trilha-2').html("Trilha 2");
@@ -504,7 +518,7 @@ var paint = (function init(courses,goals,skills){
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
-        $('.spec-name').html('Certificado de MBA em Gestão Avançado');
+        $('.spec-name').html('Certificado de MBA em Gestão Avançada');
         $('.meses').html('1 ano de duração');
         $('.trilha-1').html("Trilha 1");
         $('.trilha-2').html("Trilha 2");
