@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Drag and Drop Unigranrio</title>
+    <link rel="icon" href="img/GloboUnigranrio.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/estrutura.css">
+    <link rel="stylesheet" href="css/pandora.css"/>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <section class="draggable no-print relative">
+      <div class="container-fluid">
+        <div class="pelicula gradiente"></div>
+        <div class="container">
+          <div class="row">
+            <div class="column col-m-12">
+              <h1 class="t-laranja t-centro title">Gerencie a sua carreira</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column col-m-5">
+              <div class="line line-dir direito"></div>
+            </div>
+            <div class="column col-m-2">
+              <div class="line-center up"></div>
+            </div>
+            <div class="column col-m-5">
+              <div class="line line-esq esquerdo"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column col-m-3">
+              <div class="drag dg1 t-centro centralizado" data-id="1">
+                <h3>Hotelaria Hospitalar</h3>
+              </div>
+            </div>
+            <div class="column col-m-3">
+              <div class="drag dg2 t-centro centralizado" data-id="2">
+                <h3>Logística em Saúde</h3>
+              </div>
+            </div>
+            <div class="column col-m-3">
+              <div class="drag dg3 t-centro centralizado" data-id="3">
+                <h3>Qualidade e acreditação em Saúde</h3>
+              </div>
+            </div>
+            <div class="column col-m-3">
+              <div class="drag dg4 t-centro centralizado" data-id="4">
+                <h3>Segurança do Paciente</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="no-print">
+      <div class="container">
+        <div class="row">
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+          <div class="column col-m-3">
+            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column col-m-5">
+            <div class="line line-dir up direito"></div>
+          </div>
+          <div class="column col-m-2">
+            <div class="line-center down"></div>
+          </div>
+          <div class="column col-m-5">
+            <div class="line line-esq up esquerdo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="page-break"></div>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="column col-m-12 certificado t-branco bg-unigranrio-azul t-centro">
+            <div class="cont">
+              <div class="row line-info sumir">
+                <div class="column col-m-12 col-2">
+                  <h3><span class="areas"></span></h3>
+                </div>
+                <div class="column col-m-12 col-8">
+                  <h3 class="spec-name"></h3>
+                </div>
+                <div class="column col-m-12 col-2">
+                  <h3><span class="meses"></span> - <span class="hours"></span>hrs</h3>
+                </div>
+              </div>
+              <div class="column col-m-12 t-centro line-mensagem">
+                <p class="mensagem-none"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="column col-m-12 card gradiente t-azul-escuro">
+              <div class="cont">
+                  <div class="column col-m-12 col-t-6 card-content">
+                    <div class="row">
+                      <div class="column col-m-1">
+                        <img src="img/goal.png" alt="" class="esquerdo">
+                      </div>
+                      <div class="column col-m-11">
+                        <h3 class="card-header">Objetivos</h3>
+                        <p class="goal"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column col-m-12 col-t-6 card-content">
+                    <div class="row">
+                      <div class="column col-m-1">
+                        <img src="img/documents.png" alt="" class="esquerdo">
+                      </div>
+                      <div class="column col-m-11">
+                        <h3 class="card-header">Competências</h3>
+                        <p class="skill"></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="page-break"></div>
+        <div class="row">
+          <div class="column col-m-12">
+            <h2 class="t-centro t-laranja-2 subtitle">Grade Horária da seleção</h2>
+            <p class="t-cinza t-centro info-extra sumir">Curso de 180hs é apenas uma trilha a cada 15 dias.</p>
+          </div>
+        </div>
+        <div class="row table-hour t-azul-escuro t-centro">
+          <div class="column col-m-12">
+            <div class="row line-azul flex-center">
+              <div class="column col-m-2 header-cell">
+                  <h3>1ª Semestre</h3>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Segunda</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Terça</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quarta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quinta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Sexta</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>1ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-1 semestre-1"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>2ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-2 semestre-1"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>3ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-1 semestre-1"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>4ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-1"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-2 semestre-1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-break"></div>
+        <div class="row table-semestre-2 t-azul-escuro t-centro">
+          <div class="column col-m-12">
+            <div class="row line-azul flex-center">
+              <div class="column col-m-2 header-cell">
+                  <h3>2ª Semestre</h3>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Segunda</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Terça</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quarta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Quinta</p>
+              </div>
+              <div class="column col-m-2 header-cell">
+                <p>Sexta</p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>1ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-3 semestre-2"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>2ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-4 semestre-2"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>3ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-3 semestre-2"></p>
+              </div>
+            </div>
+            <div class="row body-table flex-center">
+              <div class="column body-cell col-m-2">
+                <p>4ª Semana</p>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="segunda-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="terca-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quarta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <div class="row">
+                  <div class="column col-m-12">
+                    <p class="quinta-2"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="column body-cell col-m-2">
+                <p class="trilhas trilha-4 semestre-2"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-print">
+          <div class="column col-m-12">
+            <button type="button" name="button" onclick="window.print()" class="centralizado button-print">Imprimir ficha de intenção</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/saude.js"></script>
+  </body>
+</html>
