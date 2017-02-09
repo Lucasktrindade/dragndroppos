@@ -117,6 +117,21 @@
       "descricao":"Fazer compreender a importância das ações desenvolvidas nacional e internacionalmente, voltadas para o desenvolvimento dos programas e protocolos de segurança do paciente e gestão de riscos hospitalares e no domínio das ferramentas fundamentais para o processo de admissão, permanência e alta dos pacientes na geração de vantagens competitivas para a unidade de saúde.",
       "total":100
     },
+    {
+      "id":12,
+      "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à Segurança do Paciente, da participação da Hotelaria Hospitalar e todo o processo de gestão estratégica e operacional dos recursos da Logística em Saúde , de forma integrada e holística.",
+      "total":1000
+    },
+    {
+      "id":13,
+      "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à Segurança do Paciente, da gestão da Qualidade e seus Sistemas de Acreditação e todo o processo de gestão estratégica e operacional dos recursos da Logística em Saúde , de forma integrada e holística.",
+      "total":3000
+    },
+    {
+      "id":14,
+      "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à participação da Hotelaria Hospitalar , da gestão da Qualidade e seus Sistemas de Acreditação e todo o processo de gestão estratégica e operacional dos recursos da Logística em Saúde , de forma integrada e holística.",
+      "total":750
+    },
   ];
   const skills = [
     {
@@ -173,6 +188,21 @@
       "id":11,
       "descricao":"Ao final do curso, o participante estará apto a atuar em implantação de programas voltados à Segurança do Paciente, contribuindo de forma significativa para a melhoria dos resultados assistenciais de sua unidade de saúde e desenvolver e implementar estratégias operacionais, de forma a auxiliar a relevante atividade relacionada à movimentação e estadia dos pacientes em unidades hospitalares.",
       "total":100
+    },
+    {
+      "id":12,
+      "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando o desenvolvimento de estratégias operacionais de forma a atuar em implantação de programas voltados à Segurança do Paciente, a sustentar a atividade relacionada à movimentação e estadia dos pacientes  e estratégias logísticas que assegurem a disponibilização de bens e serviços, a partir da adequação dos fluxos - de informações e físicos.",
+      "total":1000
+    },
+    {
+      "id":13,
+      "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando atuar em implantação de programas voltados à Segurança do Paciente, a  atuação em Comissões Internas de Qualidade e Certificação e desenvolver ações que contribuam na entrega de serviços de qualidade  e estratégias logísticas que assegurem a disponibilização de bens e serviços, a partir da adequação dos fluxos - de informações e físicos.",
+      "total":3000
+    },
+    {
+      "id":14,
+      "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando criar estratégias operacionais de forma a sustentar a atividade relacionada à movimentação e estadia dos pacientes, a  atuação em Comissões Internas de Qualidade e Certificação no desenvolvimento de ações que contribuam na entrega de serviços de qualidade e estratégias logísticas que assegurem a disponibilização de bens e serviços.",
+      "total":750
     },
   ];
   const nameEspec = [
@@ -493,7 +523,7 @@
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          $('.spec-name').html('Certificado de MBA em Gestão Essencial');
+          $('.spec-name').html('Certificado de MBA em Gestão Essencial em Saúde');
           $('.meses').html('1 ano de duração');
           let i=0;
           let coursesGrade = courses.some(function(el, index){
@@ -511,9 +541,11 @@
             $('.trilha-3').html("Trilha 3");
             $('.trilha-4').html("");
           }
+          let goal3 = findGoal(goals,peso(courses));
+          let skill3 = findSkill(skills, peso(courses))
           $('.hours').html((courses.length*180)+90 );
-          $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
-          $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
+          $('.goal').html(goal3[0].descricao);
+          $('.skill').html(skill3[0].descricao);
           break;
       case 4:
           $('.line-info').show();
