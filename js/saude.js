@@ -559,7 +559,7 @@
           $('.trilha-4').html("Trilha 4");
           $('.hours').html((courses.length*180)+90);
           $('.goal').html("Fazer compreender os aspectos gerais de uma Gestão em Saúde interelacionando  em suas visões avançadas, aspectos vinculados às areas de Hotelaria, Logística, Qualidade e Acreditação e Segurança do Paciente. Com esses conhecimentos, se torna possível a construção de um ambiente voltado para a implementação das mais modernas metodologias necessárias à uma gestão de excelência.");
-          $('.skill').html("Ao final do curso, o aluno estará apto a entender e aplicar os modelos de gestão na área de saúde de forma ampla e abrangente, podendo ocupar cargos de liderança e chefia nestas áreas. Desenvolverá uma visão sistema, que permitirá a tomada de decisão e definição de estratégias que propicie uma gestão sustentável. Desta forma conseguirá contribuir na busca e mantutenção da perenidade institucional.");
+          $('.skill').html("Ao final do curso, o aluno estará apto a entender e aplicar os modelos de gestão na área de saúde de forma ampla e abrangente, podendo ocupar cargos de liderança e chefia nestas áreas. Desenvolverá uma visão sistema, que permitirá a tomada de decisão e definição de estratégias que propicie uma gestão sustentável. Desta forma conseguirá contribuir na busca e mantutenção da perenidade .");
           break;
       default:
          $('.line-mensagem').show();
