@@ -36,7 +36,7 @@
           "peso":10,
           "certificado":'Certificado de Aperfeiçoamento de Logística em Saúde',
           "combDay":2,
-          "semestre":2,
+          "semestre":1,
        },
        {
           "nome":"Qualidade e Acreditação em Saúde",
@@ -45,7 +45,7 @@
           "id":3,
           "peso":15,
           "certificado":'Certificado de Aperfeiçoamento de Qualidade e Acreditação em Saúde',
-          "combDay":1,
+          "combDay":2,
           "semestre":2,
        },
        {
@@ -55,8 +55,8 @@
           "id":4,
           "peso":20,
           "certificado":'Certificado de Aperfeiçoamento em Segurança do Paciente',
-          "combDay":2,
-          "semestre":1,
+          "combDay":1,
+          "semestre":2,
        },
   ];
 
@@ -132,6 +132,11 @@
       "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à participação da Hotelaria Hospitalar , da gestão da Qualidade e seus Sistemas de Acreditação e todo o processo de gestão estratégica e operacional dos recursos da Logística em Saúde , de forma integrada e holística.",
       "total":750
     },
+    {
+      "id":15,
+      "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à Segurança do Paciente, da participação da Hotelaria Hospitalar e da gestão da Qualidade e seus Sistemas de Acreditação, de forma integrada e holística.",
+      "total":1500
+    },
   ];
   const skills = [
     {
@@ -204,6 +209,11 @@
       "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando criar estratégias operacionais de forma a sustentar a atividade relacionada à movimentação e estadia dos pacientes, a  atuação em Comissões Internas de Qualidade e Certificação no desenvolvimento de ações que contribuam na entrega de serviços de qualidade e estratégias logísticas que assegurem a disponibilização de bens e serviços.",
       "total":750
     },
+    {
+      "id":15,
+      "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando atuar em implantação de programas voltados à Segurança do Paciente, criar estratégias operacionais de forma a sustentar a atividade relacionada à movimentação e estadia dos pacientes e na  atuação em Comissões Internas de Qualidade e Certificação  no desenvolvimento de ações que contribuam na entrega de serviços de qualidade.",
+      "total":1500
+    },
   ];
   const nameEspec = [
     {
@@ -233,7 +243,7 @@
     },
     {
       "id":5,
-      "certificado":"Certificado de Especialização em Gestão de Logistíca em Saúde e Segurança do Paciente",
+      "certificado":"Certificado de Especialização em Gestão da Segurança do Paciente e Qualidade e Acreditação",
       "total":300,
     },
   ]
@@ -422,7 +432,7 @@
           $('.'+grade.class).html(course.nome)
         })
       };
-      grades.map(function(grade){
+      grades.forEach(function(grade){
         grade.id ="";
         grade.disponivel = true;
         $('.'+grade.class).html("");
@@ -455,7 +465,7 @@
         }
       })
     };
-    grades.map(function(grade){
+    grades.forEach(function(grade){
       grade.id ="";
       grade.disponivel = true;
       $('.'+grade.class).html("");
@@ -468,7 +478,7 @@
 
   var paint = function init(courses,goals,skills, nameEspec){
     let peso = function peso(objs){
-      return objs.reduce((prev,current) => prev.peso*current.peso);
+      return objs.reduce((result, current) => result*current.peso, 1)
     }
     let findGoal = function find(goals,value){
       return goals.filter(o => o.total == value);
@@ -541,9 +551,11 @@
             $('.trilha-3').html("Trilha 3");
             $('.trilha-4').html("");
           }
+          $('.hours').html((courses.length*180)+90 );
           let goal3 = findGoal(goals,peso(courses));
           let skill3 = findSkill(skills, peso(courses))
-          $('.hours').html((courses.length*180)+90 );
+          $('.goal').html(goal3[0].descricao);
+          $('.skill').html(skill3[0].descricao);
           $('.goal').html(goal3[0].descricao);
           $('.skill').html(skill3[0].descricao);
           break;
