@@ -26,7 +26,7 @@
           "peso":5,
           "certificado":'Certificado de Aperfeiçoamento em Hotelaria Hospitalar',
           "combDay":1,
-          "semestre":1,
+          "semestre":2,
        },
        {
           "nome":"Logística em Saúde",
@@ -36,7 +36,7 @@
           "peso":10,
           "certificado":'Certificado de Aperfeiçoamento de Logística em Saúde',
           "combDay":2,
-          "semestre":1,
+          "semestre":2,
        },
        {
           "nome":"Qualidade e Acreditação em Saúde",
@@ -46,7 +46,7 @@
           "peso":15,
           "certificado":'Certificado de Aperfeiçoamento de Qualidade e Acreditação em Saúde',
           "combDay":2,
-          "semestre":2,
+          "semestre":1,
        },
        {
           "nome":"Segurança do Paciente",
@@ -56,7 +56,7 @@
           "peso":20,
           "certificado":'Certificado de Aperfeiçoamento em Segurança do Paciente',
           "combDay":1,
-          "semestre":2,
+          "semestre":1,
        },
   ];
 
