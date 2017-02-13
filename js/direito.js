@@ -155,7 +155,7 @@
     },
     {
       "id":7,
-      "certificado": "Certificado de MBA em Direito Civil, Empresarial e Processo",
+      "certificado": "Certificado de MBA em Direito Civil, Processo e Empresarial",
       "total":750,
     },
   ]
@@ -477,7 +477,7 @@
           break;
       default:
          $('.line-mensagem').show();
-         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
+         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a três áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
          $('.line-info').hide();
          $('.skill').html('');
          $('.goal').html('');
