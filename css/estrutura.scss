@@ -512,33 +512,39 @@ a:hover {
   min-height: 50px;
   margin:0;
 }
-.line,.line-center{
+.line,.line-center,.line-direito{
   width:71%;
   height: 2px;
   border: 1px solid #83b1e0;
   position: relative;
   margin: 1em auto;
 }
+.line-direito{
+  width: 62%;
+}
 .line-center{
   width:100%;
 }
-.line-dir:after,.line-dir:before,.line-center:after{
+.line-dir:after,.line-dir:before,.line-center:after,.line-dir-direito:after,.line-dir-direito:before{
   content: '';
   position: absolute;
   height: 20px;
   width: 2px;
   background-color: #83b1e0;
 }
-.line-dir:after{
+.line-dir:after,.line-dir-direito:after{
   left: -1%;
 }
 .line-dir:before{
   right: 12%;
 }
+.line-dir-direito:before{
+  right: -36%;
+}
 .line-center:after{
   left: 50%;
 }
-.line-esq:after,.line-esq:before{
+.line-esq:after,.line-esq:before,.line-esq-direito:before{
   content: '';
   position: absolute;
   height: 20px;
@@ -548,7 +554,7 @@ a:hover {
 .line-esq:after{
   left: 12%;
 }
-.line-esq:before{
+.line-esq:before,.line-esq-direito:before{
   right: -1%;
 }
 .up:before,.up:after{
@@ -646,17 +652,20 @@ a:hover {
   .line{
     width:71%;
   }
-  .line-dir:after{
+  .line-dir:after,.line-dir-direito:after{
     left: -0.4%;
   }
   .line-dir:before{
     right: 13.5%
   }
-  .line-esq:after{
+  .line-esq:after,.line-esq-direito:after{
     left: 13.5%;
   }
   .line-esq:before{
     right: -0.4%;
+  }
+  .line-dir-direito:before{
+    right: -33.5%;
   }
   .cont{
     width: 68%;
