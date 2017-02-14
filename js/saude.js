@@ -233,7 +233,7 @@
     },
     {
       "id":4,
-      "certificado":"Certificado de Especialização em Gestão Qualidade em Acreditação e Hotelaria Hospitalar ",
+      "certificado":"Certificado da Especialização em Gestão Qualidade em Acreditação e Hotelaria Hospitalar ",
       "total":75,
     },
     {
