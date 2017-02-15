@@ -579,6 +579,20 @@
           skill = findSkill(skills, courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          specName.info.forEach(function(info){
+            let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
+
+            elementInfo = $('.info-cursos').append("<div class='info-detail column col-m-12 col-t-6'></div>");
+            unidade = $('<p></p>').text(info.unidade);
+            endereco = $('<p></p>').text(info.endereco);
+            inicio = $('<p></p>').text(info.inicio);
+            carga = $('<p></p>').text(info.carga);
+            horario = $('<p></p>').text(info.horario);
+            valor = $('<p></p>').text(info.valor);
+            aVista = $('<p></p>').text(info.aVista);
+
+            elementInfo.append(unidade, endereco, inicio, carga, horario, valor, aVista)
+          });
           break;
       case 2:
           $('.line-info').show();
