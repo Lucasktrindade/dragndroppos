@@ -126,36 +126,193 @@
     {
       "id":1,
       "certificado": "Certificado de Aperfeiçoamento em Direito Civil",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "carga": "180 horas",
+          "horario": "19h às 22h",
+          "valor": "1+5x de R$ 990,00",
+          "aVista": "R$ 5.346,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22501-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "carga": "180 horas",
+          "horario": "19h às 22h",
+          "valor": "1+5x de R$ 990,00",
+          "aVista": "R$ 5.346,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22501-17002"
+        },
+      ],
       "total":5,
     },
     {
       "id":2,
       "certificado": "Certificado de Aperfeiçoamento em Direito Empresarial",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "21/03/2017 (Duração: 6 meses)",
+          "periodo": "Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "carga": "180 horas",
+          "horario": "19h às 22h",
+          "valor": "1+5x de R$ 990,00",
+          "aVista": "R$ 5.346,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22502-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "21/03/2017 (Duração: 6 meses)",
+          "periodo": "Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "carga": "180 horas",
+          "horario": "19h às 22h",
+          "valor": "1+5x de R$ 990,00",
+          "aVista": "R$ 5.346,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22502-17002"
+        },
+      ],
       "total":10,
     },
     {
       "id":3,
       "certificado": "Certificado de Aperfeiçoamento em Direito Processual",
+      "info": [
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "carga": "180 horas",
+          "horario": "19h às 22h",
+          "valor": "1+5x de R$ 990,00",
+          "aVista": "R$ 5.346,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22503-17002"
+        }
+      ],
       "total":15,
     },
     {
       "id":4,
       "certificado": "Certificado de Especialização em Direito Civil e Empresarial",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22132-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22132-17002"
+        },
+      ],
       "total":50,
     },
     {
       "id":5,
       "certificado": "Certificado de Especialização em Direito Civil e Processo",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22133-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22133-17002"
+        },
+      ],
       "total":75,
     },
     {
       "id":6,
       "certificado": "Certificado de Especialização em Direito Empresarial e Processo",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22134-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "450 horas",
+          "horario": "19h às 22h",
+          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22134-17002"
+        },
+      ],
       "total":150,
     },
     {
       "id":7,
       "certificado": "Certificado de MBA em Direito Civil, Processo e Empresarial",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "630 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista": "R$ 13.608,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "630 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista": "R$ 13.608,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17002"
+        },
+      ],
       "total":750,
     },
   ]
