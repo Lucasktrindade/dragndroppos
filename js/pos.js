@@ -24,7 +24,6 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":1,
           "peso":5,
-          "certificado":'Certificado de Aperfeiçoamento em RH',
           "combDay":1,
           "semestre":1,
        },
@@ -34,7 +33,6 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":2,
           "peso":10,
-          "certificado":'Certificado de Aperfeiçoamento em Logística',
           "combDay":2,
           "semestre":2,
        },
@@ -44,7 +42,6 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":3,
           "peso":15,
-          "certificado":'Certificado de Aperfeiçoamento em Marketing',
           "combDay":1,
           "semestre":2,
        },
@@ -54,7 +51,6 @@ var main = (function init(){
           "cargaHoraria":180,
           "id":4,
           "peso":20,
-          "certificado":'Certificado de Aperfeiçoamento em Finanças',
           "combDay":2,
           "semestre":1,
        },
@@ -177,11 +173,59 @@ var main = (function init(){
     {
       "id":1,
       "certificado": "Certificado de Especialização em Gestão de Marketing e Logística Integrada",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20188-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20188-17002"
+        },
+      ],
       "total":150,
     },
     {
       "id":2,
       "certificado":"Certificado de Especialização em Gestão de Pessoas e Finanças",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20195-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20195-17002"
+        },
+      ],
       "total":100,
     },
     {
@@ -192,17 +236,205 @@ var main = (function init(){
     {
       "id":4,
       "certificado":"Certificado de Especialização em Gestão Estratégica de Pessoas e Marketing",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20190-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20190-17002"
+        },
+      ],
       "total":75,
     },
     {
       "id":4,
       "certificado":"Certificado de Especialização em Gestão Financeira e Logística",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"21/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20196-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20196-17002"
+        },
+      ],
       "total":200,
     },
     {
       "id":5,
       "certificado":"Certificado de Especialização em Gestão de Marketing e Finanças",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20192-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17002"
+        },
+      ],
       "total":300,
+    },
+    {
+      "id":6,
+      "certificado":"Certificado de Aperfeiçoamento em RH",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17002"
+        },
+      ],
+      "total":5,
+    },
+    {
+      "id":7,
+      "certificado":"Certificado de Aperfeiçoamento em Logística",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20502-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20502-17002"
+        },
+      ],
+      "total":10,
+    },
+    {
+      "id":8,
+      "certificado":"Certificado de Aperfeiçoamento em Marketing",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20500-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20500-17002"
+        },
+      ],
+      "total":15,
+    },
+    {
+      "id":9,
+      "certificado":"Certificado de Aperfeiçoamento em Finanças",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20505-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20505-17002"
+        },
+      ],
+      "total":20,
     },
   ]
   const grade = [
@@ -287,6 +519,7 @@ var main = (function init(){
       "semestre":2,
     },
   ]
+
   let dropped = function count(){
     return $('.draggable .dropped').length;
   }
@@ -423,7 +656,7 @@ var main = (function init(){
         }
       })
     };
-    grades.map(function(grade){
+    grades.forEach(function(grade){
       grade.id ="";
       grade.disponivel = true;
       $('.'+grade.class).html("");
@@ -436,8 +669,10 @@ var main = (function init(){
 });
 
 var paint = (function init(courses,goals,skills, nameEspec){
+  let specName, goal, skill;
+
   let peso = function peso(objs){
-    return objs.reduce((prev,current) => prev.peso*current.peso);
+    return objs.reduce((result, current) => result*current.peso, 1)
   }
   let findGoal = function find(goals,value){
     return goals.filter(o => o.total == value);
@@ -446,31 +681,33 @@ var paint = (function init(courses,goals,skills, nameEspec){
     return skills.filter(o => o.total == value);
   }
 
-  let findNameEspec = function find(value, espec){
+  let findNameEspec = function find(espec, courses){
+    let value = peso(courses);
     return espec.filter(o => o.total == value)[0];
-  }
+  };
 
   switch(courses.length) {
     case 1:
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' área');
-        $('.spec-name').html(courses[0].certificado);
+        specName = findNameEspec(nameEspec, courses);
+        $('.spec-name').html(specName.certificado);
         $('.hours').html((courses.length*180));
         $('.meses').html('6 meses de duração');
         $('.trilha-1').html("Trilha 1");
         $('.trilha-2,.trilha-3,.trilha-4').html("");
-        let goal1 = findGoal(goals,courses[0].peso);
-        let skill1 = findSkill(skills, courses[0].peso)
-        $('.goal').html(goal1[0].descricao);
-        $('.skill').html(skill1[0].descricao);
+        goal = findGoal(goals,courses[0].peso);
+        skill  = findSkill(skills, courses[0].peso)
+        $('.goal').html(goal[0].descricao);
+        $('.skill').html(skill[0].descricao);
         break;
     case 2:
         $('.line-info').show();
         $('.line-mensagem').hide();
         $('.areas').html(courses.length +' áreas');
-        let especs = findNameEspec(courses[0].peso * courses[1].peso,nameEspec);
-        $('.spec-name').html(especs.certificado);
+        specName = findNameEspec(nameEspec, courses);
+        $('.spec-name').html(specName.certificado);
         if(courses[0].combDay == courses[1].combDay){
           $('.meses').html('1 ano de duração');
           $('.trilha-1').html("Trilha 1");
@@ -483,10 +720,10 @@ var paint = (function init(courses,goals,skills, nameEspec){
           $('.trilha-3,.trilha-4').html("");
         }
         $('.hours').html((courses.length*180)+90);
-        let goal2 = findGoal(goals,peso(courses));
-        let skill2 = findSkill(skills, peso(courses))
-        $('.goal').html(goal2[0].descricao);
-        $('.skill').html(skill2[0].descricao);
+        goal = findGoal(goals,courses[0].peso);
+        skill  = findSkill(skills, courses[0].peso)
+        $('.goal').html(goal[0].descricao);
+        $('.skill').html(skill[0].descricao);
         break;
     case 3:
         $('.line-info').show();

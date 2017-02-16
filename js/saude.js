@@ -224,27 +224,200 @@
     {
       "id":2,
       "certificado":"Certificado de Especialização em Gestão da Segurança do Paciente e Hotelaria Hospitalar",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda-feira e quarta-feira (Semanal), Sexta-feira (Quinzenal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41138-17001"
+        }
+      ],
       "total":100,
     },
     {
       "id":3,
       "certificado": "Certificado de Especialização em Gestão de Logística em Saúde e Hotelaria Hospitalar",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41140-17001"
+        }
+      ],
       "total":50,
     },
     {
       "id":4,
-      "certificado":"Certificado da Especialização em Gestão Qualidade em Acreditação e Hotelaria Hospitalar ",
+      "certificado":"Certificado da Especialização em Gestão da Qualidade em Acreditação e Hotelaria Hospitalar ",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41139-17001"
+        }
+      ],
       "total":75,
     },
     {
       "id":4,
       "certificado":"Certificado de Especialização em Gestão de Logística em Saúde e Segurança do Paciente",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41137-17001"
+        }
+      ],
       "total":200,
     },
     {
       "id":5,
       "certificado":"Certificado de Especialização em Gestão da Segurança do Paciente e Qualidade e Acreditação",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "valorAvista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41136-17001"
+        }
+      ],
       "total":300,
+    },
+    {
+      "id":6,
+      "certificado":"Certificado de Aperfeiçoamento em Hotelaria Hospitalar",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda-feira e quarta-feira (Semanal), Sexta-feira (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41135-17001"
+        }
+      ],
+      "total":5,
+    },
+    {
+      "id":7,
+      "certificado":"Certificado de Aperfeiçoamento em Logística em Saúde",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça-feira e quinta-feira (Semanal), Sexta-feira (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41134-17001"
+        }
+      ],
+      "total":10,
+    },
+    {
+      "id":8,
+      "certificado":"Certificado de Aperfeiçoamento em Qualidade e Acreditação em Saúde",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça-feira e quinta-feira (Semanal), Sexta-feira (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41133-17001"
+        }
+      ],
+      "total":15,
+    },
+    {
+      "id":9,
+      "certificado":"Certificado de Aperfeiçoamento em Segurança do Paciente",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"21/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Terça-feira e quinta-feira (Semanal), Sexta-feira (Quinzenal)",
+          "cargaHoraria":"180 horas",
+          "horario":"19h às 22h",
+          "valor":"1+5x de R$ 990,00",
+          "valorAvista":"R$ 5.346,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41132-17001"
+        }
+      ],
+      "total":20,
+    },
+    {
+      "id":10,
+      "certificado":"Certificado de MBA em Gestão Essencial em Saúde",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"630 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "valorAvista":"R$ 13.608,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41142-17001"
+        }
+      ],
+      "total":750,
+    },
+    {
+      "id":11,
+      "certificado":"Certificado de MBA em Gestão Avançada em Saúde",
+      "info":[
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda-feira a sexta-feira (Semanal)",
+          "cargaHoraria":"810 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.200,00 ou 1+17x de 1.050,00 ou 1+23x de 825,00",
+          "valorAvista":"R$ 16.200,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41143-17001"
+        }
+      ],
+      "total":15000,
     },
   ]
   const grade = [
@@ -477,6 +650,7 @@
   }
 
   var paint = function init(courses,goals,skills, nameEspec){
+    let specname, goal, skill;
     let peso = function peso(objs){
       return objs.reduce((result, current) => result*current.peso, 1)
     }
@@ -496,22 +670,23 @@
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' área');
-          $('.spec-name').html(courses[0].certificado);
+          specname = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specname.certificado);
           $('.hours').html((courses.length*180));
           $('.meses').html('6 meses de duração');
           $('.trilha-1').html("Trilha 1");
           $('.trilha-2,.trilha-3,.trilha-4').html("");
-          let goal1 = findGoal(goals,courses[0].peso);
-          let skill1 = findSkill(skills, courses[0].peso)
-          $('.goal').html(goal1[0].descricao);
-          $('.skill').html(skill1[0].descricao);
+          goal = findGoal(goals,peso(courses));
+          skill = findSkill(skills, peso(courses));
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
           break;
       case 2:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          let especs = findNameEspec(courses[0].peso * courses[1].peso,nameEspec);
-          $('.spec-name').html(especs.certificado);
+          specname = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specname.certificado);
           if(courses[0].combDay == courses[1].combDay){
             $('.meses').html('1 ano de duração');
             $('.trilha-1').html("Trilha 1");
@@ -524,16 +699,17 @@
             $('.trilha-3,.trilha-4').html("");
           }
           $('.hours').html((courses.length*180)+90);
-          let goal2 = findGoal(goals,peso(courses));
-          let skill2 = findSkill(skills, peso(courses))
-          $('.goal').html(goal2[0].descricao);
-          $('.skill').html(skill2[0].descricao);
+          goal = findGoal(goals,peso(courses));
+          skill = findSkill(skills, peso(courses));
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
           break;
       case 3:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          $('.spec-name').html('Certificado de MBA em Gestão Essencial em Saúde');
+          specname = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specname.certificado);
           $('.meses').html('1 ano de duração');
           let i=0;
           let coursesGrade = courses.some(function(el, index){
@@ -552,18 +728,17 @@
             $('.trilha-4').html("");
           }
           $('.hours').html((courses.length*180)+90 );
-          let goal3 = findGoal(goals,peso(courses));
-          let skill3 = findSkill(skills, peso(courses))
-          $('.goal').html(goal3[0].descricao);
-          $('.skill').html(skill3[0].descricao);
-          $('.goal').html(goal3[0].descricao);
-          $('.skill').html(skill3[0].descricao);
+          goal = findGoal(goals,peso(courses));
+          skill = findSkill(skills, peso(courses));
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
           break;
       case 4:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          $('.spec-name').html('Certificado de MBA em Gestão Avançada em Saúde');
+          specname = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specname.certificado);
           $('.meses').html('1 ano de duração');
           $('.trilha-1').html("Trilha 1");
           $('.trilha-2').html("Trilha 2");
