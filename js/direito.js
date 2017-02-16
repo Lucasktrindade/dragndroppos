@@ -579,10 +579,9 @@
           skill = findSkill(skills, courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
-          specName.info.forEach(function(info){
+          specName.info.forEach(function(info, index){
             let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
 
-            elementInfo = $('.info-cursos').append("<div class='info-detail column col-m-12 col-t-6'></div>");
             unidade = $('<p></p>').text(info.unidade);
             endereco = $('<p></p>').text(info.endereco);
             inicio = $('<p></p>').text(info.inicio);
@@ -590,8 +589,15 @@
             horario = $('<p></p>').text(info.horario);
             valor = $('<p></p>').text(info.valor);
             aVista = $('<p></p>').text(info.aVista);
+            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+            unidade.appendTo('.detail-'+index);
+            endereco.appendTo('.detail-'+index);
+            inicio.appendTo('.detail-'+index);
+            carga.appendTo('.detail-'+index);
+            horario.appendTo('.detail-'+index);
+            valor.appendTo('.detail-'+index);
+            aVista.appendTo('.detail-'+index);
 
-            elementInfo.append(unidade, endereco, inicio, carga, horario, valor, aVista)
           });
           break;
       case 2:
@@ -616,6 +622,27 @@
           skill = findSkill(skills,courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          $('.info-detail').remove();
+          specName.info.forEach(function(info, index){
+            let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
+
+            unidade = $('<p></p>').text(info.unidade);
+            endereco = $('<p></p>').text(info.endereco);
+            inicio = $('<p></p>').text(info.inicio);
+            carga = $('<p></p>').text(info.carga);
+            horario = $('<p></p>').text(info.horario);
+            valor = $('<p></p>').text(info.valor);
+            aVista = $('<p></p>').text(info.aVista);
+            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+            unidade.appendTo('.detail-'+index);
+            endereco.appendTo('.detail-'+index);
+            inicio.appendTo('.detail-'+index);
+            carga.appendTo('.detail-'+index);
+            horario.appendTo('.detail-'+index);
+            valor.appendTo('.detail-'+index);
+            aVista.appendTo('.detail-'+index);
+
+          });
           break;
       case 3:
           $('.line-info').show();
@@ -645,6 +672,26 @@
           skill = findSkill(skills, courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          $('.info-detail').remove();
+          specName.info.forEach(function(info, index){
+            let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
+
+            unidade = $('<p></p>').text(info.unidade);
+            endereco = $('<p></p>').text(info.endereco);
+            inicio = $('<p></p>').text(info.inicio);
+            carga = $('<p></p>').text(info.carga);
+            horario = $('<p></p>').text(info.horario);
+            valor = $('<p></p>').text(info.valor);
+            aVista = $('<p></p>').text(info.aVista);
+            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+            unidade.appendTo('.detail-'+index);
+            endereco.appendTo('.detail-'+index);
+            inicio.appendTo('.detail-'+index);
+            carga.appendTo('.detail-'+index);
+            horario.appendTo('.detail-'+index);
+            valor.appendTo('.detail-'+index);
+            aVista.appendTo('.detail-'+index);
+          });
           break;
       default:
          $('.line-mensagem').show();
@@ -653,6 +700,7 @@
          $('.skill').html('');
          $('.goal').html('');
          $('.trilhas').html('');
+         $('.info-detail').remove();
       }
   };
 
