@@ -221,9 +221,9 @@
       "total":15000
     },
   ];
-
-    {
-      "id":1,
+  const nameEspec = [
+      {
+      "id": 1,
       "certificado": "Certificado de Especialização em Gestão de Logística em Saúde e Qualidade e Acreditação",
       "info": [
         {
@@ -248,7 +248,7 @@
           "aVista": "R$ 13.608,00",
           "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17002"
         },
-      ]
+      ],
       "total":150,
     },
     {
@@ -263,7 +263,7 @@
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41138-17001"
         }
       ],
@@ -281,7 +281,7 @@
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41140-17001"
         }
       ],
@@ -299,7 +299,7 @@
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41139-17001"
         }
       ],
@@ -317,7 +317,7 @@
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41137-17001"
         }
       ],
@@ -335,7 +335,7 @@
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41136-17001"
         }
       ],
@@ -353,7 +353,7 @@
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41135-17001"
         }
       ],
@@ -371,7 +371,7 @@
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41134-17001"
         }
       ],
@@ -389,7 +389,7 @@
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41133-17001"
         }
       ],
@@ -407,7 +407,7 @@
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41132-17001"
         }
       ],
@@ -425,7 +425,7 @@
           "cargaHoraria":"630 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
-          "valorAvista":"R$ 13.608,00",
+          "aVista":"R$ 13.608,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41142-17001"
         }
       ],
@@ -443,7 +443,7 @@
           "cargaHoraria":"810 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 1.200,00 ou 1+17x de 1.050,00 ou 1+23x de 825,00",
-          "valorAvista":"R$ 16.200,00",
+          "aVista":"R$ 16.200,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=41143-17001"
         }
       ],
@@ -695,6 +695,30 @@
       return espec.filter(o => o.total == value)[0];
     }
 
+    let infoComb =  function info(specname){
+      $('.info-detail').remove();
+      specname.info.forEach(function(info, index){
+        let unidade, endereco, inicio, carga, horario, valor, aVista, link, elementInfo;
+        unidade = $('<p></p>').text(info.unidade);
+        endereco = $('<p></p>').text(info.endereco);
+        inicio = $('<p></p>').text(info.inicio);
+        carga = $('<p></p>').text(info.carga);
+        horario = $('<p></p>').text(info.horario);
+        valor = $('<p></p>').text(info.valor);
+        aVista = $('<p></p>').text(info.aVista);
+        link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
+        elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+        unidade.appendTo('.detail-'+index);
+        endereco.appendTo('.detail-'+index);
+        inicio.appendTo('.detail-'+index);
+        carga.appendTo('.detail-'+index);
+        horario.appendTo('.detail-'+index);
+        valor.appendTo('.detail-'+index);
+        aVista.appendTo('.detail-'+index);
+        link.appendTo('.detail-'+index);
+      });
+    };
+
     switch(courses.length) {
       case 1:
           $('.line-info').show();
@@ -710,6 +734,7 @@
           skill = findSkill(skills, peso(courses));
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          infoComb(specname);
           break;
       case 2:
           $('.line-info').show();
@@ -733,12 +758,14 @@
           skill = findSkill(skills, peso(courses));
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          $('.info-detail').remove();
+          infoComb(specname);
           break;
       case 3:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          specname = findNameEspec(peso(courses), nameEspec);
+          specname = findNameEspec(750, nameEspec);
           $('.spec-name').html(specname.certificado);
           $('.meses').html('1 ano de duração');
           let i=0;
@@ -762,6 +789,8 @@
           skill = findSkill(skills, peso(courses));
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          $('.info-detail').remove();
+          infoComb(specname);
           break;
       case 4:
           $('.line-info').show();
@@ -779,6 +808,8 @@
           skill = findSkill(skills, peso(courses))
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
+          $('.info-detail').remove();
+          infoComb(specname);
           break;
       default:
          $('.line-mensagem').show();
@@ -787,6 +818,7 @@
          $('.skill').html('');
          $('.goal').html('');
          $('.trilhas').html('');
+         $('.info-detail').remove();
       }
   };
 

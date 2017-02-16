@@ -564,13 +564,37 @@
       return espec.filter(o => o.total == value)[0];
     };
 
+    let infoComb =  function info(specname){
+      $('.info-detail').remove();
+      specname.info.forEach(function(info, index){
+        let unidade, endereco, inicio, carga, horario, valor, aVista, link, elementInfo;
+        unidade = $('<p></p>').text(info.unidade);
+        endereco = $('<p></p>').text(info.endereco);
+        inicio = $('<p></p>').text(info.inicio);
+        carga = $('<p></p>').text(info.carga);
+        horario = $('<p></p>').text(info.horario);
+        valor = $('<p></p>').text(info.valor);
+        aVista = $('<p></p>').text(info.aVista);
+        link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
+        elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+        unidade.appendTo('.detail-'+index);
+        endereco.appendTo('.detail-'+index);
+        inicio.appendTo('.detail-'+index);
+        carga.appendTo('.detail-'+index);
+        horario.appendTo('.detail-'+index);
+        valor.appendTo('.detail-'+index);
+        aVista.appendTo('.detail-'+index);
+        link.appendTo('.detail-'+index);
+      });
+    };
+
     switch(courses.length) {
       case 1:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' área');
-          specName = findNameEspec(nameEspec, courses);
-          $('.spec-name').html(specName.certificado);
+          specname = findNameEspec(nameEspec, courses);
+          $('.spec-name').html(specname.certificado);
           $('.hours').html((courses.length*180));
           $('.meses').html('6 meses de duração');
           $('.trilha-1').html("Trilha 1");
@@ -578,36 +602,15 @@
           goal = findGoal(goals,courses);
           skill = findSkill(skills, courses)
           $('.goal').html(goal[0].descricao);
-          $('.info').html(specName.info);
           $('.skill').html(skill[0].descricao);
-          specName.info.forEach(function(info, index){
-            let unidade, endereco, inicio, carga, horario, valor, aVista, link, elementInfo;
-
-            unidade = $('<p></p>').text(info.unidade);
-            endereco = $('<p></p>').text(info.endereco);
-            inicio = $('<p></p>').text(info.inicio);
-            carga = $('<p></p>').text(info.carga);
-            horario = $('<p></p>').text(info.horario);
-            valor = $('<p></p>').text(info.valor);
-            aVista = $('<p></p>').text(info.aVista);
-            link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
-            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
-            unidade.appendTo('.detail-'+index);
-            endereco.appendTo('.detail-'+index);
-            inicio.appendTo('.detail-'+index);
-            carga.appendTo('.detail-'+index);
-            horario.appendTo('.detail-'+index);
-            valor.appendTo('.detail-'+index);
-            aVista.appendTo('.detail-'+index);
-            link.appendTo('.detail-'+index);
-          });
+          infoComb(specname);
           break;
       case 2:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          specName = findNameEspec(nameEspec, courses);
-          $('.spec-name').html(specName.certificado);
+          specname = findNameEspec(nameEspec, courses);
+          $('.spec-name').html(specname.certificado);
           if(courses[0].combDay == courses[1].combDay){
             $('.meses').html('1 ano de duração');
             $('.trilha-1').html("Trilha 1");
@@ -624,35 +627,14 @@
           skill = findSkill(skills,courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
-          $('.info-detail').remove();
-          specName.info.forEach(function(info, index){
-            let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
-
-            unidade = $('<p></p>').text(info.unidade);
-            endereco = $('<p></p>').text(info.endereco);
-            inicio = $('<p></p>').text(info.inicio);
-            carga = $('<p></p>').text(info.carga);
-            horario = $('<p></p>').text(info.horario);
-            valor = $('<p></p>').text(info.valor);
-            aVista = $('<p></p>').text(info.aVista);
-            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
-            link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
-            unidade.appendTo('.detail-'+index);
-            endereco.appendTo('.detail-'+index);
-            inicio.appendTo('.detail-'+index);
-            carga.appendTo('.detail-'+index);
-            horario.appendTo('.detail-'+index);
-            valor.appendTo('.detail-'+index);
-            aVista.appendTo('.detail-'+index);
-            link.appendTo('.detail-'+index);
-          });
+          infoComb(specname);
           break;
       case 3:
           $('.line-info').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
-          specName = findNameEspec(nameEspec, courses);
-          $('.spec-name').html(specName.certificado);
+          specname = findNameEspec(nameEspec, courses);
+          $('.spec-name').html(specname.certificado);
           $('.meses').html('1 ano de duração');
           let i=0;
           let coursesGrade = courses.some(function(el, index){
@@ -675,28 +657,7 @@
           skill = findSkill(skills, courses)
           $('.goal').html(goal[0].descricao);
           $('.skill').html(skill[0].descricao);
-          $('.info-detail').remove();
-          specName.info.forEach(function(info, index){
-            let unidade, endereco, inicio, carga, horario, valor, aVista, elementInfo;
-
-            unidade = $('<p></p>').text(info.unidade);
-            endereco = $('<p></p>').text(info.endereco);
-            inicio = $('<p></p>').text(info.inicio);
-            carga = $('<p></p>').text(info.carga);
-            horario = $('<p></p>').text(info.horario);
-            valor = $('<p></p>').text(info.valor);
-            aVista = $('<p></p>').text(info.aVista);
-            elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
-            link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
-            unidade.appendTo('.detail-'+index);
-            endereco.appendTo('.detail-'+index);
-            inicio.appendTo('.detail-'+index);
-            carga.appendTo('.detail-'+index);
-            horario.appendTo('.detail-'+index);
-            valor.appendTo('.detail-'+index);
-            aVista.appendTo('.detail-'+index);
-            link.appendTo('.detail-'+index);
-          });
+          infoComb(specname);
           break;
       default:
          $('.line-mensagem').show();
