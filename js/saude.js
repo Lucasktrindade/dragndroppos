@@ -24,7 +24,6 @@
           "cargaHoraria":180,
           "id":1,
           "peso":5,
-          "certificado":'Certificado de Aperfeiçoamento em Hotelaria Hospitalar',
           "combDay":1,
           "semestre":2,
        },
@@ -34,7 +33,6 @@
           "cargaHoraria":180,
           "id":2,
           "peso":10,
-          "certificado":'Certificado de Aperfeiçoamento em Logística em Saúde',
           "combDay":2,
           "semestre":2,
        },
@@ -44,7 +42,6 @@
           "cargaHoraria":180,
           "id":3,
           "peso":15,
-          "certificado":'Certificado de Aperfeiçoamento em Qualidade e Acreditação em Saúde',
           "combDay":2,
           "semestre":1,
        },
@@ -54,7 +51,6 @@
           "cargaHoraria":180,
           "id":4,
           "peso":20,
-          "certificado":'Certificado de Aperfeiçoamento em Segurança do Paciente',
           "combDay":1,
           "semestre":1,
        },
@@ -137,6 +133,11 @@
       "descricao":"Fazer compreender a integração dos aspectos gerais da Gestão em  Saúde , em suas visões essenciais dos temas voltados à Segurança do Paciente, da participação da Hotelaria Hospitalar e da gestão da Qualidade e seus Sistemas de Acreditação, de forma integrada e holística.",
       "total":1500
     },
+    {
+      "id":16,
+      "descricao":"Fazer compreender os aspectos gerais de uma Gestão em Saúde interelacionando  em suas visões avançadas, aspectos vinculados às areas de Hotelaria, Logística, Qualidade e Acreditação e Segurança do Paciente. Com esses conhecimentos, se torna possível a construção de um ambiente voltado para a implementação das mais modernas metodologias necessárias à uma gestão de excelência.",
+      "total":15000
+    },
   ];
   const skills = [
     {
@@ -214,11 +215,40 @@
       "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar o modelo de Gestão em Saúde, considerando atuar em implantação de programas voltados à Segurança do Paciente, criar estratégias operacionais de forma a sustentar a atividade relacionada à movimentação e estadia dos pacientes e na  atuação em Comissões Internas de Qualidade e Certificação  no desenvolvimento de ações que contribuam na entrega de serviços de qualidade.",
       "total":1500
     },
+    {
+      "id":16,
+      "descricao":"Ao final do curso, o aluno estará apto a entender e aplicar os modelos de gestão na área de saúde de forma ampla e abrangente, podendo ocupar cargos de liderança e chefia nestas áreas. Desenvolverá uma visão sistema, que permitirá a tomada de decisão e definição de estratégias que propicie uma gestão sustentável. Desta forma conseguirá contribuir na busca e mantutenção da perenidade institucional.",
+      "total":15000
+    },
   ];
-  const nameEspec = [
+
     {
       "id":1,
       "certificado": "Certificado de Especialização em Gestão de Logística em Saúde e Qualidade e Acreditação",
+      "info": [
+        {
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "630 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista": "R$ 13.608,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17001"
+        },
+        {
+          "unidade": "Unidade Barra da Tijuca",
+          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio": "20/03/2017 (Duração: 12 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
+          "carga": "630 horas",
+          "horario": "19h às 22h",
+          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista": "R$ 13.608,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17002"
+        },
+      ]
       "total":150,
     },
     {
@@ -745,8 +775,10 @@
           $('.trilha-3').html("Trilha 3");
           $('.trilha-4').html("Trilha 4");
           $('.hours').html((courses.length*180)+90);
-          $('.goal').html("Fazer compreender os aspectos gerais de uma Gestão em Saúde interelacionando  em suas visões avançadas, aspectos vinculados às areas de Hotelaria, Logística, Qualidade e Acreditação e Segurança do Paciente. Com esses conhecimentos, se torna possível a construção de um ambiente voltado para a implementação das mais modernas metodologias necessárias à uma gestão de excelência.");
-          $('.skill').html("Ao final do curso, o aluno estará apto a entender e aplicar os modelos de gestão na área de saúde de forma ampla e abrangente, podendo ocupar cargos de liderança e chefia nestas áreas. Desenvolverá uma visão sistema, que permitirá a tomada de decisão e definição de estratégias que propicie uma gestão sustentável. Desta forma conseguirá contribuir na busca e mantutenção da perenidade institucional.");
+          goal = findGoal(goals,peso(courses));
+          skill = findSkill(skills, peso(courses))
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
           break;
       default:
          $('.line-mensagem').show();
