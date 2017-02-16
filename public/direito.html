@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Drag and Drop Unigranrio</title>
     <link rel="icon" href="img/GloboUnigranrio.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="css/estrutura.css">
-    <link rel="stylesheet" href="css/pandora.css"/>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bundle.css">
   </head>
-  <body>
+  <body onload="pos.unigranrio.simulador.direito.main()">
     <section class="draggable no-print relative">
       <div class="container-fluid">
         <div class="pelicula gradiente"></div>
@@ -21,34 +19,29 @@
           </div>
           <div class="row">
             <div class="column col-m-5">
-              <div class="line line-dir direito"></div>
+              <div class="line-direito line-dir-direito direito"></div>
             </div>
             <div class="column col-m-2">
               <div class="line-center up"></div>
             </div>
             <div class="column col-m-5">
-              <div class="line line-esq esquerdo"></div>
+              <div class="line-direito line-esq-direito esquerdo"></div>
             </div>
           </div>
           <div class="row">
-            <div class="column col-m-3">
+            <div class="column col-m-4">
               <div class="drag dg1 t-centro centralizado" data-id="1">
-                <h3>Hotelaria Hospitalar</h3>
+                <h3>Direito Civil</h3>
               </div>
             </div>
-            <div class="column col-m-3">
+            <div class="column col-m-4">
               <div class="drag dg2 t-centro centralizado" data-id="2">
-                <h3>Logística em Saúde</h3>
+                <h3>Direito Empresarial</h3>
               </div>
             </div>
-            <div class="column col-m-3">
+            <div class="column col-m-4">
               <div class="drag dg3 t-centro centralizado" data-id="3">
-                <h3>Qualidade e acreditação em Saúde</h3>
-              </div>
-            </div>
-            <div class="column col-m-3">
-              <div class="drag dg4 t-centro centralizado" data-id="4">
-                <h3>Segurança do Paciente</h3>
+                <h3>Direito Processual</h3>
               </div>
             </div>
           </div>
@@ -58,28 +51,25 @@
     <section class="no-print">
       <div class="container">
         <div class="row">
-          <div class="column col-m-3">
+          <div class="column col-m-4">
             <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
           </div>
-          <div class="column col-m-3">
+          <div class="column col-m-4">
             <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
           </div>
-          <div class="column col-m-3">
-            <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
-          </div>
-          <div class="column col-m-3">
+          <div class="column col-m-4">
             <div class="droppable centralizado t-cinza"><p class="text-center text-drop">Arraste e solte</p></div>
           </div>
         </div>
         <div class="row">
           <div class="column col-m-5">
-            <div class="line line-dir up direito"></div>
+            <div class="line-direito line-dir-direito up direito"></div>
           </div>
           <div class="column col-m-2">
             <div class="line-center down"></div>
           </div>
           <div class="column col-m-5">
-            <div class="line line-esq up esquerdo"></div>
+            <div class="line-direito line-esq-direito up esquerdo"></div>
           </div>
         </div>
       </div>
@@ -494,10 +484,6 @@
         </div>
       </div>
     </section>
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-    <script type="text/javascript" src="js/saude.js"></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
   </body>
 </html>

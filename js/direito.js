@@ -1,7 +1,11 @@
 
 
 /*Scripts for page*/
-(function(){
+var pos = pos || {};
+pos.unigranrio = pos.unigranrio || {};
+pos.unigranrio.simulador = pos.unigranrio.simulador || {};
+pos.unigranrio.simulador.direito = pos.unigranrio.simulador.direito || {};
+pos.unigranrio.simulador.direito.main = function(){
   var numberId = [];
   const tcc = {
      "nome":"TCC",
@@ -567,20 +571,22 @@
     let infoComb =  function info(specname){
       $('.info-detail').remove();
       specname.info.forEach(function(info, index){
-        let unidade, endereco, inicio, carga, horario, valor, aVista, link, elementInfo;
-        unidade = $('<p></p>').text(info.unidade);
-        endereco = $('<p></p>').text(info.endereco);
-        inicio = $('<p></p>').text(info.inicio);
-        carga = $('<p></p>').text(info.carga);
-        horario = $('<p></p>').text(info.horario);
-        valor = $('<p></p>').text(info.valor);
-        aVista = $('<p></p>').text(info.aVista);
+        let unidade, endereco, inicio, periodo, carga, horario, valor, aVista, link, elementInfo;
+        unidade = $('<p></p>').text('Unidade: '+info.unidade);
+        endereco = $('<p></p>').text('Endereço: '+info.endereco);
+        inicio = $('<p></p>').text('Início: '+info.inicio);
+        periodo = $('<p></p>').text('Periodicidade: '+info.periodo);
+        carga = $('<p></p>').text('Carga horária total: '+info.carga);
+        horario = $('<p></p>').text('Horário: '+info.horario);
+        valor = $('<p></p>').text('Valor: '+info.valor);
+        aVista = $('<p></p>').text('Valor: à vista:'+ info.aVista);
         link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
         elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
         unidade.appendTo('.detail-'+index);
         endereco.appendTo('.detail-'+index);
         inicio.appendTo('.detail-'+index);
         carga.appendTo('.detail-'+index);
+        periodo.appendTo('.detail-'+index);
         horario.appendTo('.detail-'+index);
         valor.appendTo('.detail-'+index);
         aVista.appendTo('.detail-'+index);
@@ -672,4 +678,4 @@
 
   paint(cart());
 
-}());
+};

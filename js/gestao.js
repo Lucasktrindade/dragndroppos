@@ -1,7 +1,12 @@
 
 
 /*Scripts for page*/
-var main = (function init(){
+var pos = pos || {};
+pos.unigranrio = pos.unigranrio || {};
+pos.unigranrio.simulador = pos.unigranrio.simulador || {};
+pos.unigranrio.simulador.gestao = pos.unigranrio.simulador.gestao || {};
+
+ pos.unigranrio.simulador.gestao.main = function(){
   var numberId = [];
   const tcc = {
      "nome":"TCC",
@@ -182,7 +187,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20188-17001"
         },
         {
@@ -193,7 +198,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20188-17002"
         },
       ],
@@ -211,7 +216,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20195-17001"
         },
         {
@@ -222,7 +227,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20195-17002"
         },
       ],
@@ -232,6 +237,30 @@ var main = (function init(){
       "id":3,
       "certificado": "Certificado de Especialização em Gestão de Pessoas e Logística Integrada",
       "total":50,
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "aVista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20200-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"450 horas",
+          "horario":"19h às 22h",
+          "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "aVista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20200-17002"
+        },
+      ],
     },
     {
       "id":4,
@@ -240,30 +269,30 @@ var main = (function init(){
         {
           "unidade":"Campus I - Duque de Caxias",
           "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
           "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20190-17001"
         },
         {
           "unidade":"Unidade Barra da Tijuca",
           "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "inicio":"20/03/2017 (Duração: 6 meses)",
           "periodicidade":"Segunda e Quarta (Semanal), Sexta (Quinzenal)",
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20190-17002"
         },
       ],
       "total":75,
     },
     {
-      "id":4,
+      "id":5,
       "certificado":"Certificado de Especialização em Gestão Financeira e Logística",
       "info": [
         {
@@ -274,7 +303,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20196-17001"
         },
         {
@@ -285,14 +314,14 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20196-17002"
         },
       ],
       "total":200,
     },
     {
-      "id":5,
+      "id":6,
       "certificado":"Certificado de Especialização em Gestão de Marketing e Finanças",
       "info": [
         {
@@ -303,7 +332,7 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
+          "aVista":"R$ 10.044,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20192-17001"
         },
         {
@@ -314,14 +343,14 @@ var main = (function init(){
           "cargaHoraria":"450 horas",
           "horario":"19h às 22h",
           "valor":"1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
-          "valorAvista":"R$ 10.044,00",
-          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17002"
+          "aVista":"R$ 10.044,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20192-17002"
         },
       ],
       "total":300,
     },
     {
-      "id":6,
+      "id":7,
       "certificado":"Certificado de Aperfeiçoamento em RH",
       "info": [
         {
@@ -332,7 +361,7 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17001"
         },
         {
@@ -343,14 +372,14 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20501-17002"
         },
       ],
       "total":5,
     },
     {
-      "id":7,
+      "id":8,
       "certificado":"Certificado de Aperfeiçoamento em Logística",
       "info": [
         {
@@ -361,7 +390,7 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20502-17001"
         },
         {
@@ -372,14 +401,14 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20502-17002"
         },
       ],
       "total":10,
     },
     {
-      "id":8,
+      "id":9,
       "certificado":"Certificado de Aperfeiçoamento em Marketing",
       "info": [
         {
@@ -390,7 +419,7 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20500-17001"
         },
         {
@@ -401,14 +430,14 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20500-17002"
         },
       ],
       "total":15,
     },
     {
-      "id":9,
+      "id":10,
       "certificado":"Certificado de Aperfeiçoamento em Finanças",
       "info": [
         {
@@ -419,7 +448,7 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20505-17001"
         },
         {
@@ -430,11 +459,69 @@ var main = (function init(){
           "cargaHoraria":"180 horas",
           "horario":"19h às 22h",
           "valor":"1+5x de R$ 990,00",
-          "valorAvista":"R$ 5.346,00",
+          "aVista":"R$ 5.346,00",
           "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20505-17002"
         },
       ],
       "total":20,
+    },
+    {
+      "id":10,
+      "certificado":"Certificado de MBA em Gestão Essencial",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"630 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista":"R$ 13.608,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20198-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"630 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
+          "aVista":"R$ 13.608,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20198-17002"
+        },
+      ],
+      "total":750,
+    },
+    {
+      "id":11,
+      "certificado":"Certificado de MBA em Gestão Avançada",
+      "info": [
+        {
+          "unidade":"Campus I - Duque de Caxias",
+          "endereco":"Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"810 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.200,00 ou 1+17x de 1.050,00 ou 1+23x de 825,00",
+          "aVista":"R$ 16.200,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20199-17001"
+        },
+        {
+          "unidade":"Unidade Barra da Tijuca",
+          "endereco":"Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
+          "inicio":"20/03/2017 (Duração: 12 meses)",
+          "periodicidade":"Segunda a Sexta (Semanal)",
+          "cargaHoraria":"810 horas",
+          "horario":"19h às 22h",
+          "valor":"1+14x de R$ 1.200,00 ou 1+17x de 1.050,00 ou 1+23x de 825,00",
+          "aVista":"R$ 16.200,00",
+          "link":"http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20199-17002"
+        },
+      ],
+      "total":15000,
     },
   ]
   const grade = [
@@ -535,7 +622,6 @@ var main = (function init(){
   let gradeBycurso = function find(id){
     return grade.filter(o => o.curso == id );
   }
-  paint(cart());
 
   $( ".drag" ).draggable({revert : revertElement});
   $(".droppable" ).droppable({accept: ".drag",drop: onDrop,out: onOut});
@@ -666,111 +752,145 @@ var main = (function init(){
       repaintCourse(grades, course);
     });
   }
-});
 
-var paint = (function init(courses,goals,skills, nameEspec){
-  let specName, goal, skill;
+  var paint = (function init(courses,goals,skills, nameEspec){
+    let specName, goal, skill;
 
-  let peso = function peso(objs){
-    return objs.reduce((result, current) => result*current.peso, 1)
-  }
-  let findGoal = function find(goals,value){
-    return goals.filter(o => o.total == value);
-  }
-  let findSkill = function find(skills,value){
-    return skills.filter(o => o.total == value);
-  }
+    let peso = function peso(objs){
+      return objs.reduce((result, current) => result*current.peso, 1)
+    }
+    let findGoal = function find(goals,value){
+      return goals.filter(o => o.total == value);
+    }
+    let findSkill = function find(skills,value){
+      return skills.filter(o => o.total == value);
+    }
 
-  let findNameEspec = function find(espec, courses){
-    let value = peso(courses);
-    return espec.filter(o => o.total == value)[0];
-  };
+    let findNameEspec = function find(value, espec){
+      return espec.filter(o => o.total == value)[0];
+    };
 
-  switch(courses.length) {
-    case 1:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
-        $('.areas').html(courses.length +' área');
-        specName = findNameEspec(nameEspec, courses);
-        $('.spec-name').html(specName.certificado);
-        $('.hours').html((courses.length*180));
-        $('.meses').html('6 meses de duração');
-        $('.trilha-1').html("Trilha 1");
-        $('.trilha-2,.trilha-3,.trilha-4').html("");
-        goal = findGoal(goals,courses[0].peso);
-        skill  = findSkill(skills, courses[0].peso)
-        $('.goal').html(goal[0].descricao);
-        $('.skill').html(skill[0].descricao);
-        break;
-    case 2:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
-        $('.areas').html(courses.length +' áreas');
-        specName = findNameEspec(nameEspec, courses);
-        $('.spec-name').html(specName.certificado);
-        if(courses[0].combDay == courses[1].combDay){
-          $('.meses').html('1 ano de duração');
-          $('.trilha-1').html("Trilha 1");
-          $('.trilha-3').html("Trilha 2");
-          $('.trilha-2,.trilha-4').html("");
-        }else{
+    let infoComb =  function info(specname){
+      $('.info-detail').remove();
+      specname.info.forEach(function(info, index){
+        let unidade, endereco, inicio, periodo, carga, horario, valor, aVista, link, elementInfo;
+        unidade = $('<p></p>').text('Unidade: '+info.unidade);
+        endereco = $('<p></p>').text('Endereço: '+info.endereco);
+        inicio = $('<p></p>').text('Início: '+info.inicio);
+        periodo = $('<p></p>').text('Periodicidade: '+info.periodicidade);
+        carga = $('<p></p>').text('Carga horária total: '+info.cargaHoraria);
+        horario = $('<p></p>').text('Horário: '+info.horario);
+        valor = $('<p></p>').text('Valor: '+info.valor);
+        aVista = $('<p></p>').text('Valor: à vista:'+ info.aVista);
+        link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
+        elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
+        unidade.appendTo('.detail-'+index);
+        endereco.appendTo('.detail-'+index);
+        inicio.appendTo('.detail-'+index);
+        carga.appendTo('.detail-'+index);
+        periodo.appendTo('.detail-'+index);
+        horario.appendTo('.detail-'+index);
+        valor.appendTo('.detail-'+index);
+        aVista.appendTo('.detail-'+index);
+        link.appendTo('.detail-'+index);
+      });
+    };
+    switch(courses.length) {
+      case 1:
+          $('.line-info').show();
+          $('.line-mensagem').hide();
+          $('.areas').html(courses.length +' área');
+          specName = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specName.certificado);
+          $('.hours').html((courses.length*180));
           $('.meses').html('6 meses de duração');
           $('.trilha-1').html("Trilha 1");
-          $('.trilha-2').html("Trilha 2");
-          $('.trilha-3,.trilha-4').html("");
-        }
-        $('.hours').html((courses.length*180)+90);
-        goal = findGoal(goals,courses[0].peso);
-        skill  = findSkill(skills, courses[0].peso)
-        $('.goal').html(goal[0].descricao);
-        $('.skill').html(skill[0].descricao);
-        break;
-    case 3:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
-        $('.areas').html(courses.length +' áreas');
-        $('.spec-name').html('Certificado de MBA em Gestão Essencial');
-        $('.meses').html('1 ano de duração');
-        let i=0;
-        let coursesGrade = courses.some(function(el, index){
-          if(el.semestre == 2){i++;}
-          return i >=2;
-        });
-        if(coursesGrade){
-          $('.trilha-1').html("Trilha 1");
-          $('.trilha-2').html("");
-          $('.trilha-3').html("Trilha 2");
-          $('.trilha-4').html("Trilha 3");
-        }else{
+          $('.trilha-2,.trilha-3,.trilha-4').html("");
+          goal = findGoal(goals,courses[0].peso);
+          skill  = findSkill(skills, courses[0].peso)
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
+          infoComb(specName);
+          break;
+      case 2:
+          $('.line-info').show();
+          $('.line-mensagem').hide();
+          $('.areas').html(courses.length +' áreas');
+          specName = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specName.certificado);
+          if(courses[0].combDay == courses[1].combDay){
+            $('.meses').html('1 ano de duração');
+            $('.trilha-1').html("Trilha 1");
+            $('.trilha-3').html("Trilha 2");
+            $('.trilha-2,.trilha-4').html("");
+          }else{
+            $('.meses').html('6 meses de duração');
+            $('.trilha-1').html("Trilha 1");
+            $('.trilha-2').html("Trilha 2");
+            $('.trilha-3,.trilha-4').html("");
+          }
+          $('.hours').html((courses.length*180)+90);
+          goal = findGoal(goals,courses[0].peso);
+          skill  = findSkill(skills, courses[0].peso)
+          $('.goal').html(goal[0].descricao);
+          $('.skill').html(skill[0].descricao);
+          infoComb(specName);
+          break;
+      case 3:
+          $('.line-info').show();
+          $('.line-mensagem').hide();
+          $('.areas').html(courses.length +' áreas');
+          specName = findNameEspec(750, nameEspec);
+          $('.spec-name').html(specName.certificado);
+          $('.meses').html('1 ano de duração');
+          let i=0;
+          let coursesGrade = courses.some(function(el, index){
+            if(el.semestre == 2){i++;}
+            return i >=2;
+          });
+          if(coursesGrade){
+            $('.trilha-1').html("Trilha 1");
+            $('.trilha-2').html("");
+            $('.trilha-3').html("Trilha 2");
+            $('.trilha-4').html("Trilha 3");
+          }else{
+            $('.trilha-1').html("Trilha 1");
+            $('.trilha-2').html("Trilha 2");
+            $('.trilha-3').html("Trilha 3");
+            $('.trilha-4').html("");
+          }
+          $('.hours').html((courses.length*180)+90 );
+          $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
+          $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
+          infoComb(specName);
+          break;
+      case 4:
+          $('.line-info').show();
+          $('.line-mensagem').hide();
+          $('.areas').html(courses.length +' áreas');
+          specName = findNameEspec(peso(courses), nameEspec);
+          $('.spec-name').html(specName.certificado);
+          $('.meses').html('1 ano de duração');
           $('.trilha-1').html("Trilha 1");
           $('.trilha-2').html("Trilha 2");
           $('.trilha-3').html("Trilha 3");
-          $('.trilha-4').html("");
-        }
-        $('.hours').html((courses.length*180)+90 );
-        $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões essenciais dos aspectos de mercado e de marketing, da gestão de recursos financeiros, humanos e todo o processo de gestão estratégica e operacional dos recursos logísticos, de forma integrada e holística.");
-        $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
-        break;
-    case 4:
-        $('.line-info').show();
-        $('.line-mensagem').hide();
-        $('.areas').html(courses.length +' áreas');
-        $('.spec-name').html('Certificado de MBA em Gestão Avançada');
-        $('.meses').html('1 ano de duração');
-        $('.trilha-1').html("Trilha 1");
-        $('.trilha-2').html("Trilha 2");
-        $('.trilha-3').html("Trilha 3");
-        $('.trilha-4').html("Trilha 4");
-        $('.hours').html((courses.length*180)+90);
-        $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
-        $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
-        break;
-    default:
-       $('.line-mensagem').show();
-       $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
-       $('.line-info').hide();
-       $('.skill').html('');
-       $('.goal').html('');
-       $('.trilhas').html('');
-    }
-});
+          $('.trilha-4').html("Trilha 4");
+          $('.hours').html((courses.length*180)+90);
+          $('.goal').html("Fazer compreender os aspectos gerais de gestão de empresas e negócios, em suas visões avançadas relacionadas aos aspectos de mercado e de markeeting, a gestão de recursos financeiros e humanos e todo o processo de gestão estratégica e operacional de recursos logísticos, de forma integrada e holística.");
+          $('.skill').html("Ao final do curso o aluno estará apto a entender e aplicar os modelos de gestão das empresas considerando, de forma ampla e abrangente, desde a análise e posicionamento de mercado, sua forma de atendimento ao consumidor, seu processo de produção e movimentação de produtos e serviços, sua gestão de recursos financeiros e apuração de resultados, bem como o processo de envolvimento das pessoas na gestão dos recursos e na motivação para a busca de resultados.");
+          infoComb(specName);
+          break;
+      default:
+         $('.line-mensagem').show();
+         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
+         $('.line-info').hide();
+         $('.skill').html('');
+         $('.goal').html('');
+         $('.trilhas').html('');
+         $('.info-detail').remove();
+      }
+  });
+
+  paint(cart());
+};
+console.log(pos.main);
