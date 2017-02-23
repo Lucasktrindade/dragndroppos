@@ -4,9 +4,8 @@ var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
-var uglify = require('gulp-uglify');
 
-gulp.task('default', ['sass:watch','webserver','scripts','css','images']);
+gulp.task('default', ['sass:watch','scripts:watch','css:watch','images:watch','webserver']);
 
 gulp.task('sass', function () {
   return gulp.src('./css/**/*.scss')
@@ -16,6 +15,18 @@ gulp.task('sass', function () {
 
 gulp.task('sass:watch', function () {
   gulp.watch('./css/**/*.scss', ['sass']);
+});
+
+gulp.task('css:watch', function () {
+  gulp.watch('./css/**/*.css', ['css']);
+});
+
+gulp.task('scripts:watch', function () {
+  gulp.watch('./js/**/*.js', ['scripts']);
+});
+
+gulp.task('images:watch', function () {
+  gulp.watch('./img/**/*', ['images']);
 });
 
 gulp.task('webserver', function() {
@@ -35,9 +46,8 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./js/jquery.min.js','./js/jquery-ui.min.js','js/jquery.ui.touch-punch.min.js','./js/gestao.js','./js/saude.js','./js/direto.js'])
+  return gulp.src(['./js/jquery.min.js','./js/jquery-ui.min.js','js/jquery.ui.touch-punch.min.js','./js/gestao.js','./js/saude.js','./js/direito.js'])
     .pipe(concat('bundle.js'))
-    //.pipe(uglify())
     .pipe(gulp.dest('./public/js/'));
 });
 gulp.task('images', function (){

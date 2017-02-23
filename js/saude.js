@@ -711,7 +711,7 @@ pos.unigranrio.simulador.saude.main =function(){
         horario = $('<p></p>').text('Horário: '+info.horario);
         valor = $('<p></p>').text('Valor: '+info.valor);
         aVista = $('<p></p>').text('Valor: à vista:'+ info.aVista);
-        link = $('<a></a>').text("Inscreva-se").attr("href", info.link).attr("target", "_blank").addClass('button-print');
+        link = $('<a></a>').text("Inscreva-se já!").attr("href", info.link).attr("target", "_blank").addClass('button-print');
         elementInfo = $('.info-cursos').append("<div class='info-detail detail-"+index+" column col-m-12 col-t-6'></div>");
         unidade.appendTo('.detail-'+index);
         endereco.appendTo('.detail-'+index);
@@ -727,14 +727,14 @@ pos.unigranrio.simulador.saude.main =function(){
 
     switch(courses.length) {
       case 1:
-          $('.line-info').show();
-          $('.line-mensagem').hide();
+          $('.line-info,.info-banner, .grade, .table-semestre-1,.goals-skills').show();
+          $('.line-mensagem,.table-semestre-2').hide();
           $('.areas').html(courses.length +' área');
           specname = findNameEspec(peso(courses), nameEspec);
           $('.spec-name').html(specname.certificado);
           $('.hours').html((courses.length*180));
           $('.meses').html('6 meses de duração');
-          $('.trilha-1').html("Trilha 1");
+          $('.trilha-1').html("Disciplina comum 1");
           $('.trilha-2,.trilha-3,.trilha-4').html("");
           goal = findGoal(goals,peso(courses));
           skill = findSkill(skills, peso(courses));
@@ -743,21 +743,24 @@ pos.unigranrio.simulador.saude.main =function(){
           infoComb(specname);
           break;
       case 2:
-          $('.line-info').show();
+          $('.line-info,.info-banner,.goals-skills').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
           specname = findNameEspec(peso(courses), nameEspec);
           $('.spec-name').html(specname.certificado);
           if(courses[0].combDay == courses[1].combDay){
             $('.meses').html('1 ano de duração');
-            $('.trilha-1').html("Trilha 1");
-            $('.trilha-3').html("Trilha 2");
+            $('.trilha-1').html("Disciplina comum 1");
+            $('.trilha-3').html("Disciplina comum 2");
             $('.trilha-2,.trilha-4').html("");
+            $('.grade, .table-semestre-1, .table-semestre-2').show();
           }else{
             $('.meses').html('6 meses de duração');
-            $('.trilha-1').html("Trilha 1");
-            $('.trilha-2').html("Trilha 2");
+            $('.trilha-1').html("Disciplina comum 1");
+            $('.trilha-2').html("Disciplina comum 2");
             $('.trilha-3,.trilha-4').html("");
+            $('.grade, .table-semestre-1').show();
+            $('.table-semestre-2').hide();
           }
           $('.hours').html((courses.length*180)+90);
           goal = findGoal(goals,peso(courses));
@@ -768,7 +771,7 @@ pos.unigranrio.simulador.saude.main =function(){
           infoComb(specname);
           break;
       case 3:
-          $('.line-info').show();
+          $('.line-info,.info-banner, .grade, .table-semestre-1, .table-semestre-2,.goals-skills').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
           specname = findNameEspec(750, nameEspec);
@@ -780,14 +783,14 @@ pos.unigranrio.simulador.saude.main =function(){
             return i >=2;
           });
           if(coursesGrade){
-            $('.trilha-1').html("Trilha 1");
+            $('.trilha-1').html("Disciplina comum 1");
             $('.trilha-2').html("");
-            $('.trilha-3').html("Trilha 2");
-            $('.trilha-4').html("Trilha 3");
+            $('.trilha-3').html("Disciplina comum 2");
+            $('.trilha-4').html("Disciplina comum 3");
           }else{
-            $('.trilha-1').html("Trilha 1");
-            $('.trilha-2').html("Trilha 2");
-            $('.trilha-3').html("Trilha 3");
+            $('.trilha-1').html("Disciplina comum 1");
+            $('.trilha-2').html("Disciplina comum 2");
+            $('.trilha-3').html("Disciplina comum 3");
             $('.trilha-4').html("");
           }
           $('.hours').html((courses.length*180)+90 );
@@ -799,16 +802,16 @@ pos.unigranrio.simulador.saude.main =function(){
           infoComb(specname);
           break;
       case 4:
-          $('.line-info').show();
+          $('.line-info,.info-banner, .grade, .table-semestre-1, .table-semestre-2, .goals-skills').show();
           $('.line-mensagem').hide();
           $('.areas').html(courses.length +' áreas');
           specname = findNameEspec(peso(courses), nameEspec);
           $('.spec-name').html(specname.certificado);
           $('.meses').html('1 ano de duração');
-          $('.trilha-1').html("Trilha 1");
-          $('.trilha-2').html("Trilha 2");
-          $('.trilha-3').html("Trilha 3");
-          $('.trilha-4').html("Trilha 4");
+          $('.trilha-1').html("Disciplina comum 1");
+          $('.trilha-2').html("Disciplina comum 2");
+          $('.trilha-3').html("Disciplina comum 3");
+          $('.trilha-4').html("Disciplina comum 4");
           $('.hours').html((courses.length*180)+90);
           goal = findGoal(goals,peso(courses));
           skill = findSkill(skills, peso(courses))
@@ -819,11 +822,9 @@ pos.unigranrio.simulador.saude.main =function(){
           break;
       default:
          $('.line-mensagem').show();
-         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas de acordo com a necessidade da sua carreira</b>.<br>Clique na(s) área(s) de interesse e arraste para os campos pontilhados, para gerar a simulação.");
-         $('.line-info').hide();
-         $('.skill').html('');
-         $('.goal').html('');
-         $('.trilhas').html('');
+         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas, de acordo com a necessidade da sua carreira</b>.<br>Para gerar a simulação, clique na(s) área(s) de interesse e a(s) arraste para os campos pontilhados.");
+         $('.line-info, .info-banner, .grade, .table-semestre-1, .table-semestre-2,.goals-skills').hide();
+         $('.skill, .goal, .trilhas').html('');
          $('.info-detail').remove();
       }
   };
