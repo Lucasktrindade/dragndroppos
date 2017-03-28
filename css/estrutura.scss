@@ -512,7 +512,7 @@ a:hover {
   min-height: 50px;
   margin:0;
 }
-.line,.line-center,.line-direito{
+.line,.line-center,.line-direito, .line-adm {
   width:71%;
   height: 2px;
   border: 1px solid #83b1e0;
@@ -522,10 +522,13 @@ a:hover {
 .line-direito{
   width: 62%;
 }
+.line-adm {
+  width: 40%;
+}
 .line-center{
   width:100%;
 }
-.line-dir:after,.line-dir:before,.line-center:after,.line-dir-direito:after,.line-dir-direito:before{
+.line-dir:after,.line-dir:before,.line-center:after,.line-dir-direito:after{
   content: '';
   position: absolute;
   height: 20px;

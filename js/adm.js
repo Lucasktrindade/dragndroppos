@@ -4,27 +4,16 @@
 var pos = pos || {};
 pos.unigranrio = pos.unigranrio || {};
 pos.unigranrio.simulador = pos.unigranrio.simulador || {};
-pos.unigranrio.simulador.direito = pos.unigranrio.simulador.direito || {};
-pos.unigranrio.simulador.direito.main = function(){
+pos.unigranrio.simulador.adm = pos.unigranrio.simulador.adm || {};
+pos.unigranrio.simulador.adm.main = function(){
   var numberId = [];
-  const tcc = {
-     "nome":"TCC",
-     "cargaHoraria":90,
-     "disciplinas":[
-       {
-         "nome":"Disciplina TCC"
-       }
-     ],
-     "id":1
-  };
-
   //combDay são os dias de cada curso
   // 1 = Seg e Quar
   // 2 = Ter e Qui
   const elements = [
        {
-          "nome":"Direito Civil",
-          "slug":"direito-civil",
+          "nome":"Administração Pública",
+          "slug":"administracao-publica",
           "cargaHoraria":180,
           "id":1,
           "peso":5,
@@ -32,7 +21,7 @@ pos.unigranrio.simulador.direito.main = function(){
           "semestre":1,
        },
        {
-          "nome":"Direito Empresarial",
+          "nome":"Desenvolvimento Sustentável",
           "slug":"direito-empresarial",
           "cargaHoraria":180,
           "id":2,
@@ -40,285 +29,98 @@ pos.unigranrio.simulador.direito.main = function(){
           "combDay":2,
           "semestre":1,
        },
-       {
-          "nome":"Direito Processual",
-          "slug":"direito-processual",
-          "cargaHoraria":180,
-          "id":3,
-          "peso":15,
-          "combDay":1,
-          "semestre":2,
-       },
   ];
 
   //Total: elements.peso * elements2.peso ou o valor do próprio peso é o elemento
   const goals = [
     {
       "id":1,
-      "descricao":"Fazer compreender, de maneira prática e teórica, o Direito Civil, ramo essencial para o cotidiano do operador do Direito.",
+      "descricao":"Ao final do curso o participante estará apto a desenvolver análises e estudos relacionados às implicações decorrentes da formulação e da implementação de políticas e projetos a cargo da Administração Pública em âmbito local e regional, assim como apoiar a formulação e a avaliação de planos e programas de governo.",
       "total":5
     },
     {
       "id":2,
-      "descricao":"Fazer compreender, de maneira prática e teórica, o Direito Empresarial, ramo essencial para o cotidiano do operador do Direito",
+      "descricao":"Ao final do curso o participante estará apto a desenvolver análises e estudos contemplando os atuais direcionadores e demarcadores do desenvolvimento sustentável segundo a óptica da performance integrada entre resultados econômicos, sociais e ambientais.",
       "total":10
     },
     {
       "id":3,
-      "descricao":"Fazer compreender, de maneira prática e teórica, o Direito Processual, ramo essencial para o cotidiano do operador do Direito.",
-      "total":15
-    },
-    {
-      "id":4,
-      "descricao":"Apreender uma visão crítica e racional do Direito Civil e do Direito Empresarial, com o objetivo de aplicação prática ao operador do Direito.",
+      "descricao":"Ao final do curso o participante estará apto a desenvolver diretrizes e programas afins aos desafios da Nova Adminstração Pública em vista do paradigma do Desenvolvimento Sustentável, assim como gerir projetos, planos de ação e processos de gestão à vista com base em indicadores de desempenho relacionados  às diversas atividades de cunho governamental.",
       "total":50
-    },
-    {
-      "id":5,
-      "descricao":"Apreender uma visão crítica e racional do Direito Civil e do Direito Processual, com objetivo de aplicação prática ao operador do Direito.",
-      "total":75
-    },
-    {
-      "id":6,
-      "descricao":"Apreender uma visão crítica e racional do Direito Empresarial e do Direito Processual, com o objetivo de aplicação prática ao operador do Direito.",
-      "total":150
-    },
-    {
-      "id":7,
-      "descricao":"Apreender uma visão crítica, racional e sistemática do Direito, com foco nos ramos Civil, Empresarial e Processual, com objetivo de aplicação prática dos conteúdos.",
-      "total":750
-    },
+    }
   ];
   const skills = [
     {
       "id":1,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática civil, no sentido de elaborar fundamentações de peças processuais, analisar casos e interpretar julgados.",
+      "descricao":"Desenvolvimento do aparelho de estado; Desenvolvimento de planos de governo; Alinhamento estratégico e operacional de planos, programas e projetos de governo; Sistematização de controles administrativos e financeiros; Adoção de novas tecnologias de informação e comunicações; Relações públicas e comunitárias.",
       "total":5
     },
     {
       "id":2,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática empresarial, no sentido de elaborar fundamentações de peças processuais, analisar casos e interpretar julgados.",
+      "descricao":"Desenvolvimento de visão holística voltada para a sustentabilidade; Desenvolvimento de técnicas análiticas e de controle com base na performacne integrada econômica, ambiental e social; Alinhamento de interesses dos ators sociais; Sistematização de indicadores e de instrumentos de comunicação e de formação de parcerias visando à responsabilidade ambiental e social.",
       "total":10
     },
     {
       "id":3,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática processual, no sentido de elaborar fundamentações de peças processuais, analisar casos e interpretar julgados.",
-      "total":15
-    },
-    {
-      "id":4,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática cível e empresarial, aplicando os institutos de uma forma prática.",
+      "descricao":"Desenvolvimento das capacidades de formulação, implementação e análise de resultados das políticas e planos de ação governamentais; Reconhecimento e priorização de áreas críticas de governo com base na confrontação entre padrões globias e locais de desenvolvimento sustentável.",
       "total":50
-    },
-    {
-      "id":5,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática cível aplicando os institutos, bem como utilizar o processo na forma de instrumento na busca e defesa dos direitos. ",
-      "total":75
-    },
-    {
-      "id":6,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer a prática empresarial aplicando os institutos, bem como utilizar o processo na forma de instrumento na busca e defesa dos direitos.",
-      "total":150
-    },
-    {
-      "id":7,
-      "descricao":"Ao final do curso, o aluno estará apto a exercer, de forma crítica e sistemática, a prática cível, empresarial e utilizar o processo como meio hábil na busca e defesa dos direitos, podendo elaborar fundamentação de petições, analisar casos e interpretar julgados.",
-      "total":750
-    },
+    }
   ];
   const nameEspec = [
     {
       "id":1,
-      "certificado": "Certificado de Aperfeiçoamento em Direito Civil",
+      "certificado": "Certificado de Aperfeiçoamento em Administração Pública",
       "info": [
         {
           "unidade": "Campus I - Duque de Caxias",
           "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
           "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "periodo": "Segunda e Terça (Semanal), Sexta (Quinzenal)",
           "carga": "180 horas",
           "horario": "19h às 22h",
           "valor": "1+5x de R$ 990,00",
           "aVista": "R$ 5.346,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22501-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
-          "carga": "180 horas",
-          "horario": "19h às 22h",
-          "valor": "1+5x de R$ 990,00",
-          "aVista": "R$ 5.346,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22501-17002"
-        },
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20506-17001"
+        }
       ],
       "total":5,
     },
     {
       "id":2,
-      "certificado": "Certificado de Aperfeiçoamento em Direito Empresarial",
+      "certificado": "Certificado de Aperfeiçoamento em Desenvolvimento Sustentável",
       "info": [
         {
           "unidade": "Campus I - Duque de Caxias",
           "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio": "21/03/2017 (Duração: 6 meses)",
-          "periodo": "Terça e Quinta (Semanal), Sexta (Quinzenal)",
+          "inicio": "22/03/2017 (Duração: 6 meses)",
+          "periodo": "Quarta e Quinta (Semanal), Sexta (Quinzenal)",
           "carga": "180 horas",
           "horario": "19h às 22h",
           "valor": "1+5x de R$ 990,00",
           "aVista": "R$ 5.346,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22502-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "21/03/2017 (Duração: 6 meses)",
-          "periodo": "Terça e Quinta (Semanal), Sexta (Quinzenal)",
-          "carga": "180 horas",
-          "horario": "19h às 22h",
-          "valor": "1+5x de R$ 990,00",
-          "aVista": "R$ 5.346,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22502-17002"
-        },
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20507-17001"
+        }
       ],
       "total":10,
     },
     {
       "id":3,
-      "certificado": "Certificado de Aperfeiçoamento em Direito Processual",
+      "certificado": "Certificado de Especialização em Administração Pública para o Desenvolvimento Sustentável",
       "info": [
         {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
+          "unidade": "Campus I - Duque de Caxias",
+          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
+          "inicio": "21/03/2017 (Duração: 6 meses)",
+          "periodo": "Segunda a Sexta (Semanal)",
           "carga": "180 horas",
           "horario": "19h às 22h",
-          "valor": "1+5x de R$ 990,00",
-          "aVista": "R$ 5.346,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22503-17002"
+          "valor": "1+8x de R$ 1.240,00 ou 1+14x de R$ 781,20",
+          "aVista": "R$ 10.044,00",
+          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=20194-17001"
         }
       ],
-      "total":15,
-    },
-    {
-      "id":4,
-      "certificado": "Certificado de Especialização em Direito Civil e Empresarial",
-      "info": [
-        {
-          "unidade": "Campus I - Duque de Caxias",
-          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22132-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22132-17002"
-        },
-      ],
       "total":50,
-    },
-    {
-      "id":5,
-      "certificado": "Certificado de Especialização em Direito Civil e Processo",
-      "info": [
-        {
-          "unidade": "Campus I - Duque de Caxias",
-          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio": "20/03/2017 (Duração: 12 meses)",
-          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22133-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 12 meses)",
-          "periodo": "Segunda e Quarta (Semanal), Sexta (Quinzenal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+14x de R$ 744,00 ou 1+17x de 651,00 ou 1+23x de 511,50",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22133-17002"
-        },
-      ],
-      "total":75,
-    },
-    {
-      "id":6,
-      "certificado": "Certificado de Especialização em Direito Empresarial e Processo",
-      "info": [
-        {
-          "unidade": "Campus I - Duque de Caxias",
-          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio": "20/03/2017 (Duração: 6 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22134-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 12 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "450 horas",
-          "horario": "19h às 22h",
-          "valor": "1+8x de R$ 1.240,00 ou 1+14x de 781,20",
-          "aVista": "R$ 10.044,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22134-17002"
-        },
-      ],
-      "total":150,
-    },
-    {
-      "id":7,
-      "certificado": "Certificado de MBA em Direito Civil, Processo e Empresarial",
-      "info": [
-        {
-          "unidade": "Campus I - Duque de Caxias",
-          "endereco": "Rua Prof. José de Souza Herdy, 1160 - Jardim Vinte e Cinco de Agosto, Duque de Caxias - RJ",
-          "inicio": "20/03/2017 (Duração: 12 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "630 horas",
-          "horario": "19h às 22h",
-          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
-          "aVista": "R$ 13.608,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17001"
-        },
-        {
-          "unidade": "Unidade Barra da Tijuca",
-          "endereco": "Av. Ayrton Senna, 3.383, Barra da Tijuca - Rio de Janeiro (RJ) - CEP: 22775-002",
-          "inicio": "20/03/2017 (Duração: 12 meses)",
-          "periodo": "Segunda a Sexta (Semanal)",
-          "carga": "630 horas",
-          "horario": "19h às 22h",
-          "valor": "1+14x de R$ 1.008,00 ou 1+17x de 882,00 ou 1+23x de 693,00",
-          "aVista": "R$ 13.608,00",
-          "link": "http://inscricao.unigranrio.com.br/processoSeletivo/pos/inscricao?hdId=22135-17002"
-        },
-      ],
-      "total":750,
-    },
+    }
   ]
   const grade = [
     {
@@ -335,7 +137,7 @@ pos.unigranrio.simulador.direito.main = function(){
       "id":2,
       "dia":2,
       "class": "terca-1",
-      "combDay":2,
+      "combDay":1,
       "disponivel":true,
       "trilha":"",
       "curso":"",
@@ -345,7 +147,7 @@ pos.unigranrio.simulador.direito.main = function(){
       "id":3,
       "dia":3,
       "class": "quarta-1",
-      "combDay":1,
+      "combDay":2,
       "disponivel":true,
       "trilha":"",
       "curso":"",
@@ -375,7 +177,7 @@ pos.unigranrio.simulador.direito.main = function(){
       "id":6,
       "dia":2,
       "class": "terca-2",
-      "combDay":2,
+      "combDay":1,
       "disponivel":true,
       "trilha":"",
       "curso":"",
@@ -385,7 +187,7 @@ pos.unigranrio.simulador.direito.main = function(){
       "id":7,
       "dia":3,
       "class": "quarta-2",
-      "combDay":1,
+      "combDay":2,
       "disponivel":true,
       "trilha":"",
       "curso":"",

@@ -46,7 +46,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./js/jquery.min.js','./js/jquery-ui.min.js','js/jquery.ui.touch-punch.min.js','./js/gestao.js','./js/saude.js','./js/direito.js'])
+  return gulp.src(['./js/jquery.min.js','./js/jquery-ui.min.js','js/jquery.ui.touch-punch.min.js','./js/gestao.js','./js/saude.js','./js/direito.js', './js/adm.js'])
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('./public/js/'));
 });
