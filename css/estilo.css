@@ -116,5 +116,37 @@
 .subtitle,.title{
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
-  margin-top: 1.5em;
+  margin-top: 3em;
+}
+.info-detail p{
+  margin: 0.5em 0;
+}
+.banner-simulador{
+  margin: 1em auto;
+}
+.wrapper-logo{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.logo {
+    position: absolute;
+    z-index: 9999;
+}
+.menusuperior {
+    background-color: #003581;
+}
+.menusuperior a {
+  float: left;
+  color: #fff;
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: initial;
+  vertical-align: bottom;
+}
+.menusuperior a:hover{
+  text-decoration: underline;
 }
