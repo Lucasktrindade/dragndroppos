@@ -631,7 +631,7 @@ pos.unigranrio.simulador.gestao = pos.unigranrio.simulador.gestao || {};
     elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     addNumber( elDropped, elDroppedId );
-    if(cart().length < 3){
+    if(cart().length < elements.length - 1){
       especCoursesDay(elDroppedId, grade, cart());
     }else{
       mbaCoursesDay(grade, cart());

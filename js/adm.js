@@ -472,7 +472,7 @@ pos.unigranrio.simulador.adm.main = function(){
           break;
       default:
          $('.line-mensagem').show();
-         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas, de acordo com a necessidade da sua carreira</b>.<br>Para gerar a simulação, clique na(s) área(s) de interesse e a(s) arraste para os campos pontilhados.");
+         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a duas áreas, de acordo com a necessidade da sua carreira</b>.<br>Para gerar a simulação, clique na(s) área(s) de interesse e a(s) arraste para os campos pontilhados.");
          $('.line-info,  .info-banner, .grade, .table-semestre-1, .table-semestre-2,.goals-skills').hide();
          $('.skill, .goal, .trilhas').html('');
          $('.info-detail').remove();
