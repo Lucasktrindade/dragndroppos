@@ -830,7 +830,7 @@ pos.unigranrio.simulador.gestao = pos.unigranrio.simulador.gestao || {};
     elDropped = ui.draggable;
     ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
     addNumber( elDropped, elDroppedId );
-    if(cart().length < 3){
+    if(cart().length < elements.length - 1){
       especCoursesDay(elDroppedId, grade, cart());
     }else{
       mbaCoursesDay(grade, cart());
@@ -3087,7 +3087,7 @@ pos.unigranrio.simulador.adm.main = function(){
           break;
       default:
          $('.line-mensagem').show();
-         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a quatro áreas, de acordo com a necessidade da sua carreira</b>.<br>Para gerar a simulação, clique na(s) área(s) de interesse e a(s) arraste para os campos pontilhados.");
+         $('.mensagem-none').html("<b>Simule a escolha de seu curso de Pós, selecionando de uma a duas áreas, de acordo com a necessidade da sua carreira</b>.<br>Para gerar a simulação, clique na(s) área(s) de interesse e a(s) arraste para os campos pontilhados.");
          $('.line-info,  .info-banner, .grade, .table-semestre-1, .table-semestre-2,.goals-skills').hide();
          $('.skill, .goal, .trilhas').html('');
          $('.info-detail').remove();
